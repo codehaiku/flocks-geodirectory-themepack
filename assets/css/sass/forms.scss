@@ -1,0 +1,208 @@
+.geodir-list-view-select {
+    position: relative;
+    @extend .themepack_font_awesome_after;
+    &:after {
+        content: "\f078";
+        font-size: 8px;
+        position: absolute;
+        top: 15.5px;
+        right: 15px;
+    }
+    select {
+        color: #8e97ac;
+        background: #f6f8f9;
+        min-width: 220px;
+        padding: 8.5px 15px;
+    }
+}
+
+#propertyform {
+    #geodir_fieldset_details {
+        font-size: 18px;
+        line-height: 1.6;
+        border-bottom: 2px solid #22b5ce;
+        display: inline-block;
+    }
+    #geodir_post_mapview_row {
+        .geodir_user_define {
+            width: 100%;
+            display: inline-block;
+        }
+    }
+    #geodir_post_address_row {
+        #post_address {
+            &:focus {
+                + .gd-input-group-addon {
+                    border-color: #22b5ce;
+                    i {
+                        color: #22b5ce;
+                    }
+                }
+            }
+        }
+        .gd-input-group {
+            position: relative;
+            width: 100%;
+            .gd-input-group-addon {
+                height: 34px;
+                width: 35px;
+                text-align: center;
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                z-index: 4;
+                i {
+                    width: 100%;
+                    &:hover {
+                        color: #22b5ce;
+                    }
+                }
+            }
+        }
+    }
+    #geodir_form_title_row {
+        border-bottom: 0;
+        small {
+            color: #999;
+            font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            display: block;
+            &:first-of-type {
+                margin-top: 15px;
+            }
+        }
+    }
+    #post_imagesdropbox {
+        width: 100%;
+        background: #f7f8fa;
+        border: 1px solid #f1f1f1!important;
+        color: #b3b9c0;
+        border-radius: 4px;
+        h4 {
+            margin-top: 20px;
+        }
+        #post_imagesplupload-browse-button,
+        #upload-msg {
+            margin-bottom: 20px;
+        }
+    }
+    #geodir_accept_term_condition_row {
+        label {
+            display: none;
+        }
+        .geodir_taxonomy_field {
+            #geodir_accept_term_condition {
+                position: relative;
+                top: 2.5px;
+            }
+        }
+    }
+    #geodir-add-listing-submit {
+        .geodir_button {
+            float: left;
+        }
+    }
+    .geodir_form_row {
+        padding: 0;
+        margin-bottom: 15px;
+        .geodir_textfield,
+        .geodir_textarea,
+        .chosen-search input[type="text"],
+        #geodir_post_address_row #post_address {
+            width: 100%;
+            background: #f7f8fa;
+            border: 1px solid #f1f1f1;
+            color: #b3b9c0;
+            border-radius: 4px;
+            box-shadow: none;
+            &:focus {
+                border-color: #22b5ce;
+                box-shadow: none;
+            }
+        }
+        #gd_placecategory {
+            min-width: 100%;
+        }
+        .geodir-chosen-container {
+            .chosen-single {
+                color: #8e97ac;
+                background: #f6f8f9;
+                border: 1px solid #f1f1f1;
+                height: auto;
+                width: 100%;
+                padding: 8.5px 15px;
+                box-shadow: none;
+                div b {
+                    @extend .themepack_font_awesome_after;
+                    background: none;
+                    text-align: center;
+                    position: relative;
+                    right: 7.5px;
+
+                    &:after {
+                        content: "\f078";
+                        font-size: 12px;
+                        position: relative;
+                        top: 7.5px;
+                    }
+                }
+            }
+            .chosen-search {
+                @extend .themepack_font_awesome_after;
+                position: relative;
+                &:after {
+                    content: "\f002";
+                    font-size: 12px;
+                    position: absolute;
+                    top: 8.5px;
+                    right: 10px;
+                }
+            }
+            .chosen-drop {
+                margin-top: -3px;
+                border: 1px solid #22b5ce;
+                background: #f6f8f9;
+                border-top: none;
+                width: 100.25%;
+                margin-left: -0.5px;
+            }
+            .chosen-results li{
+                &.highlighted {
+                    background: #22b5ce
+                }
+            }
+        }
+        .geodir-chosen-container-active {
+            border: 1px solid #22b5ce;
+            border-radius: 6px;
+            .chosen-single {
+                div b {
+                    &:after {
+                        content: "\f077";
+                    }
+                }
+            }
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            span {
+                color: #22b5ce;
+            }
+        }
+        label,
+        .geodir_message_error,
+        .geodir_message_note {
+            width: 100%;
+            padding-left: 0;
+            text-align: left;
+            float: none;
+        }
+        .geodir_message_error,
+        .geodir_message_note {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+#geodir-wrapper {
+    padding: 0 15px 80px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+}
+// GeoDirectory Flex Slider Container
+.geodir_flex-container {
+    .geodir_flexslider {
+        box-shadow: none;
+        border: 1px solid #eee;
+        &#geodir_slider {
+            padding-bottom: 7.5px;
+        }
+        &#geodir_carousel {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            overflow: hidden;
+            li {
+                border: none;
+                border-right: 1px solid #eee;
+                &:last-of-type {
+                    border-right: 0;
+                }
+            }
+        } // #geodir_carousel
+    }
+}
+
+
+// List Layout
+.geodir_category_list_view {
+    .geodir_Star {
+        img {
+
+        }
+    }
+}
+#geodir-main-content {
+    .geodir_category_list_view {
+        padding-left: 0;
+        li {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            h3 a {
+                color: #444;
+                font-weight: 600;
+                font-size: 15px;
+                text-transform: capitalize;
+            }
+            .geodir-entry-content {
+                p {
+                    font-size: 14px;
+                }
+            }
+            .geodir-addinfo {
+                a {
+                    font-size: 14px;
+                }
+                .geodir-pinpoint {
+                    min-width: 20px;
+                    min-height: 20px;
+                }
+                .geodir-addtofav a {
+                    i {
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                }
+                .geodir-pcomments {
+                    i {
+                        font-size: 16px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

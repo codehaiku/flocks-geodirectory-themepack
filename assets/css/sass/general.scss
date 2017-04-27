@@ -1,0 +1,19 @@
+.themepack_font_awesome_before {
+    &:before {
+        @include font_awesome('');
+    }
+}
+.themepack_font_awesome_after {
+    &:after {
+        @include font_awesome('');
+    }
+}
+
+.geodir-breadcrumb {
+    #breadcrumbs {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 0;
+        display: inline-block;
+    }
+}

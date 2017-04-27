@@ -1,0 +1,18 @@
+@mixin font_awesome($font_awesome_name) {
+
+    content: $font_awesome_name;
+
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}

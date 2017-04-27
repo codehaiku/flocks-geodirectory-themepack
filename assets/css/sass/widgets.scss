@@ -1,0 +1,118 @@
+#geodir-sidebar {
+    .geodir-sidebar-wrap {
+        .geodir-company_info {
+            background: #f6f8f9;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border: none;
+        }
+    }
+}
+.geodir-sidebar-wrap {
+    // Widget Social Buttons
+    .likethis {
+        padding: 5px 0;
+        line-height: 0;
+        display: inline-block;
+        vertical-align: middle;
+        iframe {
+            &.facebook,
+            &.twitter-share-button {
+                max-width: 60px;
+            }
+        }
+
+        div {
+            max-width: 60px;
+        }
+    }
+    .geodir-details-sidebar-google-analytics {
+        #ga_stats {
+            width: 100%;
+            display: inline-block;
+            #ga-analytics-title {
+                margin-bottom: 15px;
+            }
+
+            #gd-active-users-container {
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .geodir-details-sidebar-listing-info {
+        .geodir-i-location,
+        .geodir-i-contact,
+        .geodir-i-email,
+        .geodir-i-website {
+            padding-left: 22px;
+            display: inline-block;
+            position: relative;
+            i.fa {
+                font-size: 15px;
+                margin-right: 5px;
+                position: absolute;
+                top: 1.5px;
+                left: 2.5px;
+            }
+        }
+        .geodir-i-location {
+            i.fa {
+                &:before {
+                    content: "\f041";
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        span[itemprop="streetAddress"] {
+            display: inline-block;
+            margin-bottom: 10px;
+            ~ span {
+                display: inline-block;
+                margin-bottom: 10px;
+                padding-left: 22px;
+                position: relative;
+                @extend .themepack_font_awesome_before;
+                &:before {
+                    font-size: 15px;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+            ~ span[itemprop="addressLocality"] {
+                &:before {
+                    content: "\f015";
+                }
+            }
+            ~ span[itemprop="addressRegion"] {
+                &:before {
+                    content: "\f277";
+                }
+            }
+            ~ span[itemprop="postalCode"] {
+                &:before {
+                    content: "\f276";
+                    left: 3.5px;
+                }
+            }
+            ~ span[itemprop="addressCountry"] {
+                margin-bottom: 0;
+                &:before {
+                    content: "\f0ac";
+                }
+            }
+        }
+    }
+    .geodir_popular_post_view {
+        
+    }
+}
+#content {
+    .geodir_full_page  {
+        .geodir-category-list-in {
+            margin-top: 0;
+        }
+    }
+}
