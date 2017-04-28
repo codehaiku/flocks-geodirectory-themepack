@@ -16,9 +16,38 @@
 .geodir_flex-container {
     .geodir_flexslider {
         box-shadow: none;
-        border: 1px solid #eee;
+        border: none;
         &#geodir_slider {
             padding-bottom: 7.5px;
+            li {
+                background: #000;
+            }
+        }
+        .geodir-direction-nav {
+            li {
+                a {
+                    background: none;
+                    text-indent: inherit;
+                    font-size: 0;
+                    @extend .themepack_font_awesome_before;
+                    &:before {
+                        font-size: 30px;
+                        color: #fff;
+                    }
+                }
+                .geodir-prev {
+                    left: 15px;
+                    &:before {
+                        content: "\f137";
+                    }
+                }
+                .geodir-next {
+                    right: 15px;
+                    &:before {
+                        content: "\f138";
+                    }
+                }
+            }
         }
         &#geodir_carousel {
             border-top-left-radius: 0;
@@ -49,7 +78,33 @@
         padding-left: 0;
         li {
             border-bottom: 1px solid #eee;
-            padding: 15px 0;
+            padding: 15px 0 30px;
+
+            &.geodir-gridview {
+                padding: 0 0 30px;
+                .geodir-content {
+                    margin-bottom: 15px;
+                }
+                .geodir-post-img {
+                    margin-bottom: 15px;
+                }
+                .geodir-post-img,
+                .geodir-addinfo {
+                    top: auto;
+                }
+            }
+
+            .geodir-post-img,
+            .geodir-addinfo {
+                position: relative;
+                top: 8px;
+            }
+            .geodir-post-img {
+                .geodir_thumbnail {
+                    min-width: 100%;
+                    margin: 0;
+                }
+            }
             h3 a {
                 color: #444;
                 font-weight: 600;
@@ -59,6 +114,22 @@
             .geodir-entry-content {
                 p {
                     font-size: 14px;
+                    position: relative;
+                    padding-bottom: 40px;
+                    line-height: inherit;
+                    a:last-of-type {
+                        color: #fff;
+                        background-color: #22b5ce;
+                        text-transform: capitalize;
+                        padding: 5px 10px;
+                        border: 0 none;
+                        border-radius: 4px;
+                        display: inline-block;
+                        cursor: pointer;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
                 }
             }
             .geodir-addinfo {
@@ -82,6 +153,160 @@
                     }
                 }
             }
+        }
+    }
+}
+.gd-navi {
+    display: inline-block;
+    .on,
+    > a {
+        color: #444;
+        background: #f5f8f9;
+        font-size: 16px;
+        font-weight: 600;
+        border: 1px solid #ebebeb;
+        padding: 10.015px 16px;
+        margin: 0 5px;
+        position: relative;
+        top: 10.5px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-user-select: none;
+        text-align: center;
+    }
+    .on,
+    > a:hover {
+        color: #fff;
+        background-color: #22b5ce;
+        border-color: transparent;
+    }
+    > a strong {
+        font-size: 0;
+        @extend .themepack_font_awesome_before;
+        &:before,
+        &:after {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    > a:first-of-type strong {
+        &:before {
+            content: "\f104";
+        }
+    }
+    > a:last-of-type strong {
+        &:before {
+            content: "\f105";
+        }
+    }
+}
+
+// Tabs
+dl.geodir-tab-head dd a {
+    border: 1px solid #eee;
+    border-right: none;
+}
+.geodir-tabs {
+    margin-top: 55px;
+    dl.geodir-tab-head {
+        dd {
+            margin-top: -47px;
+            background: #fff;
+        }
+    }
+    ul.geodir-tabs-content {
+        border: 1px solid #eee;
+        border-top: none;
+        &.entry-content {
+            > li {
+                width: 100%;
+                margin: 0;
+                padding: 15px;
+                .geodir_map_container {
+                    margin-bottom: 0;
+                    .map_background {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        #post_imagesTab {
+            #geodir-post-gallery a {
+                margin-right: 1.30%;
+                border: none;
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+                .geodir_thumbnail {
+                    min-width: 100%;
+                    margin: 0;
+                    border: none;
+                }
+            }
+        }
+        #post_mapTab {
+            .geodir_map_container {
+                .gd-get-directions {
+                    input[type="text"] {
+                        &:focus {
+                            box-shadow: none;
+                            + .gd-map-mylocation {
+                                border-color: #22b5ce;
+                            }
+                        }
+                    }
+                    .gd-map-mylocation {
+                        &:hover {
+                            i:before {
+                                color: #22b5ce;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Jquery Lightbox
+#lightbox-container-image-box {
+    #lightbox-container-image {
+        background: #fff;
+        padding: 5px 5px 45px;
+        #lightbox-image {
+            border-bottom: 5px solid #FFF;
+            min-width: 100%;
+        }
+        #lightbox-nav-btnPrev,
+        #lightbox-nav-btnNext {
+            background-position-y: 50%!important;
+        }
+    }
+}
+#lightbox-container-image-data-box {
+    position: relative;
+    overflow: visible;
+    #lightbox-secNav-btnClose {
+        background: #F44336;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+        @extend .themepack_font_awesome_before;
+        &:hover {
+            opacity: 0.85;
+        }
+        &:before {
+            content: "\f00d";
+            color: #fff;
+            position: relative;
+            top: 5.5px;
+        }
+        img {
+            display: none;
         }
     }
 }

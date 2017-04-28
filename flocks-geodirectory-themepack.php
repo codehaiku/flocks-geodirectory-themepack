@@ -1,7 +1,9 @@
 <?php
 /**
  * Plugin Name: Flocks GeoDirectory Themepack
+ * Plugin URI: http://themeforest.net/user/dunhakdis
  * Description: A third party plugin for Flocks WordPress theme that will add style to the 'GeoDirectory – Directory Plugin.'
+ * Version: 1.0
  * Author: Dunhakdis
  * Author URI: https://dunhakdis.com/
  * Text Domain: flocks-geodirectory-themepack

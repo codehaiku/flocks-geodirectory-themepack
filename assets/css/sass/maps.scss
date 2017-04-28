@@ -1,0 +1,76 @@
+.geodir_map_container {
+    min-width: 100%;
+    .main_map_wrapper {
+        min-width: 100%;
+        .advmap_notloaded,
+        .advmap_nofound {
+            width: 100%;
+            left: auto;
+            background: #ffffff;
+            border: none;
+            border-left: 5px solid #EF5350;
+                color: #EF5350;
+            h3 {
+                color: #999999;
+                margin-bottom: 10px!important;
+            }
+            p {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+
+    // Map Category Filter button
+    .gd-trigger {
+        background: #22b5ce;
+        &.gd-triggeron {
+
+        }
+        &.gd-triggeroff {
+
+        }
+    }
+
+    // Full Screen button
+    &.geodir-map-full .map_background {
+        .triggermap {
+            background: rgba(0, 0, 0, 0.45);
+            padding: 5px 8.5px;
+            font-size: 15px;
+            top: 10px;
+            left: 10px;
+            &:hover {
+                font-size: 15px;
+            }
+        }
+    }
+}
+.gd-map-osm {
+    .advmap_notloaded {
+        width: 100%;
+        left: auto;
+        background: #ffffff;
+        border: none;
+        border-left: 5px solid #EF5350;
+        color: #EF5350;
+    }
+}
+
+
+// Full Screen Map
+.body_fullscreen {
+    .stick_trigger_container {
+        position: absolute;
+    }
+    .geodir_map_container.geodir_map_container_fullscreen {
+        .map_background .TopLeft {
+            bottom: 0px;
+        }
+        .triggermap_fullscreen {
+            top: auto !important;
+            bottom: 30px;
+            left: 10px !important;
+        }
+    }
+}

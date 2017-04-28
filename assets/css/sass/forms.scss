@@ -16,6 +16,113 @@
     }
 }
 
+// text fields
+.flocks-geodirectory-text {
+    width: 100%;
+    background: #f7f8fa;
+    border: 1px solid #f1f1f1;
+    color: #b3b9c0;
+    border-radius: 4px;
+    box-shadow: none;
+    &:focus {
+        border-color: #22b5ce;
+        box-shadow: none;
+    }
+    &::-webkit-input-placeholder {
+       color: #adb5c0;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: #adb5c0;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: #adb5c0;
+    }
+
+    &:-ms-input-placeholder {
+       color: #adb5c0;
+    }
+}
+// DropDown
+.geodir-chosen-container {
+    &.geodir-chosen-container-single {
+        .chosen-single {
+            color: #8e97ac;
+            background: #f6f8f9;
+            border: 1px solid #f1f1f1;
+            height: auto;
+            width: 100%;
+            padding: 8.5px 15px;
+            box-shadow: none;
+            div b {
+                @extend .themepack_font_awesome_after;
+                background: none;
+                text-align: center;
+                position: relative;
+                right: 7.5px;
+
+                &:after {
+                    content: "\f078";
+                    font-size: 12px;
+                    position: relative;
+                    top: 7.5px;
+                }
+            }
+        }
+        .chosen-search {
+            input[type="text"] {
+                width: 100%;
+                background: #f7f8fa;
+                border: 1px solid #f1f1f1;
+                color: #b3b9c0;
+                border-radius: 4px;
+                box-shadow: none;
+                &:focus {
+                    border-color: #22b5ce;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .chosen-search {
+        @extend .themepack_font_awesome_after;
+        position: relative;
+        &:after {
+            content: "\f002";
+            font-size: 12px;
+            position: absolute;
+            top: 8.5px;
+            right: 10px;
+        }
+    }
+
+    .chosen-drop {
+        margin-top: -3px;
+        border: 1px solid #22b5ce;
+        background: #f6f8f9;
+        border-top: none;
+        width: 100.25%;
+        margin-left: -0.5px;
+    }
+    .chosen-results li{
+        &.highlighted {
+            background: #22b5ce
+        }
+    }
+}
+.geodir-chosen-container-active {
+    border: 1px solid #22b5ce;
+    border-radius: 6px;
+    .chosen-single {
+        div b {
+            &:after {
+                content: "\f077";
+            }
+        }
+    }
+}
+// Add Listing form
 #propertyform {
     #geodir_fieldset_details {
         font-size: 18px;
@@ -61,10 +168,10 @@
         }
     }
     #geodir_form_title_row {
+        font-family: inherit;
         border-bottom: 0;
         small {
             color: #999;
-            font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
             font-size: 12px;
             font-weight: normal;
             display: block;
@@ -92,9 +199,11 @@
             display: none;
         }
         .geodir_taxonomy_field {
+            min-width: 100%;
             #geodir_accept_term_condition {
                 position: relative;
-                top: 2.5px;
+                top: 1.5px;
+                margin-right: 5px;
             }
         }
     }
@@ -110,79 +219,10 @@
         .geodir_textarea,
         .chosen-search input[type="text"],
         #geodir_post_address_row #post_address {
-            width: 100%;
-            background: #f7f8fa;
-            border: 1px solid #f1f1f1;
-            color: #b3b9c0;
-            border-radius: 4px;
-            box-shadow: none;
-            &:focus {
-                border-color: #22b5ce;
-                box-shadow: none;
-            }
+            @extend .flocks-geodirectory-text;
         }
         #gd_placecategory {
             min-width: 100%;
-        }
-        .geodir-chosen-container {
-            .chosen-single {
-                color: #8e97ac;
-                background: #f6f8f9;
-                border: 1px solid #f1f1f1;
-                height: auto;
-                width: 100%;
-                padding: 8.5px 15px;
-                box-shadow: none;
-                div b {
-                    @extend .themepack_font_awesome_after;
-                    background: none;
-                    text-align: center;
-                    position: relative;
-                    right: 7.5px;
-
-                    &:after {
-                        content: "\f078";
-                        font-size: 12px;
-                        position: relative;
-                        top: 7.5px;
-                    }
-                }
-            }
-            .chosen-search {
-                @extend .themepack_font_awesome_after;
-                position: relative;
-                &:after {
-                    content: "\f002";
-                    font-size: 12px;
-                    position: absolute;
-                    top: 8.5px;
-                    right: 10px;
-                }
-            }
-            .chosen-drop {
-                margin-top: -3px;
-                border: 1px solid #22b5ce;
-                background: #f6f8f9;
-                border-top: none;
-                width: 100.25%;
-                margin-left: -0.5px;
-            }
-            .chosen-results li{
-                &.highlighted {
-                    background: #22b5ce
-                }
-            }
-        }
-        .geodir-chosen-container-active {
-            border: 1px solid #22b5ce;
-            border-radius: 6px;
-            .chosen-single {
-                div b {
-                    &:after {
-                        content: "\f077";
-                    }
-                }
-            }
         }
 
         label {
