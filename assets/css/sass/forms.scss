@@ -44,6 +44,16 @@
        color: #adb5c0;
     }
 }
+// Button
+.flocks-geodirectory-button {
+    background-color: #22b5ce;
+    border: 0 none;
+    padding: 5px 10px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
 // DropDown
 .geodir-chosen-container {
     &.geodir-chosen-container-single {
@@ -153,15 +163,21 @@
             .gd-input-group-addon {
                 height: 34px;
                 width: 35px;
+                background: #22b5ce;
+                border: none;
                 text-align: center;
                 display: inline-block;
                 position: absolute;
                 right: 0;
                 z-index: 4;
+                &:hover {
+                    opacity: 0.84;
+                }
                 i {
                     width: 100%;
-                    &:hover {
-                        color: #22b5ce;
+                    color: #fff;
+                    &:before {
+                        color: #fff;
                     }
                 }
             }

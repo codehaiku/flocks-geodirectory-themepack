@@ -179,7 +179,11 @@ body .geodir-widget {
         }
         .geodir-chosen-container {
             &.geodir-chosen-container-single {
+                .chosen-single {
+                    background: #fff;
+                }
                 .chosen-drop {
+                    background: #fff;
                     margin-left: -0.75px;
                 }
             }
@@ -198,10 +202,16 @@ body .geodir-widget {
                     background: none;
                     border: none;
                     .geodir-search {
+                        .gd-search-input-wrapper {
+                            @media(max-width: 480px) {
+                                width: 100%!important;
+                            }
+                        }
                         select,
                         input[type=text],
                         input[type=text].ac_input {
                             border-radius: 0;
+                            border: 1px solid #e1e1e1;
                             &:focus {
                                 border-color: #22b5ce;
                             }
@@ -242,6 +252,9 @@ body .geodir-widget {
                 li {
                     width: 18%;
                     padding: 10px 0;
+                    @media(max-width: 480px) {
+                        font-size: 14px;
+                    }
                     a {
                         width: 100%;
                         display: inline-block;
@@ -286,12 +299,403 @@ body .geodir-widget {
             }
         }
     }
+
+    // CPT Categories Widget
+    &.geodir_cpt_categories_widget {
+        .gd-cptcat-row {
+            width: 100%;
+        }
+        .gd-cptcat-title {
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        ul {
+            padding-left: 0;
+            li {
+                list-style: none;
+                display: inline-block;
+                vertical-align: top;
+                width: 100%;
+                h3 {
+                    font-size: 14px;
+                    font-weight: normal;
+                    line-height: inherit;
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        position: relative;
+                        line-height: inherit;
+                        padding-left:  22px;
+                    }
+                    img {
+                        width: 16px;
+                        position: absolute;
+                        left: 0;
+                    }
+                    .gd-cptcat-count {
+                        color: inherit;
+                        line-height: inherit;
+                        position: relative;
+                        top: 2.5px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #content {
+
+    // Top & Bottom GeoDirectory Sidebars
     .geodir_full_page  {
         .geodir-category-list-in {
             margin-top: 0;
+        }
+
+        // CPT Categories Widget
+        .geodir_cpt_categories_widget {
+            ul {
+                width: 18%;
+                padding: 10px 0;
+                margin: 0 2% 0 0;
+                display: inline-block;
+                @media(max-width: 768px) {
+                    width: 30%;
+                }
+                @media(max-width: 480px) {
+                    width: 48%;
+                }
+                @media(max-width: 375px) {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        //  Features Widget
+        .widget_gd_features {
+            .gd-features {
+                li {
+                    width: 15.6666667%;
+                    margin-right: 1.20%;
+                    display: inline-block;
+                    vertical-align: top;
+                    float: none;
+                    @media(max-width: 992px) {
+                        width: 24%;
+                        &:nth-child(4n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(max-width: 768px) {
+                        width: 32%;
+                        margin-right: 2%;
+                        &:nth-child(3n) {
+                            margin-right: 0;
+                        }
+                        &:nth-child(3n+1),
+                        &:nth-child(3n+2) {
+                            margin-right: 2%;
+                        }
+                    }
+                    @media(max-width: 480px) {
+                        width: 100%;
+                        margin-right: 0;
+                        &:nth-child(3n+1),
+                        &:nth-child(3n+2) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media(min-width: 992px) {
+                        &:nth-child(6n) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Popular Post Category
+        .geodir_popular_post_category {
+            .geodir-category-list-in {
+                ul {
+                    li {
+                        @media(max-width: 768px) {
+                            width: 30%;
+                        }
+                        @media(max-width: 480px) {
+                            width: 48%;
+                        }
+                        @media(max-width: 375px) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Left & Right GeoDirectory Sidebars
+    .geodir-listings-sidebar-left,
+    .geodir-listings-sidebar-right {
+        @media (min-width: 1200px) {
+            max-width: 25%;
+        }
+    }
+}
+
+section.widget {
+    margin-bottom: 30px;
+}
+.widget {
+    &.widget_gd_features {
+        .gd-features {
+            padding-left: 0;
+            li {
+                width: 100%;
+                padding: 0;
+                border-radius: 6px;
+                border: 1px solid #fff;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                &:hover {
+                    .gd-fe-title,
+                    .gd-fe-desc {
+                        color: #fff;
+                        background: #22b5ce;
+                    }
+                }
+                .gd-fe-title,
+                .gd-fe-desc {
+                    color: #7F8D95;
+                    background: #E7EBED;
+                    margin: 0;
+                    padding: 15px;
+                }
+                .gd-fe-title {
+                    font-size: 14px;
+                    @extend .flocks-geodirectory-body-font;
+                    text-transform: capitalize;
+                    border-bottom: 1px solid #fff;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                }
+                .gd-fe-image {
+                    background: #eee;
+                    max-height: 160px;
+                    overflow: hidden;
+                    i {
+                        width: 100%;
+                        color: #fff;
+                        padding: 20px;
+                        line-height: inherit;
+                    }
+                }
+                .gd-fe-desc {
+                    border-top: 1px solid #fff;
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+            }
+        }
+    }
+
+    // Best Of Widget
+    &.geodir_bestof_widget {
+        .geodir-tabs {
+            margin-top: 0;
+        }
+        .bestof-cat-icon {
+            width: 25px;
+        }
+        .geo-bestof-contentwrap {
+            border: none;
+        }
+        #geodir-bestof-places {
+            padding: 0;
+            .bestof-cat-title {
+                font-size: 18px;
+                margin: 35px 0 10px;
+                display: inline-block;
+                line-height: initial;
+                width: 100%;
+                @media(max-width: 480px) {
+                    margin: 10px 0 0;
+                }
+                a {
+                    font-weight: normal;
+                    line-height: initial;
+                    font-size: 14px;
+                    position: relative;
+                    top: -1.5px;
+                    @extend .flocks-geodirectory-button;
+                }
+            }
+        }
+        dl.geodir-tab-head {
+            border: none;
+            dd {
+                height: 60px;
+                background: none;
+                margin-right: 7.5px;
+                border: none;
+                &:hover,
+                &.geodir-tab-active {
+                    a {
+                        background: #22b5ce;
+                        border-color: #22b5ce;
+                        span {
+                            color: #fff;
+                            small {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                a {
+                    height: 60px;
+                    border: 1px solid #e1e1e1;
+                    border-radius: 6px;
+                    span {
+                        color: #777;
+                        font-size: 14px;
+                        padding: 0;
+                        margin-bottom: 5px;
+                        small {
+                            color: #777;
+                            width: 100%;
+                            font-size: 12px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .geodir_category_list_view {
+        padding: 0;
+        li {
+            border: none;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            .geodir-post-img {
+                padding: 0;
+                position: relative;
+                top: 7.5px;
+            }
+            .geodir_thumbnail {
+                min-width: 100%;
+                margin: 0;
+            }
+            .geodir-entry-title {
+                a {
+                    color: #444;
+                    font-weight: 600;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                }
+            }
+            .geodir-entry-content {
+                @media(max-width: 480px) {
+                    margin-bottom: 15px;
+                }
+            }
+            .geodir-content{
+                p {
+                    font-size: 14px;
+                    padding-bottom: 25px;
+                    line-height: inherit;
+                    position: relative;
+                    .excerpt-read-more {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            .geodir-addinfo {
+                .geodir-pcomments,
+                .geodir-addtofav {
+                    width: 100%;
+                    font-size: 14px;
+                    padding: 0;
+                    margin: 10px 0;
+                    display: inline-block;
+                    i {
+                        font-size: 18px;
+                        margin-right: 5px;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Best Of Widget
+dl.geodir-tab-head {
+    border-bottom: 1px solid #eee;
+    margin-bottom: -1px;
+}
+.bestof-tabs-on-top,
+.bestof-tabs-on-left,
+.bestof-tabs-as-dropdown {
+    section.widget.geodir_bestof_widget {
+        background: #f6f8f9;
+        padding: 15px 20px;
+        margin-bottom: 30px;
+    }
+}
+.bestof-tabs-on-top {
+    .geodir_bestof_widget {
+        .geodir-tabs {
+            margin-top: 90px;
+        }
+        .geodir-chosen-container {
+            position: relative;
+            top: -75px;
+            max-width: 250px;
+        }
+    }
+    .geodir-tabs dl.geodir-tab-head dd {
+        @media(max-width: 1060px) {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+.bestof-tabs-on-left {
+    .geodir_bestof_widget {
+        .geodir-tabs {
+            margin-top: 0;
+            dl.geodir-tab-head dd {
+                margin-top: 0;
+                margin-bottom: 2.5px;
+            }
+        }
+        #geodir-bestof-places {
+            padding-left: 15px;
+            @media(max-width: 660px) {
+                padding-left: 0;
+                margin: 80px 0 0;
+            }
+            .bestof-cat-title {
+                margin: 0 0 40px;
+                @media(max-width: 660px) {
+                    margin: 0 0 30px;
+                }
+            }
+        }
+    }
+}
+.bestof-tabs-as-dropdown {
+    .geodir_bestof_widget {
+        .geodir-tabs {
+            margin-bottom: 25px;
         }
     }
 }

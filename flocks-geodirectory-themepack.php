@@ -28,6 +28,11 @@ add_action( 'wp_enqueue_scripts', 'flocks_geodirectory_themepack_enqueue_scripts
 
 
 function flocks_geodirectory_home_map() {
-    the_widget( 'geodir_homepage_map' );
+    if (is_page(geodir_home_page_id())) {
+        echo '<div class="flocks-home-map-container">';
+            echo do_shortcode( '[gd_homepage_map width=100% height=425 scrollwheel=false]' );
+            echo do_shortcode( '[gd_advanced_search]' );
+        echo '</div>';
+    }
 }
-// add_action('geodir_wrapper_open', 'flocks_geodirectory_home_map');
+add_action('geodir_wrapper_open', 'flocks_geodirectory_home_map');
