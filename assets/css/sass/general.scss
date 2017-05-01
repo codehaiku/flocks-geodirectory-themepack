@@ -17,3 +17,26 @@
         display: inline-block;
     }
 }
+
+
+
+.flocks-gd-cover-image {
+    .geodir-breadcrumb {
+        margin: 3.5em auto 0;
+        padding: 0;
+        position: relative;
+        z-index: 2;
+        ul {
+            li {
+                color: #fff;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &#cover-image {
+        h1.entry-title {
+            margin-top: 1em;
+        }
+    }
+}

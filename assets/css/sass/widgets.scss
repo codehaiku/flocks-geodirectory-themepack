@@ -65,20 +65,20 @@
                 margin-bottom: 0;
             }
         }
-
-        .geodir-i-location,
-        .geodir_timing,
-        .geodir-i-contact,
-        .geodir-i-email,
-        .geodir-i-website {
+        .geodir_more_info {
             padding-left: 25px;
             display: inline-block;
             position: relative;
+            width: 100%;
+            &.gd_placecategory,
+            &.post_address {
+                padding-left: 0;
+            }
             i.fa {
                 font-size: 15px;
                 margin-right: 5px;
                 position: absolute;
-                top: 1.5px;
+                top: 5.5px;
                 left: 2.5px;
             }
         }

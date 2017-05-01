@@ -49,6 +49,23 @@
   display: inline-block;
 }
 
+.flocks-gd-cover-image .geodir-breadcrumb {
+  margin: 3.5em auto 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.flocks-gd-cover-image .geodir-breadcrumb ul li {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.flocks-gd-cover-image#cover-image h1.entry-title {
+  margin-top: 1em;
+}
+
 .geodir-list-view-select {
   position: relative;
 }
@@ -338,7 +355,7 @@
 }
 
 #geodir-wrapper {
-  padding: 0 15px 80px;
+  padding: 80px 15px 40px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -974,25 +991,22 @@ dl.geodir-tab-head dd a {
   margin-bottom: 0;
 }
 
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-location,
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_timing,
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-contact,
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-email,
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-website {
+.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info {
   padding-left: 25px;
   display: inline-block;
   position: relative;
+  width: 100%;
 }
 
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-location i.fa,
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_timing i.fa,
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-contact i.fa,
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-email i.fa,
-.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-website i.fa {
+.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info.gd_placecategory, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info.post_address {
+  padding-left: 0;
+}
+
+.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info i.fa {
   font-size: 15px;
   margin-right: 5px;
   position: absolute;
-  top: 1.5px;
+  top: 5.5px;
   left: 2.5px;
 }
 
