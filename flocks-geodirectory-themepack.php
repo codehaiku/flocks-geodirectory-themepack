@@ -53,20 +53,40 @@ function flocks_geodirectory_action_calls()
 }
 
 
-add_action('geodir_wrapper_open', 'flocks_geodirectory_home_map');
+add_action('geodir_wrapper_open', 'flocks_geodirectory_home_header');
 /**
  * Adds [gd_homepage_map] and [gd_advanced_search] shortcode in the GD Home page.
  *
  * @since 1.0.0
  * @package Flocks GeoDirectory Themepack
  */
-function flocks_geodirectory_home_map() {
-    if (is_page(geodir_home_page_id())) {
-        echo '<div class="flocks-home-map-container">';
-            echo do_shortcode( '[gd_homepage_map width=100% height=425 scrollwheel=false]' );
-            echo do_shortcode( '[gd_advanced_search]' );
-        echo '</div>';
-    }
+function flocks_geodirectory_home_header() {
+    $enable_gd_home_header = apply_filters('flocks_enable_gd_home_header', true);
+    $enable_map = apply_filters('flocks_enable_gd_home_map', true);
+    $map_atts = apply_filters('flocks_gd_home_map_atts', 'width=100% height=425 maptype="ROADMAP" scrollwheel=false');
+    $enable_search = apply_filters('flocks_enable_gd_home_search', true);
+
+    if (is_page(geodir_home_page_id()) && $enable_gd_home_header) { ?>
+        <div class="flocks-home-map-container">
+
+            <?php do_action('flocks_before_gd_home_map_content'); ?>
+
+            <?php if ($enable_map) { ?>
+
+                <?php echo do_shortcode( '[gd_homepage_map ' . $map_atts . ' ]' ); ?>
+
+            <?php } ?>
+
+            <?php if ($enable_search) { ?>
+
+                <?php echo do_shortcode( '[gd_advanced_search]' ); ?>
+
+            <?php } ?>
+
+            <?php do_action('flocks_after_gd_home_map_content'); ?>
+
+        </div>
+    <?php }
 }
 
 
@@ -85,6 +105,22 @@ function flocks_change_gd_breadcrumb_separator($separator)
         $separator .= ' / ';
     $separator .= '</span>';
     return $separator;
+}
+
+
+add_filter('geodir_comment_avatar_size', 'flocks_change_gd_comment_avatar_size');
+/**
+ * change the gd breadcrumb separator.
+ *
+ * @since 1.0.0
+ * @package Flocks GeoDirectory Themepack
+ * @param string $separator The breadcrumb separator HTML.
+ * @return string Modified breadcrumb separator HTML.
+ */
+function flocks_change_gd_comment_avatar_size()
+{
+    $comment_avatar_size  = 125;
+    return $comment_avatar_size;
 }
 
 

@@ -85,7 +85,7 @@
 #geodir-main-content {
     .geodir_category_list_view {
         padding-left: 0;
-        li {
+        > li {
             border-bottom: 1px solid #eee;
             padding: 15px 0 30px;
 
@@ -399,10 +399,10 @@ dl.geodir-tab-head dd a {
 }
 
 .geodir-tabs {
-    margin-top: 55px;
+    margin-top: 15px;
     dl.geodir-tab-head {
         dd {
-            margin-top: -47px;
+            margin-top: 0;
             background: #fff;
         }
     }
@@ -491,8 +491,178 @@ dl.geodir-tab-head dd a {
                 }
             }
         }
+        #post_videoTab {
+            #post_video-wrap {
+                padding: 0;
+                height: auto;
+                p {
+                    margin-bottom: 0;
+
+                    iframe {
+                        height: auto;
+                        min-height: 450px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+    .geodir-company_info {
+        border: 1px #eee solid;
+    }
+    .geodir-category-listing,
+    .geodir-company_info {
+
+        .geodir_more_info {
+            display: inline-block;
+            width: 100%;
+            &:last-of-type {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+        }
     }
 }
+
+.fieldset-separator {
+    font-size: 15px;
+    padding-bottom: 10px;
+    margin: 25px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.geodir-category-listing,
+.geodir-tabs ul > li,
+.geodir-tabs .geodir-category-listing,
+.geodir-tabs .geodir-company_info {
+    .geodir_more_info {
+        width: 100%;
+        font-size: 14px;
+        line-height: inherit;
+        display: inline-block;
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+        &.post_address,
+        &.geodir_twitterusername {
+            padding-left: 0;
+        }
+        &.gd_placecategory {
+            width: 100%;
+            display: inline-block;
+        }
+        &.geodir_timing {
+            padding-left: 25px;
+            .geodir-i-time {
+                width: 100%;
+                display: inline-block;
+                position: relative;
+                left: -25px;
+            }
+        }
+        &.geodir_property_features_checkbox {
+            padding-left: 25px;
+            .geodir-i-select {
+                width: 100%;
+                display: inline-block;
+                position: relative;
+                left: -25px;
+            }
+            ul {
+                padding-left: 0;
+                margin-bottom: 0;
+                li {
+                    padding: 0 0 0 17.5px;
+                    border-bottom: none;
+                    list-style: none;
+                    position: relative;
+                    @extend .themepack_font_awesome_before;
+                    &:before {
+                        content: "\f111";
+                        font-size: 8px;
+                        position: absolute;
+                        top: 5.5px;
+                        left: 1.5px;
+                    }
+                }
+            }
+        }
+        &.geodir-custom-file-box {
+            border-bottom: none;
+            i.fa {
+                float: left;
+            }
+            .geodir-custom-post-gallery {
+                width: 100%;
+                margin: 15px 0 0;
+                border: 1px #eee solid;
+            }
+        }
+        i.fa {
+            width: 15px;
+            font-size: 15px;
+            margin-right: 10px;
+        }
+        > p {
+            padding-left: 25px;
+        }
+        &.post_address {
+            span {
+                width: 100%;
+                display: inline-block;
+                margin-bottom: 10px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.geodir-category-listing .geodir-i-location,
+.geodir-tabs .geodir-i-location {
+
+    ~ span {
+        padding-left: 22px;
+        position: relative;
+        @extend .themepack_font_awesome_before;
+        &:before {
+            font-size: 15px;
+            position: absolute;
+            left: 0;
+        }
+    }
+    ~ span[itemprop="streetAddress"] {
+        &:before {
+            content: "\f041";
+            left: 3.5px;
+        }
+    }
+    ~ span[itemprop="addressLocality"] {
+        &:before {
+            content: "\f2bc";
+        }
+    }
+    ~ span[itemprop="addressRegion"] {
+        &:before {
+            content: "\f277";
+        }
+    }
+    ~ span[itemprop="postalCode"] {
+        &:before {
+            content: "\f276";
+            left: 3.5px;
+        }
+    }
+    ~ span[itemprop="addressCountry"] {
+        &:before {
+            content: "\f0ac";
+        }
+    }
+}
+
+
 
 // Jquery Lightbox
 #lightbox-container-image-box {
@@ -532,6 +702,171 @@ dl.geodir-tab-head dd a {
         }
         img {
             display: none;
+        }
+    }
+}
+
+
+// Review
+#reviewsTab {
+    .comments-area {
+        ol.commentlist {
+            padding-left: 0;
+            margin-bottom: 35px;
+            li {
+                border: none;
+                article {
+                    margin: 0;
+                    padding: 20px 0;
+                    border-bottom: 1px solid #ebebeb;
+                    position: relative;
+                    header,
+                    .comment-content {
+                        width: 100%;
+                        padding-left: 105px;
+                        padding-right: 0;
+                        margin: 0;
+                    }
+                    header {
+                        min-height: 85px;
+                        position: relative;
+                        img {
+                            position: absolute;
+                            width: 85px;
+                            border-radius: 0;
+                        }
+                        cite,
+                        span.item,
+                        > a time {
+                            font-size: 14px;
+                            margin: 0;
+                            display: inline-block;
+                        }
+                        cite {
+                            width: 100%;
+                            margin-bottom: 10px;
+                            span {
+                                background: #22b5ce;
+                                font-size: inherit;
+                                line-height: inherit;
+                                padding: 2.5px 5px 3px;
+                                border: none;
+                                border-radius: 4px;
+                                position: relative;
+                            }
+                        }
+                        span.item {
+                            width: 100%;
+                        }
+                        > a {
+                            color: #8e97ac;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            &:hover {
+                                color: #22b5ce;
+                            }
+                        }
+                    }
+                    .comment-content {
+                        .gd-rating-text {
+                            display: none;
+                        }
+                        .geodir-rating {
+                            position: absolute;
+                            top: 55px;
+                            right: 0;
+                        }
+                    }
+                    .comment-links {
+                        text-align: right;
+                        .edit-link,
+                        .reply {
+                            display: inline-block;
+                            margin: 0;
+                        }
+                        .reply {
+                            a {
+                                @extend .flocks-geodirectory-button;
+                            }
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .children {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+body .simplemodal-container#simplemodal-container {
+    min-width: 450px;
+    height: auto!important;
+    margin-top: 50px;
+
+    .geodir-modal-loading {
+        margin-top: 10px;
+    }
+    a.modalCloseImg {
+        width: 40px;
+        height: 40px;
+        background: none;
+        top: 12.5px;
+        right: 10px;
+        color: #fff;
+        line-height: 45px;
+        text-align: center;
+        @extend .themepack_font_awesome_before;
+        &:before {
+            content: "\f00d";
+        }
+        &:hover {
+            opacity: 0.84;
+        }
+    }
+    .simplemodal-wrap {
+        overflow: visible!important;
+        .simplemodal-data,
+        #basic-modal-content2 {
+            width: 100%;
+            border: none;
+            padding: 0;
+            height: auto;
+            padding-bottom: 15px;
+        }
+        .simplemodal-data {
+            form {
+                padding: 15px;
+                h3 {
+                    color: #fff;
+                    background: #22b5ce;
+                    margin: -15px -15px 15px;
+                    padding: 15px;
+                    @extend .flocks-geodirectory-heading-font;
+                }
+                .row.clearfix {
+                    width: 100%;
+                    margin: 0;
+                    display: inline-block;
+                    clear: none;
+                    input[type=text],
+                    input[type=email],
+                    textarea {
+                        @extend .flocks-geodirectory-text;
+                        @extend .flocks-geodirectory-body-font;
+                    }
+                }
+                .button {
+                    @extend .flocks-geodirectory-button;
+                    display: inline-block;
+                    margin: 10px 0 0;
+                    float: right;
+                }
+            }
         }
     }
 }

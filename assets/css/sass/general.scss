@@ -26,17 +26,25 @@
         padding: 0;
         position: relative;
         z-index: 2;
+        @media(max-width: 1200px) {
+            margin: 2.25em auto 0;
+        }
         ul {
             li {
                 color: #fff;
                 font-size: 14px;
                 text-transform: uppercase;
+                padding: 0;
+                float: none;
             }
         }
     }
     &#cover-image {
         h1.entry-title {
             margin-top: 1em;
+        }
+        .heading-lead {
+            margin-bottom: 25px;
         }
     }
 }

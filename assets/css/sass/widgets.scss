@@ -66,50 +66,83 @@
             }
         }
         .geodir_more_info {
-            padding-left: 25px;
             display: inline-block;
-            position: relative;
             width: 100%;
-            &.gd_placecategory,
-            &.post_address {
+
+            &:last-of-type {
+                padding-bottom: 0;
+            }
+            &.post_address,
+            &.geodir_twitterusername {
                 padding-left: 0;
             }
-            i.fa {
-                font-size: 15px;
-                margin-right: 5px;
-                position: absolute;
-                top: 5.5px;
-                left: 2.5px;
-            }
-        }
-        .geodir-i-location {
-            padding-left: 22px;
-            i.fa {
-                &:before {
-                    content: "\f041";
-                    position: absolute;
-                    left: 0;
-                }
-            }
-        }
-        .geodir-i-email {
-            i.fa {
-                &:before {
-                    font-size: 13px;
-                }
-            }
-        }
-        .geodir_timing {
-            i.fa {
-                top: 7.5px;
-            }
-        }
-        span[itemprop="streetAddress"] {
-            display: inline-block;
-            margin-bottom: 10px;
-            ~ span {
+            &.gd_placecategory {
+                width: 100%;
                 display: inline-block;
-                margin-bottom: 10px;
+            }
+            &.geodir_timing {
+                padding-left: 25px;
+                .geodir-i-time {
+                    width: 100%;
+                    display: inline-block;
+                    position: relative;
+                    left: -25px;
+                }
+            }
+            &.geodir_property_features_checkbox {
+                .geodir-i-select {
+                    width: 100%;
+                    display: inline-block;
+                }
+                ul {
+                    padding-left: 25px;
+                    margin-bottom: 0;
+                    li {
+                        padding-left: 17.5px;
+                        position: relative;
+                        @extend .themepack_font_awesome_before;
+                        &:before {
+                            content: "\f111";
+                            font-size: 8px;
+                            position: absolute;
+                            top: 4.5px;
+                            left: 1.5px;
+                        }
+                    }
+                }
+            }
+            &.geodir-custom-file-box {
+                i.fa {
+                    float: left;
+                }
+                .geodir-custom-post-gallery {
+                    width: 100%;
+                    margin: 15px 0 0;
+                    border: 1px #eee solid;
+                }
+            }
+            i.fa {
+                width: 15px;
+                font-size: 15px;
+                margin-right: 10px;
+            }
+            > p {
+                padding-left: 25px;
+            }
+            &.post_address {
+                span {
+                    width: 100%;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .geodir-i-location {
+            ~ span {
                 padding-left: 22px;
                 position: relative;
                 @extend .themepack_font_awesome_before;
@@ -119,9 +152,15 @@
                     left: 0;
                 }
             }
+            ~ span[itemprop="streetAddress"] {
+                &:before {
+                    content: "\f041";
+                    left: 3.5px;
+                }
+            }
             ~ span[itemprop="addressLocality"] {
                 &:before {
-                    content: "\f015";
+                    content: "\f2bc";
                 }
             }
             ~ span[itemprop="addressRegion"] {
@@ -136,7 +175,6 @@
                 }
             }
             ~ span[itemprop="addressCountry"] {
-                margin-bottom: 0;
                 &:before {
                     content: "\f0ac";
                 }
@@ -188,6 +226,40 @@ body .geodir-widget {
                 }
             }
         }
+        .geodir_form_row {
+            .textfield {
+                @extend .flocks-geodirectory-text;
+                background: #fff;
+            }
+        }
+        p.geodir-new-forgot-link {
+            margin: 0;
+            padding-top: 15px;
+            font-size: inherit;
+            a {
+                width: 100%;
+            }
+        }
+    }
+
+    // Recent Reviews
+    &.geodir_recent_reviews {
+        .geodir_recent_reviews_section {
+            padding: 0;
+        }
+        .geodir_recent_reviews {
+            padding-left: 0;
+            li {
+                list-style: none;
+                border: none;
+                &:first-of-type {
+                    padding-top: 0;
+                }
+                &:last-of-type {
+                    padding-bottom: 0;
+                }
+            }
+        }
     }
 
     // Advance Search Widget
@@ -228,6 +300,7 @@ body .geodir-widget {
         line-height: inherit;
         display: inline-block;
         vertical-align: middle;
+        margin-bottom: 30px;
         iframe {
             &.facebook,
             &.twitter-share-button {
@@ -433,14 +506,6 @@ body .geodir-widget {
                     }
                 }
             }
-        }
-    }
-
-    // Left & Right GeoDirectory Sidebars
-    .geodir-listings-sidebar-left,
-    .geodir-listings-sidebar-right {
-        @media (min-width: 1200px) {
-            max-width: 25%;
         }
     }
 }
@@ -698,4 +763,11 @@ dl.geodir-tab-head {
             margin-bottom: 25px;
         }
     }
+}
+
+// Left & Right GeoDirectory Sidebars
+#secondary,
+.geodir-details-sidebar-left,
+.geodir-details-sidebar-right {
+
 }
