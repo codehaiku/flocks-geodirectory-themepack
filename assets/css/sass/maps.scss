@@ -43,7 +43,9 @@
             left: 10px;
             right: auto;
             &.gd-triggeron {
-
+                &:hover {
+                    background: rgba(0, 0, 0, 1);                    
+                }
             }
             &.gd-triggeroff {
                 background: #000;
@@ -134,6 +136,7 @@
                 left: 10px;
                 &:hover {
                     font-size: 15px;
+                    background: rgba(0, 0, 0, 1);
                 }
             }
         }
@@ -154,25 +157,35 @@
 .stick_trigger_container {
     .trigger_sticky {
         color: #fff;
-        margin-top: -17.5px;
+        background: rgba(0, 0, 0, 0.45);
+        margin-top: 20px;
+        margin-right: 0;
         min-width: 30px;
         min-height: 30px;
         text-align: center;
         padding: 0;
         @extend .themepack_font_awesome_before;
-
-        &.triggeron_sticky {
-            margin-right: 15px;
+        &:before {
+            width: 100%;
+            font-size: 18px;
+            display: inline-block;
+            position: relative;
+            top: 5.5px;
+            left: 1px;
+        }
+        &:hover {
             background: rgba(0, 0, 0, 1);
+        }
+        &.triggeron_sticky {
             &:before {
                 content: "\f067";
             }
         }
         &.triggeroff_sticky {
-            margin-right: 265px;
-            background: rgba(0, 0, 0, 0.45);
+            margin-right: 20px;
             &:before {
                 content: "\f00d";
+                top: 4.5px;
             }
         }
     }

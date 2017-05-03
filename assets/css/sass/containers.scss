@@ -343,58 +343,115 @@ dl.geodir-tab-head dd a {
     padding: 5px 15px;
     font-size: 14px;
 }
-#geodir-wrapper-content article .geodir-tabs {
+#geodir-wrapper-content article {
+    .geodir_post_taxomomies {
+        @media(max-width: 768px) {
+            margin-bottom: 0;
+        }
+        .geodir-category,
+        .geodir-tags {
+            @media(max-width: 768px) {
+                width: 100%;
+                float: none;
+                display: inline-block;
+            }
+        }
+        .geodir-category {
+            @media(max-width: 768px) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .geodir-tabs {
+        #geodir-tab-mobile-menu {
+            @media(max-width: 1060px) {
+                height: 50px;
+                margin-bottom: 15px;
+                padding: 0;
+                border-color: #eee;
+                border-radius: 4px;
+                position: relative;
+                line-height: normal;
 
-    dl.geodir-tab-head {
-        width: 100%;
-        margin-bottom: 15px;
-        border: none;
-        display: inline-block;
-        dd {
+                .geodir-mobile-active-tab {
+                    width: 100%;
+                    font-size: 18px;
+                    margin: 0;
+                    display: inline-block;
+                    padding: 0 45px;
+                    height: 50px;
+                    line-height: 50px;
+                }
+                i.fa {
+                    position: absolute;
+                }
+                i.fa-bars {
+                    font-size: 22px;
+                    top: 12.5px;
+                    left: 15px;
+                }
+                i.fa-sort-desc {
+                    font-size: 28px;
+                    margin-top: 0;
+                    top: 5px;
+                    right: 15px;
+                }
+            }
+        }
+        dl.geodir-tab-head {
+            width: 100%;
+            margin-bottom: 15px;
             border: none;
-            margin-right: 7.5px;
-            background: none;
-            &:hover,
-            &.geodir-tab-active {
-                a {
-                    color: #fff;
-                    background: #22b5ce;
-                    border-top: none;
-                    span {
+            display: inline-block;
+            dd {
+                border: none;
+                margin-right: 7.5px;
+                background: none;
+                @media(max-width: 1060px) {
+                    width: auto;
+                }
+                &:hover,
+                &.geodir-tab-active {
+                    a {
                         color: #fff;
-                        small {
+                        background: #22b5ce;
+                        border-top: none;
+                        span {
                             color: #fff;
+                            small {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                a {
+                    color: #777;
+                    height: auto;
+                    line-height: inherit;
+                    padding: 7.5px 15px;
+                    border: 1px solid #e1e1e1;
+                    border-radius: 6px;
+                    display: inline-block;
+                    span {
+                        color: #000;
+                        font-size: 14px;
+                        padding: 0;
+                        margin-bottom: 5px;
+                        small {
+                            color: #000;
+                            width: 100%;
+                            font-size: 12px;
+                            display: inline-block;
                         }
                     }
                 }
             }
-            a {
-                color: #777;
-                height: auto;
-                line-height: inherit;
-                padding: 7.5px 15px;
-                border: 1px solid #e1e1e1;
-                border-radius: 6px;
-                display: inline-block;
-                span {
-                    color: #000;
-                    font-size: 14px;
-                    padding: 0;
-                    margin-bottom: 5px;
-                    small {
-                        color: #000;
-                        width: 100%;
-                        font-size: 12px;
-                        display: inline-block;
-                    }
-                }
-            }
         }
-    }
-    ul.geodir-tabs-content {
-        background: #f6f8f9;
-        border: none;
-        border-radius: 6px;
+        ul.geodir-tabs-content {
+            background: #f6f8f9;
+            border: none;
+            border-radius: 6px;
+        }
     }
 }
 
