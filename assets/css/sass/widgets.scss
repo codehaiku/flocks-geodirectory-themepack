@@ -182,9 +182,15 @@
         }
     }
 }
-.geodir_full_page section.widget {
-    padding: 15px 20px;
+.geodir_full_page {
     margin-bottom: 30px;
+    .geodir-widget.widget {
+        padding: 15px 20px;
+        margin-bottom: 30px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
 }
 body .geodir-widget {
     width: 100%;
@@ -510,8 +516,11 @@ body .geodir-widget {
     }
 }
 
-section.widget {
+.geodir-widget.widget {
     margin-bottom: 30px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }
 .widget {
     &.widget_gd_features {
@@ -709,7 +718,7 @@ dl.geodir-tab-head {
 .bestof-tabs-on-top,
 .bestof-tabs-on-left,
 .bestof-tabs-as-dropdown {
-    section.widget.geodir_bestof_widget {
+    .geodir-widget.widget.geodir_bestof_widget {
         background: #f6f8f9;
         padding: 15px 20px;
         margin-bottom: 30px;
@@ -1113,6 +1122,54 @@ dl.geodir-tab-head {
                         padding-bottom: 0;
                     }
                 }
+            }
+        }
+
+        // Advance Search Widget
+        &.geodir_advance_search_widget {
+
+            .geodir-listing-search.gd-search-bar-style {
+                .geodir-loc-bar {
+                    border: none;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    .clearfix.geodir-loc-bar-in {
+                        background: none;
+                        border: none;
+                        .geodir-search {
+                            .gd-search-input-wrapper {
+                                flex: inherit!important;
+                                min-width: 100%!important;
+                                @media(max-width: 480px) {
+                                    width: 100%!important;
+                                }
+                            }
+                            select,
+                            input[type=text],
+                            input[type=text].ac_input {
+                                border-radius: 0;
+                                border: 1px solid #e1e1e1;
+                                &:focus {
+                                    border-color: #22b5ce;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Social Like Widget
+        &.geodir_social_like_widget {
+            iframe {
+                &.facebook,
+                &.twitter-share-button {
+                    max-width: 60px;
+                }
+            }
+
+            div {
+                max-width: 60px;
             }
         }
 

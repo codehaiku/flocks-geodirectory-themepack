@@ -55,31 +55,50 @@
     cursor: pointer;
 }
 // DropDown
-.geodir-chosen-container {
-    &.geodir-chosen-container-single {
-        .chosen-single {
-            color: #8e97ac;
-            background: #f6f8f9;
-            border: 1px solid #f1f1f1;
-            height: auto;
-            width: 100%;
-            padding: 8.5px 15px;
-            box-shadow: none;
-            div b {
-                @extend .themepack_font_awesome_after;
-                background: none;
-                text-align: center;
-                position: relative;
-                right: 7.5px;
 
-                &:after {
-                    content: "\f078";
-                    font-size: 12px;
-                    position: relative;
-                    top: 7.5px;
-                }
+.geodir-chosen-container {
+    &.geodir-chosen-container-multi {
+        .chosen-choices {
+            @extend .themepack_font_awesome_after;
+            text-align: center;
+            position: relative;
+            right: 0;
+
+            &:after {
+                content: "\f078";
+                font-size: 12px;
+                position: absolute;
+                top: 11.5px;
+                right: 15px;
             }
         }
+    }
+    &.geodir-chosen-container-multi .chosen-choices,
+    &.geodir-chosen-container-single .chosen-single {
+        color: #8e97ac;
+        background: #f6f8f9;
+        border: 1px solid #f1f1f1;
+        height: auto;
+        width: 100%;
+        padding: 8.5px 15px;
+        box-shadow: none;
+        div b {
+            @extend .themepack_font_awesome_after;
+            background: none;
+            text-align: center;
+            position: relative;
+            right: 7.5px;
+
+            &:after {
+                content: "\f078";
+                font-size: 12px;
+                position: relative;
+                top: 7.5px;
+            }
+        }
+    }
+    &.geodir-chosen-container-multi,
+    &.geodir-chosen-container-single {
         .chosen-search {
             input[type="text"] {
                 width: 100%;
@@ -231,6 +250,15 @@
     .geodir_form_row {
         padding: 0;
         margin-bottom: 15px;
+        &.geodir_custom_fields {
+            .geodir-chosen-container {
+                min-width: 100%;
+            }
+        }
+        .gd_multi_choice,
+        .geodir_multiselect_list {
+            width: 100%;
+        }
         .geodir_textfield,
         .geodir_textarea,
         .chosen-search input[type="text"],
@@ -259,6 +287,159 @@
         .geodir_message_error,
         .geodir_message_note {
             font-size: 12px;
+        }
+        :not(#post_imagesdropbox) {
+            .plupload-upload-uic {
+                min-width: 100%;
+                color: #b3b9c0;
+                background: #f7f8fa;
+                padding: 50px 15px;
+                border: 1px solid #f1f1f1;
+                border-radius: 4px;
+                text-align: left;
+                @extend .themepack_font_awesome_before;
+                &:before {
+                    content: "\f093";
+                    width: 100%;
+                    margin-bottom: 15px;
+                    font-size: 35px;
+                    text-align: center;
+                    display: inline-block;
+                }
+                .geodir_button {
+                    padding: 5px 25px;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            .filelist {
+                .file {
+                    &:first-of-type {
+                        margin-top: 25px;
+                    }
+                }
+            }
+            .plupload-thumbs {
+                background: #f7f8fa;
+                .thumb {
+                    margin: 0 1% 0 0;
+                    width: 32.65%;
+                    background: #ffffff;
+
+                    @media(max-width: 992px) {
+                        width: 100%;
+                        margin: 0;
+                    }
+                    &:nth-child(3n) {
+                        margin-right: 0;
+                    }
+                }
+            }
+            .upload-error {
+                width: 100%;
+                background: #f6f8f9;
+                margin-top: 15px;
+                float: left;
+            }
+        }
+        .filelist {
+            .file {
+                background: #f1f1f1;
+                border-color: #fff;
+                border-radius: 4px;
+                padding: 7.5px 15px;
+                text-align: center;
+                .fileprogress {
+                    background: #22b5ce;
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        .plupload-upload-uic {
+            h4 {
+                color: #b3b9c0;
+                margin-bottom: 0;
+                @extend .themepack_font_awesome_after;
+                &:after {
+                    content: "\f093";
+                    width: 100%;
+                    margin-top: 15px;
+                    font-size: 35px;
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+        }
+        .plupload-thumbs {
+            min-width: 100%;
+            margin: 15px 0!important;
+            padding: 0;
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #f1f1f1!important;
+            border-radius: 4px;
+            &:empty {
+                display: none;
+                padding: 0;
+            }
+            .thumb {
+                margin: 0 1% 1% 0;
+                width: 15%;
+                height: auto;
+                background: #f1f1f1;
+                border: 1px solid #fff;
+                border-radius: 4px;
+                padding: 0;
+                text-align: center;
+                overflow: hidden;
+                max-height: 100px;
+                min-height: 100px;
+
+                @media(max-width: 992px) {
+                    width: 20%;
+                    margin: 0;
+                }
+                &.geodir_file {
+                    padding: 7.5px 15px;
+                    padding-right: 25px;
+                }
+
+                .thumbi {
+                    top: 0;
+                    right: 0;
+                    min-width: 25px;
+                    height: 25px;
+                    a {
+                        background: none;
+                        display: inline-block;
+                        text-indent: 0;
+                        font-size: 0;
+                        position: relative;
+
+                        @extend .themepack_font_awesome_before;
+                        &:before {
+                            content: "\f00d";
+                            font-size: 16px;
+                            color: #fff;
+                            background: #ef5350;
+                            display: inline-block;
+                            height: 25px;
+                            width: 25px;
+                            line-height: 23px;
+                        }
+                    }
+                }
+            }
+        }
+        .upload-error {
+            background: #fff;
+            color: #ef5350;
+            padding: 10px 15px;
+            margin: 0 0 15px;
+            text-align: left;
+            border: none;
+            border-left: 3.5px solid #ef5350;
         }
     }
 }
