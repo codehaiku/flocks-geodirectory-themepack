@@ -35,6 +35,7 @@
     }
     .geodir-common {
         #geodir_content {
+            width: 70%;
             float: left;
         }
         .geodir-sidebar-left,
@@ -62,6 +63,30 @@
 
 #geodir-wrapper + .geodir_full_page {
     padding: 0 0 40px;
+}
+
+// GD Header Slider
+.flocks-gd-header-slider {
+    .geodir_flex-loader {
+        background: #000;
+        .fa-refresh {
+            color: #fff;
+            font-size: 25px;
+            margin-top: -35px;
+        }
+    }
+    #geodir_slider {
+        .geodir-slides {
+            li {
+                img {
+                    &:nth-child(2) {
+                        width: 100%;
+                        max-height: none!important;
+                    }
+                }
+            }
+        }
+    }
 }
 // GeoDirectory Flex Slider Container
 .geodir_flex-container {

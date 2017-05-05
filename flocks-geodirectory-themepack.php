@@ -50,6 +50,12 @@ function flocks_geodirectory_action_calls()
     remove_action('geodir_details_main_content', 'geodir_action_page_title', 20);
     remove_action('geodir_search_page_title', 'geodir_action_search_page_title', 10);
     remove_action('geodir_author_page_title', 'geodir_action_author_page_title', 10);
+
+    // Remove Details Slider
+    remove_action('geodir_details_main_content', 'geodir_action_details_slider', 30);
+
+    // Add the DetailsSlider
+    add_action('flocks_action_header_slider', 'geodir_action_details_slider', 10);
 }
 
 
@@ -137,66 +143,78 @@ function flocks_gd_the_cover_image() { ?>
 	$meta_header_text_color = $content_header['text_color'];
 	$meta_header_size = $content_header['header_size'];
 	$meta_header_alignment = $content_header['header_alignment'];
+    $post_images = geodir_get_images(
+        get_the_ID(), 'thumbnail',
+        get_option('geodir_listing_no_img')
+    );
 	?>
     <?php if ( ! is_page( geodir_home_page_id() ) ): ?>
 
-    	<div class="flocks-gd-cover-image" id="cover-image">
+        <?php if ( geodir_is_geodir_page() && is_singular() && ! empty( $post_images ) ): ?>
 
-    		<div id="cover-image-wrap" class="<?php echo sanitize_html_class( $meta_header_size ); ?> <?php echo sanitize_html_class( $meta_header_alignment ); ?>">
+            <div class="flocks-gd-header-slider">
 
-    			<div id="cover-image-inner-wrap">
+                <?php do_action('flocks_action_header_slider'); ?>
 
-    				<div id="cover-image-copy">
+            </div>
 
-    				<div class="container">
+        <?php elseif ( geodir_is_geodir_page() ) : ?>
 
-                        <?php if ( geodir_is_geodir_page() ) : ?>
+            <div class="flocks-gd-cover-image" id="cover-image">
 
-                            <?php geodir_breadcrumb(); ?>
+                <div id="cover-image-wrap" class="<?php echo sanitize_html_class( $meta_header_size ); ?> <?php echo sanitize_html_class( $meta_header_alignment ); ?>">
 
-                            <?php if ( is_singular() ): ?>
+                    <div id="cover-image-inner-wrap">
 
-                                <?php  the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                        <div id="cover-image-copy">
 
-                                <?php if ( ! empty( $meta_header_sub_title ) ) { ?>
+                            <div class="container">
 
-                                    <div class="heading-lead">
+                                <?php if ( is_singular() ): ?>
 
-                                        <?php echo wp_kses( $meta_header_sub_title, wp_kses_allowed_html( 'post' ) ); ?>
+                                    <?php  the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-                                    </div>
+                                    <?php if ( ! empty( $meta_header_sub_title ) ) { ?>
 
-                                <?php } ?>
+                                        <div class="heading-lead">
 
-                            <?php endif; ?>
+                                            <?php echo wp_kses( $meta_header_sub_title, wp_kses_allowed_html( 'post' ) ); ?>
 
-                            <?php if ( is_archive() ): ?>
+                                        </div>
 
-                                <?php geodir_action_listings_title(); ?>
+                                    <?php } ?>
 
-                                <?php the_archive_description( '<div class="heading-lead">', '</div>' ); ?>
+                                <?php endif; ?>
 
-                            <?php endif; ?>
+                                <?php if ( is_archive() ): ?>
 
-                            <?php if ( geodir_is_page('search') ): ?>
+                                    <?php geodir_action_listings_title(); ?>
 
-                                <?php geodir_action_listings_title(); ?>
+                                    <?php the_archive_description( '<div class="heading-lead">', '</div>' ); ?>
 
-                            <?php endif; ?>
+                                <?php endif; ?>
 
-                            <?php if ( geodir_is_page('author') ): ?>
+                                <?php if ( geodir_is_page('search') ): ?>
 
-                                <?php geodir_action_listings_title(); ?>
+                                    <?php geodir_action_listings_title(); ?>
 
-                            <?php endif; ?>
+                                <?php endif; ?>
 
-                        <?php endif; ?>
+                                <?php if ( geodir_is_page('author') ): ?>
 
-                        </div><!--.container-->
-                    </div><!--#cover-image-copy-->
+                                    <?php geodir_action_listings_title(); ?>
+
+                                <?php endif; ?>
+
+                                <?php geodir_breadcrumb(); ?>
+
+                            </div><!--.container-->
+                        </div><!--#cover-image-copy-->
+                    </div>
                 </div>
             </div>
-        </div>
+
+        <?php endif; ?>
 
     <?php endif; ?>
 

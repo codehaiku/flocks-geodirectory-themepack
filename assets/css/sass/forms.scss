@@ -27,6 +27,7 @@
     &:focus {
         border-color: #22b5ce;
         box-shadow: none;
+        outline: none;
     }
     &::-webkit-input-placeholder {
        color: #adb5c0;
@@ -161,8 +162,13 @@
     }
     #geodir_post_mapview_row {
         .geodir_user_define {
-            width: 100%;
             display: inline-block;
+            margin-right: 15px;
+            input[type=checkbox],
+            input[type=radio] {
+                position: relative;
+                top: 2px;
+            }
         }
     }
     #geodir_post_address_row {
@@ -440,6 +446,236 @@
             text-align: left;
             border: none;
             border-left: 3.5px solid #ef5350;
+        }
+
+        // Tiny MCE
+        .wp-editor-wrap {
+            .wp-editor-tabs {
+                .wp-switch-editor  {
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                    &:hover {
+                        color: #555;
+                    }
+                }
+            }
+            .wp-editor-container {
+                border: 1px solid #e1e1e1;
+                .mce-panel {
+                    width: 99.95%
+                }
+            }
+        }
+    }
+}
+.geodir-page {
+    .ui-datepicker .ui-datepicker-buttonpane {
+        border-color: #eee;
+        button {
+            @extend .flocks-geodirectory-button;
+            @extend .flocks-geodirectory-body-font;
+            font-weight: normal;
+            background: #22b5ce;
+            opacity: 1;
+            &:hover {
+                opacity: 0.87;
+            }
+        }
+    }
+    .ui-timepicker-div {
+        padding: 0;
+        .ui-widget-header {
+            border: none;
+            background: #22b5ce;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin: -1px -1px 0;
+            .ui-datepicker-title {
+                color: #fff;
+                margin: 0;
+                @extend .flocks-geodirectory-heading-font;
+            }
+        }
+        dl {
+            padding: 10px;
+            margin: 0;
+            dt,
+            dd {
+                margin: 0;
+                font-size: 14px;
+                @extend .flocks-geodirectory-body-font;
+            }
+            dt {
+
+            }
+            dd {
+                margin-bottom: 15px;
+                .ui-slider {
+                    background: #f7f8fa;
+                    border: 1px solid #eee;
+                    .ui-slider-handle  {
+                        background: #f7f8fa;
+                        border: 1px solid #eee;
+                        border-radius: 50%;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            .ui_tpicker_time_label,
+            .ui_tpicker_time {
+                display: inline-block;
+                margin-right: 5px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // Date Picker
+    .ui-datepicker {
+        padding: 0;
+        border: 1px solid #eee;
+        .ui-datepicker-header {
+            border: none;
+            background: #22b5ce;
+            margin: -1px -1px 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            .ui-datepicker-title {
+                select {
+                    color: #999;
+                    font-weight: normal;
+                    border-color: #e1e1e1;
+                    background: #fff;
+                    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAHCAYAAAD9NeaIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE1LTA0LTE3VDE3OjEyOjQyKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxNS0wNC0yMFQxNzoxNjoyNCswMjowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxNS0wNC0yMFQxNzoxNjoyNCswMjowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTU4MjBDRURERjVCMTFFNEEzN0FCODBEM0I5MTExMjkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTU4MjBDRUVERjVCMTFFNEEzN0FCODBEM0I5MTExMjkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2RUVFRDJCNkREQzMxMUU0QTM3QUI4MEQzQjkxMTEyOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNTgyMENFQ0RGNUIxMUU0QTM3QUI4MEQzQjkxMTEyOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuShL/sAAABeSURBVHjaYszOzjZnYGDYCcT8DMSBv0AcP2XKlKVEqmdgAuKTQOwOxB+JtQCIibYAZgkDkRaRZQGyJYQsItsCdEtwWUSRBdgsQbeIYgtAgAWHOMwiJSBezkAhAAgwAJSTG/DI0S9VAAAAAElFTkSuQmCC");
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    background-position: right center;
+                    background-position-x: 105%;
+                }
+                .ui-datepicker-month {
+                    float: left;
+                }
+                .ui-datepicker-year {
+                    float: right;
+                }
+            }
+            .ui-datepicker-prev,
+            .ui-datepicker-next {
+                top: 4px;
+                &.ui-state-hover {
+                    background: none;
+                    border: none;
+                }
+                span {
+                    width: 25px;
+                    height: 25px;
+                    color: #fff;
+                    background: none;
+                    text-indent: 0;
+                    margin: 0;
+                    text-align: center;
+                    display: inline-block;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                    @extend .themepack_font_awesome_before;
+                    &:before {
+                        font-size: 18px;
+                        width: 25px;
+                        height: 25px;
+                        position: relative;
+                        top: 1.5px;
+                    }
+                    &:hover {
+                        opacity: 0.87;
+                    }
+                }
+            }
+            .ui-datepicker-prev {
+                &.ui-state-hover {
+                    left: 2px;
+                }
+                span {
+                    &:before {
+                        content: "\f053";
+                        right: 0;
+                    }
+                }
+            }
+            .ui-datepicker-next {
+                &.ui-state-hover {
+                    right: 2px;
+                }
+                span {
+                    &:before {
+                        content: "\f054";
+                        left: 2.5px;
+                    }
+                }
+            }
+        }
+        .ui-datepicker-calendar {
+            margin: 0;
+            tr {
+                th,
+                td {
+                    width: 14.2857143%;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                td {
+                    &:first-of-type {
+                        padding-left: 0;
+                    }
+                    &:last-of-type {
+                        padding-right: 0;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    border: none;
+                    &:last-of-type
+                    td {
+                        a {
+                            margin-bottom: -1px;
+                        }
+                    }
+                    td {
+                        padding: 0;
+
+                        &:nth-child(7n) a {
+                            margin-right: -1px;
+                        }
+
+                        a {
+                            background: none;
+                            margin-top: -1px;
+                            margin-left: -1px;
+                            text-align: center;
+                            border-color: #eee;
+
+                            &.ui-state-active,
+                            &.ui-state-hover,
+                            &.ui-state-highlight {
+                                color: #fff;
+                                background: #22b5ce;
+                                border: 1px solid #22b5ce;
+                                position: relative;
+                                z-index: 5;
+                            }
+                            &.ui-state-highlight,
+                            &.ui-state-active {
+                                opacity: 0.87;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
