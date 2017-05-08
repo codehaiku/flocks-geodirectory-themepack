@@ -13,11 +13,11 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 }
 
 .themepack_font_awesome_before:before, #propertyform .geodir_form_row :not(#post_imagesdropbox) .plupload-upload-uic:before, #propertyform .geodir_form_row .plupload-thumbs .thumb .thumbi a:before, .geodir-page .ui-datepicker .ui-datepicker-header .ui-datepicker-prev span:before,
-.geodir-page .ui-datepicker .ui-datepicker-header .ui-datepicker-next span:before, .geodir_flex-container .geodir_flexslider .geodir-direction-nav li a:before, .gd-navi > a strong:before, .geodir-pos_navigation div a:before, .geodir-category-listing .geodir_more_info.geodir_property_features_checkbox ul li:before,
-.geodir-tabs ul > li .geodir_more_info.geodir_property_features_checkbox ul li:before,
-.geodir-tabs .geodir-category-listing .geodir_more_info.geodir_property_features_checkbox ul li:before,
-.geodir-tabs .geodir-company_info .geodir_more_info.geodir_property_features_checkbox ul li:before, .geodir-category-listing .geodir-i-location ~ span:before,
-.geodir-tabs .geodir-i-location ~ span:before, #lightbox-container-image-data-box #lightbox-secNav-btnClose:before, body .simplemodal-container#simplemodal-container a.modalCloseImg:before, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info.geodir_property_features_checkbox ul li:before, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-location ~ span:before, body .geodir-widget.geodir_loginbox ul li .signin:before, #secondary .widget.geodir_loginbox ul li .signin:before,
+.geodir-page .ui-datepicker .ui-datepicker-header .ui-datepicker-next span:before, .geodir_flex-container .geodir_flexslider .geodir-direction-nav li a:before, .gd-navi > a strong:before, .geodir-pos_navigation div a:before, .geodir-category-listing .geodir_more_info > ul li:before,
+.geodir-tabs ul > li .geodir_more_info > ul li:before,
+.geodir-tabs .geodir-category-listing .geodir_more_info > ul li:before,
+.geodir-tabs .geodir-company_info .geodir_more_info > ul li:before, .geodir-category-listing .geodir-i-location ~ span:before,
+.geodir-tabs .geodir-i-location ~ span:before, #lightbox-container-image-data-box #lightbox-secNav-btnClose:before, body .simplemodal-container#simplemodal-container a.modalCloseImg:before, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info > ul li:before, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info.geodir_property_features_checkbox ul li:before, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-location ~ span:before, body .geodir-widget.geodir_loginbox ul li .signin:before, #secondary .widget.geodir_loginbox ul li .signin:before,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox ul li .signin:before,
 .geodir-details-sidebar-left .widget.geodir_loginbox ul li .signin:before,
 .geodir-details-sidebar-right .widget.geodir_loginbox ul li .signin:before, .stick_trigger_container .trigger_sticky:before {
@@ -127,6 +127,7 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   color: #b3b9c0;
   border-radius: 4px;
   box-shadow: none;
+  min-height: 36px;
 }
 
 .flocks-geodirectory-text:focus, #propertyform .geodir_form_row .geodir_textfield:focus,
@@ -331,6 +332,7 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   text-align: center;
   display: inline-block;
   position: absolute;
+  top: 0;
   right: 0;
   z-index: 4;
 }
@@ -411,6 +413,19 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 #propertyform .geodir_form_row .gd_multi_choice,
 #propertyform .geodir_form_row .geodir_multiselect_list {
   width: 100%;
+}
+
+#propertyform .geodir_form_row .gd_multi_choice li,
+#propertyform .geodir_form_row .geodir_multiselect_list li {
+  list-style: none;
+}
+
+#propertyform .geodir_form_row .gd_multi_choice li input[type=checkbox],
+#propertyform .geodir_form_row .gd_multi_choice li input[type=radio],
+#propertyform .geodir_form_row .geodir_multiselect_list li input[type=checkbox],
+#propertyform .geodir_form_row .geodir_multiselect_list li input[type=radio] {
+  position: relative;
+  top: 1.5px;
 }
 
 #propertyform .geodir_form_row #gd_placecategory {
@@ -618,6 +633,12 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   width: 99.95%;
 }
 
+@media (max-width: 480px) {
+  #propertyform .geodir_form_row .wp-editor-wrap .wp-editor-container .mce-panel {
+    width: 99.85%;
+  }
+}
+
 .geodir-page .ui-datepicker .ui-datepicker-buttonpane {
   border-color: #eee;
 }
@@ -673,6 +694,16 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   background: #f7f8fa;
   border: 1px solid #eee;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.geodir-page .ui-timepicker-div dl dd .ui-slider .ui-slider-handle.ui-state-hover, .geodir-page .ui-timepicker-div dl dd .ui-slider .ui-slider-handle.ui-state-active {
+  background: #22b5ce;
+  border-color: #22b5ce;
+}
+
+.geodir-page .ui-timepicker-div dl dd .ui-slider .ui-slider-handle.ui-state-focus {
+  border-color: #22b5ce;
 }
 
 .geodir-page .ui-timepicker-div dl dd .ui-slider .ui-slider-handle:focus {
@@ -870,11 +901,6 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   padding-bottom: 0;
 }
 
-#geodir-wrapper .geodir_full_page,
-#geodir-wrapper .geodir-common {
-  margin: 0 -15px;
-}
-
 #geodir-wrapper .geodir_full_page {
   margin-bottom: 30px;
 }
@@ -914,7 +940,8 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 }
 
 #geodir-wrapper + .geodir_full_page {
-  padding: 0 0 40px;
+  padding: 0 15px 50px;
+  margin-bottom: 0;
 }
 
 .flocks-gd-header-slider .geodir_flex-loader {
@@ -998,6 +1025,12 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 #geodir-main-content .geodir_category_list_view > li {
   border-bottom: 1px solid #eee;
   padding: 15px 0 30px;
+}
+
+.widget .geodir_category_list_view > li:last-of-type,
+#related_listingTab .geodir_category_list_view > li:last-of-type,
+#geodir-main-content .geodir_category_list_view > li:last-of-type {
+  border-bottom: none;
 }
 
 .widget .geodir_category_list_view > li.geodir-gridview,
@@ -1221,12 +1254,12 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   padding: 10.015px 16px;
   margin: 0 5px;
   position: relative;
-  top: 10.5px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
   -webkit-user-select: none;
   text-align: center;
+  float: left;
 }
 
 .gd-navi .on,
@@ -1372,6 +1405,7 @@ dl.geodir-tab-head dd a {
 #geodir-wrapper-content article .geodir-tabs dl.geodir-tab-head dd:hover a, #geodir-wrapper-content article .geodir-tabs dl.geodir-tab-head dd.geodir-tab-active a {
   color: #fff;
   background: #22b5ce;
+  border-color: #22b5ce;
   border-top: none;
 }
 
@@ -1612,33 +1646,33 @@ dl.geodir-tab-head dd a {
   left: -25px;
 }
 
-.geodir-category-listing .geodir_more_info.geodir_property_features_checkbox ul,
-.geodir-tabs ul > li .geodir_more_info.geodir_property_features_checkbox ul,
-.geodir-tabs .geodir-category-listing .geodir_more_info.geodir_property_features_checkbox ul,
-.geodir-tabs .geodir-company_info .geodir_more_info.geodir_property_features_checkbox ul {
+.geodir-category-listing .geodir_more_info > ul,
+.geodir-tabs ul > li .geodir_more_info > ul,
+.geodir-tabs .geodir-category-listing .geodir_more_info > ul,
+.geodir-tabs .geodir-company_info .geodir_more_info > ul {
   padding-left: 0;
   margin-bottom: 0;
 }
 
-.geodir-category-listing .geodir_more_info.geodir_property_features_checkbox ul li,
-.geodir-tabs ul > li .geodir_more_info.geodir_property_features_checkbox ul li,
-.geodir-tabs .geodir-category-listing .geodir_more_info.geodir_property_features_checkbox ul li,
-.geodir-tabs .geodir-company_info .geodir_more_info.geodir_property_features_checkbox ul li {
-  padding: 0 0 0 17.5px;
+.geodir-category-listing .geodir_more_info > ul li,
+.geodir-tabs ul > li .geodir_more_info > ul li,
+.geodir-tabs .geodir-category-listing .geodir_more_info > ul li,
+.geodir-tabs .geodir-company_info .geodir_more_info > ul li {
+  padding: 0 0 0 40px;
   border-bottom: none;
   list-style: none;
   position: relative;
 }
 
-.geodir-category-listing .geodir_more_info.geodir_property_features_checkbox ul li:before,
-.geodir-tabs ul > li .geodir_more_info.geodir_property_features_checkbox ul li:before,
-.geodir-tabs .geodir-category-listing .geodir_more_info.geodir_property_features_checkbox ul li:before,
-.geodir-tabs .geodir-company_info .geodir_more_info.geodir_property_features_checkbox ul li:before {
+.geodir-category-listing .geodir_more_info > ul li:before,
+.geodir-tabs ul > li .geodir_more_info > ul li:before,
+.geodir-tabs .geodir-category-listing .geodir_more_info > ul li:before,
+.geodir-tabs .geodir-company_info .geodir_more_info > ul li:before {
   content: "\f111";
   font-size: 8px;
   position: absolute;
-  top: 5.5px;
-  left: 1.5px;
+  top: 7.5px;
+  left: 25px;
 }
 
 .geodir-category-listing .geodir_more_info.geodir-custom-file-box,
@@ -2040,6 +2074,26 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   display: inline-block;
   position: relative;
   left: -25px;
+}
+
+.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info > ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info > ul li {
+  padding: 0 0 0 40px;
+  border-bottom: none;
+  list-style: none;
+  position: relative;
+}
+
+.geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info > ul li:before {
+  content: "\f111";
+  font-size: 8px;
+  position: absolute;
+  top: 7.5px;
+  left: 25px;
 }
 
 .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info.geodir_property_features_checkbox .geodir-i-select {
@@ -2466,10 +2520,6 @@ body .geodir-widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count {
 
 .geodir-widget.widget {
   margin-bottom: 30px;
-}
-
-.geodir-widget.widget:last-of-type {
-  margin-bottom: 0;
 }
 
 .widget.widget_gd_features .gd-features {

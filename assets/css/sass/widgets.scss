@@ -89,6 +89,24 @@
                     left: -25px;
                 }
             }
+            > ul {
+                padding-left: 0;
+                margin-bottom: 0;
+                li {
+                    padding: 0 0 0 40px;
+                    border-bottom: none;
+                    list-style: none;
+                    position: relative;
+                    @extend .themepack_font_awesome_before;
+                    &:before {
+                        content: "\f111";
+                        font-size: 8px;
+                        position: absolute;
+                        top: 7.5px;
+                        left: 25px;
+                    }
+                }
+            }
             &.geodir_property_features_checkbox {
                 .geodir-i-select {
                     width: 100%;
@@ -518,9 +536,6 @@ body .geodir-widget {
 
 .geodir-widget.widget {
     margin-bottom: 30px;
-    &:last-of-type {
-        margin-bottom: 0;
-    }
 }
 .widget {
     &.widget_gd_features {

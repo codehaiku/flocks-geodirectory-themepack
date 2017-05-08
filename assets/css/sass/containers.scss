@@ -25,7 +25,7 @@
     padding-bottom: 0;
     .geodir_full_page,
     .geodir-common {
-        margin: 0 -15px;
+
     }
     .geodir_full_page {
         margin-bottom: 30px;
@@ -62,7 +62,8 @@
 }
 
 #geodir-wrapper + .geodir_full_page {
-    padding: 0 0 40px;
+    padding: 0 15px 50px;
+    margin-bottom: 0;
 }
 
 // GD Header Slider
@@ -158,6 +159,9 @@
         > li {
             border-bottom: 1px solid #eee;
             padding: 15px 0 30px;
+            &:last-of-type {
+                border-bottom: none;
+            }
 
             &.geodir-gridview {
                 padding: 0 0 30px;
@@ -335,12 +339,12 @@
         padding: 10.015px 16px;
         margin: 0 5px;
         position: relative;
-        top: 10.5px;
         -webkit-border-radius: 6px;
         -moz-border-radius: 6px;
         border-radius: 6px;
         -webkit-user-select: none;
         text-align: center;
+        float: left;
     }
     .on,
     > a:hover {
@@ -485,6 +489,7 @@ dl.geodir-tab-head dd a {
                     a {
                         color: #fff;
                         background: #22b5ce;
+                        border-color: #22b5ce;
                         border-top: none;
                         span {
                             color: #fff;
@@ -696,22 +701,22 @@ dl.geodir-tab-head dd a {
                 position: relative;
                 left: -25px;
             }
-            ul {
-                padding-left: 0;
-                margin-bottom: 0;
-                li {
-                    padding: 0 0 0 17.5px;
-                    border-bottom: none;
-                    list-style: none;
-                    position: relative;
-                    @extend .themepack_font_awesome_before;
-                    &:before {
-                        content: "\f111";
-                        font-size: 8px;
-                        position: absolute;
-                        top: 5.5px;
-                        left: 1.5px;
-                    }
+        }
+        > ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            li {
+                padding: 0 0 0 40px;
+                border-bottom: none;
+                list-style: none;
+                position: relative;
+                @extend .themepack_font_awesome_before;
+                &:before {
+                    content: "\f111";
+                    font-size: 8px;
+                    position: absolute;
+                    top: 7.5px;
+                    left: 25px;
                 }
             }
         }

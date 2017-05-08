@@ -24,6 +24,7 @@
     color: #b3b9c0;
     border-radius: 4px;
     box-shadow: none;
+    min-height: 36px;
     &:focus {
         border-color: #22b5ce;
         box-shadow: none;
@@ -193,6 +194,7 @@
                 text-align: center;
                 display: inline-block;
                 position: absolute;
+                top: 0;
                 right: 0;
                 z-index: 4;
                 &:hover {
@@ -264,6 +266,14 @@
         .gd_multi_choice,
         .geodir_multiselect_list {
             width: 100%;
+            li {
+                list-style: none;
+                input[type=checkbox],
+                input[type=radio] {
+                    position: relative;
+                    top: 1.5px;
+                }
+            }
         }
         .geodir_textfield,
         .geodir_textarea,
@@ -462,7 +472,10 @@
             .wp-editor-container {
                 border: 1px solid #e1e1e1;
                 .mce-panel {
-                    width: 99.95%
+                    width: 99.95%;
+                    @media(max-width: 480px) {
+                        width: 99.85%;
+                    }
                 }
             }
         }
@@ -517,6 +530,16 @@
                         background: #f7f8fa;
                         border: 1px solid #eee;
                         border-radius: 50%;
+                        cursor: pointer;
+                        &.ui-state-hover,
+                        &.ui-state-active {
+                            background: #22b5ce;
+                            border-color: #22b5ce;
+                        }
+
+                        &.ui-state-focus {
+                            border-color: #22b5ce;
+                        }
                         &:focus {
                             outline: none;
                         }
