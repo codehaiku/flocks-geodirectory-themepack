@@ -228,6 +228,27 @@
                     margin: 0;
                 }
             }
+            .geodir-content {
+                > h3 {
+                    @extend .flocks-geodirectory-body-font;
+                    @extend .themepack_font_awesome_before;
+                    color: #fff;
+                    background: #22b5ce;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    margin-top: 10px;
+                    padding: 5px 7.5px;
+                    border-radius: 4px;
+                    display: inline-block;
+
+                    &:before {
+                        content: "\f277";
+                        font-size: inherit;
+                        margin-right: 5px;
+                    }
+                }
+            }
             h3 a {
                 color: #444;
                 font-weight: 600;
@@ -556,9 +577,35 @@ dl.geodir-tab-head dd a {
         #post_imagesTab {
             #geodir-post-gallery a {
                 margin-right: 1.30%;
+                margin-bottom: 1.30%;
+                float: left;
                 border: none;
                 &:nth-child(4n) {
                     margin-right: 0;
+                }
+                @media(max-width: 992px) {
+                    width: 32.33%;
+                    &:nth-child(4n) {
+                        margin-right: 1.30%;
+                    }
+                    &:nth-child(3n) {
+                        margin-right: 0;
+                    }
+                }
+                @media(max-width: 768px) {
+                    width: 49%;
+                    &:nth-child(3n) {
+                        margin-right: 1.30%;
+                    }
+                    &:nth-child(2n) {
+                        margin-right: 0;
+                    }
+                }
+                @media(max-width: 480px) {
+                    width: 100%;
+                    &:nth-child(3n) {
+                        margin-right: 0;
+                    }
                 }
                 .geodir_thumbnail {
                     min-width: 100%;
@@ -756,7 +803,7 @@ dl.geodir-tab-head dd a {
 .geodir-tabs .geodir-i-location {
 
     ~ span {
-        padding-left: 22px;
+        padding-left: 25px;
         position: relative;
         @extend .themepack_font_awesome_before;
         &:before {
@@ -767,13 +814,12 @@ dl.geodir-tab-head dd a {
     }
     ~ span[itemprop="streetAddress"] {
         &:before {
-            content: "\f041";
-            left: 3.5px;
+            content: "\f018";
         }
     }
     ~ span[itemprop="addressLocality"] {
         &:before {
-            content: "\f2bc";
+            content: "\f1ad";
         }
     }
     ~ span[itemprop="addressRegion"] {

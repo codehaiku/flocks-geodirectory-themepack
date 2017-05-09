@@ -1,14 +1,28 @@
 .geodir_map_container {
     min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
 
     &.stickymap {
         border: none!important;
-        min-width: auto;
+        min-width: 370px;
         margin-top: -30px;
+        top: auto!important;
+        bottom: 0;
+        .map_background {
+            background: #f6f8f9;
+            padding: 10px;
+            border-radius: 6px;
+        }
     }
 
     .main_map_wrapper {
         min-width: 100%;
+        max-width: 100%;
+        .geodir_marker_cluster {
+            min-width: 100%;
+            max-width: 100%;
+        }
         .advmap_notloaded,
         .advmap_nofound {
             width: 100%;
@@ -44,7 +58,7 @@
             right: auto;
             &.gd-triggeron {
                 &:hover {
-                    background: rgba(0, 0, 0, 1);                    
+                    background: rgba(0, 0, 0, 1);
                 }
             }
             &.gd-triggeroff {
@@ -158,7 +172,7 @@
     .trigger_sticky {
         color: #fff;
         background: rgba(0, 0, 0, 0.45);
-        margin-top: 20px;
+        margin-top: 30px;
         margin-right: 0;
         min-width: 30px;
         min-height: 30px;
@@ -183,6 +197,8 @@
         }
         &.triggeroff_sticky {
             margin-right: 20px;
+            top: auto!important;
+            bottom: 300px;
             &:before {
                 content: "\f00d";
                 top: 4.5px;
@@ -190,7 +206,9 @@
         }
     }
 }
-
+.loading_div {
+    max-width: 100%;
+}
 // Full Screen Map
 .body_fullscreen {
     .stick_trigger_container {

@@ -161,7 +161,7 @@
 
         .geodir-i-location {
             ~ span {
-                padding-left: 22px;
+                padding-left: 25px;
                 position: relative;
                 @extend .themepack_font_awesome_before;
                 &:before {
@@ -172,13 +172,12 @@
             }
             ~ span[itemprop="streetAddress"] {
                 &:before {
-                    content: "\f041";
-                    left: 3.5px;
+                    content: "\f018";
                 }
             }
             ~ span[itemprop="addressLocality"] {
                 &:before {
-                    content: "\f2bc";
+                    content: "\f1ad";
                 }
             }
             ~ span[itemprop="addressRegion"] {
