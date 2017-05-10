@@ -5,6 +5,8 @@
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix input[type=email],
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix textarea, .widget.widget_gd_features .gd-features li .gd-fe-title, #secondary .widget.geodir_cpt_categories_widget ul li h3,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget ul li h3,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget ul li h3,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget ul li h3,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget ul li h3,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget ul li h3 {
   font-family: 'Source Sans Pro', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
@@ -23,8 +25,12 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 .geodir-tabs .geodir-company_info .geodir_more_info > ul li:before, .geodir-category-listing .geodir-i-location ~ span:before,
 .geodir-tabs .geodir-i-location ~ span:before, #lightbox-container-image-data-box #lightbox-secNav-btnClose:before, body .simplemodal-container#simplemodal-container a.modalCloseImg:before, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info > ul li:before, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir_more_info.geodir_property_features_checkbox ul li:before, .geodir-sidebar-wrap .geodir-details-sidebar-listing-info .geodir-i-location ~ span:before, body .geodir-widget.geodir_loginbox ul li .signin:before, #secondary .widget.geodir_loginbox ul li .signin:before,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox ul li .signin:before,
+.geodir-sidebar-left .widget.geodir_loginbox ul li .signin:before,
+.geodir-sidebar-right .widget.geodir_loginbox ul li .signin:before,
 .geodir-details-sidebar-left .widget.geodir_loginbox ul li .signin:before,
-.geodir-details-sidebar-right .widget.geodir_loginbox ul li .signin:before, .stick_trigger_container .trigger_sticky:before {
+.geodir-details-sidebar-right .widget.geodir_loginbox ul li .signin:before, .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .stick_trigger_container .trigger_sticky:before {
   content: "";
   font-family: FontAwesome;
   font-weight: normal;
@@ -69,16 +75,9 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 }
 
 .flocks-gd-cover-image .geodir-breadcrumb {
-  margin: 3.5em auto 0;
   padding: 0;
   position: relative;
   z-index: 2;
-}
-
-@media (max-width: 1200px) {
-  .flocks-gd-cover-image .geodir-breadcrumb {
-    margin: 0 auto 1.25em;
-  }
 }
 
 .flocks-gd-cover-image .geodir-breadcrumb ul li {
@@ -93,8 +92,34 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   margin-top: 1em;
 }
 
+@media (max-width: 1200px) {
+  .flocks-gd-cover-image#cover-image h1.entry-title {
+    margin: 2.15em auto 1.5em;
+  }
+}
+
+.flocks-gd-cover-image#cover-image h1.entry-title + .geodir-breadcrumb {
+  margin: 1.5em auto 2.5em;
+}
+
+@media (max-width: 1200px) {
+  .flocks-gd-cover-image#cover-image h1.entry-title + .geodir-breadcrumb {
+    margin: 0 auto 3.25em;
+  }
+}
+
 .flocks-gd-cover-image#cover-image .heading-lead {
   margin-bottom: 25px;
+}
+
+.flocks-gd-cover-image#cover-image .heading-lead + .geodir-breadcrumb {
+  margin: 1.5em auto 2.5em;
+}
+
+@media (max-width: 1200px) {
+  .flocks-gd-cover-image#cover-image .heading-lead + .geodir-breadcrumb {
+    margin: 0 auto 3.25em;
+  }
 }
 
 .geodir-list-view-select {
@@ -123,6 +148,8 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix input[type=email],
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix textarea, body .geodir-widget.geodir_loginbox .geodir_form_row .textfield, #secondary .widget.geodir_loginbox .geodir_form_row .textfield,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir_form_row .textfield,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield {
   width: 100%;
@@ -141,6 +168,8 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix input[type=email]:focus,
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix textarea:focus, body .geodir-widget.geodir_loginbox .geodir_form_row .textfield:focus, #secondary .widget.geodir_loginbox .geodir_form_row .textfield:focus,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir_form_row .textfield:focus,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield:focus,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield:focus,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield:focus,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield:focus {
   border-color: #22b5ce;
@@ -155,6 +184,8 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix input[type=email]::-webkit-input-placeholder,
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix textarea::-webkit-input-placeholder, body .geodir-widget.geodir_loginbox .geodir_form_row .textfield::-webkit-input-placeholder, #secondary .widget.geodir_loginbox .geodir_form_row .textfield::-webkit-input-placeholder,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir_form_row .textfield::-webkit-input-placeholder,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield::-webkit-input-placeholder,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield::-webkit-input-placeholder,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield::-webkit-input-placeholder,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield::-webkit-input-placeholder {
   color: #adb5c0;
@@ -167,6 +198,8 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix input[type=email]:-moz-placeholder,
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix textarea:-moz-placeholder, body .geodir-widget.geodir_loginbox .geodir_form_row .textfield:-moz-placeholder, #secondary .widget.geodir_loginbox .geodir_form_row .textfield:-moz-placeholder,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir_form_row .textfield:-moz-placeholder,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield:-moz-placeholder,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield:-moz-placeholder,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield:-moz-placeholder,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield:-moz-placeholder {
   /* Firefox 18- */
@@ -180,6 +213,8 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix input[type=email]::-moz-placeholder,
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix textarea::-moz-placeholder, body .geodir-widget.geodir_loginbox .geodir_form_row .textfield::-moz-placeholder, #secondary .widget.geodir_loginbox .geodir_form_row .textfield::-moz-placeholder,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir_form_row .textfield::-moz-placeholder,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield::-moz-placeholder,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield::-moz-placeholder,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield::-moz-placeholder,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield::-moz-placeholder {
   /* Firefox 19+ */
@@ -193,12 +228,14 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix input[type=email]:-ms-input-placeholder,
 body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix textarea:-ms-input-placeholder, body .geodir-widget.geodir_loginbox .geodir_form_row .textfield:-ms-input-placeholder, #secondary .widget.geodir_loginbox .geodir_form_row .textfield:-ms-input-placeholder,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir_form_row .textfield:-ms-input-placeholder,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield:-ms-input-placeholder,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield:-ms-input-placeholder,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield:-ms-input-placeholder,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield:-ms-input-placeholder {
   color: #adb5c0;
 }
 
-.flocks-geodirectory-button, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button, #reviewsTab .comments-area ol.commentlist li article .comment-links .reply a, body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .button, .geodir_preview_section .geodir_goback, .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a {
+.flocks-geodirectory-button, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button, #reviewsTab .comments-area ol.commentlist li article .comment-links .reply a, body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .button, .geodir_preview_section .geodir_goback, .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a, .widget.geodir_related_listing_post_view .geodir-viewall, .widget.geodir_popular_post_view .geodir-viewall {
   background-color: #22b5ce;
   border: 0 none;
   padding: 5px 10px;
@@ -206,6 +243,10 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   display: inline-block;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.flocks-geodirectory-button:hover, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button:hover, #reviewsTab .comments-area ol.commentlist li article .comment-links .reply a:hover, body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .button:hover, .geodir_preview_section .geodir_goback:hover, .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a:hover, .widget.geodir_related_listing_post_view .geodir-viewall:hover, .widget.geodir_popular_post_view .geodir-viewall:hover {
+  opacity: 0.84;
 }
 
 .geodir-chosen-container.geodir-chosen-container-multi .chosen-choices {
@@ -901,6 +942,34 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   }
 }
 
+.flocks-map-container {
+  margin-bottom: 50px;
+}
+
+.flocks-widget-container {
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .flocks-widget-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .flocks-widget-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .flocks-widget-container {
+    width: 1170px;
+  }
+}
+
 #geodir-wrapper {
   padding-bottom: 0;
 }
@@ -1134,7 +1203,16 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 #geodir-main-content .geodir_category_list_view > li .geodir-post-img,
 #geodir-main-content .geodir_category_list_view > li .geodir-addinfo {
   position: relative;
-  top: 8px;
+}
+
+.widget .geodir_category_list_view > li .geodir-post-img .gd-star-rating,
+.widget .geodir_category_list_view > li .geodir-addinfo .gd-star-rating,
+#related_listingTab .geodir_category_list_view > li .geodir-post-img .gd-star-rating,
+#related_listingTab .geodir_category_list_view > li .geodir-addinfo .gd-star-rating,
+#geodir-main-content .geodir_category_list_view > li .geodir-post-img .gd-star-rating,
+#geodir-main-content .geodir_category_list_view > li .geodir-addinfo .gd-star-rating {
+  line-height: normal;
+  margin-bottom: 5px;
 }
 
 .widget .geodir_category_list_view > li .geodir-post-img .geodir_thumbnail,
@@ -1636,6 +1714,19 @@ dl.geodir-tab-head dd a {
   padding-bottom: 10px;
   margin: 25px 0;
   border-bottom: 1px solid #eee;
+}
+
+#geodir-main-content > .geodir_category_list_view .fieldset-separator,
+#geodir-main-content > .geodir_category_list_view .geodir_more_info {
+  display: none;
+}
+
+#geodir-main-content > .geodir_category_list_view li .geodir-entry-content p {
+  max-height: 90px;
+}
+
+#geodir-main-content > .geodir_category_list_view li .geodir-entry-content p a:last-of-type {
+  display: none;
 }
 
 .geodir-category-listing .geodir_more_info,
@@ -2313,6 +2404,17 @@ body .geodir-widget.geodir_recent_reviews .geodir_recent_reviews_section {
   padding: 0;
 }
 
+body .geodir-widget.geodir_recent_reviews .geodir_reviewer_image {
+  width: 60px;
+  margin: 0 15px 0 0;
+}
+
+body .geodir-widget.geodir_recent_reviews .geodir_reviewer_image a,
+body .geodir-widget.geodir_recent_reviews .geodir_reviewer_image img {
+  width: 100%;
+  display: inline-block;
+}
+
 body .geodir-widget.geodir_recent_reviews .geodir_recent_reviews {
   padding-left: 0;
 }
@@ -2756,16 +2858,15 @@ body .geodir-widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count {
 }
 
 .widget .geodir_category_list_view li .geodir-content p {
+  max-height: 165px;
   font-size: 14px;
-  padding-bottom: 25px;
+  padding-bottom: 0;
   line-height: inherit;
   position: relative;
 }
 
 .widget .geodir_category_list_view li .geodir-content p .excerpt-read-more {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  display: none;
 }
 
 .widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments,
@@ -2773,7 +2874,7 @@ body .geodir-widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count {
   width: 100%;
   font-size: 14px;
   padding: 0;
-  margin: 10px 0;
+  margin: 0 0 5px;
   display: inline-block;
 }
 
@@ -2782,7 +2883,10 @@ body .geodir-widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count {
   font-size: 18px;
   margin-right: 5px;
   position: relative;
-  top: 2px;
+}
+
+.widget .geodir_category_list_view li .geodir-addinfo .geodir-addtofav i {
+  left: 2px;
 }
 
 dl.geodir-tab-head {
@@ -2872,8 +2976,24 @@ dl.geodir-tab-head {
   }
 }
 
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+#site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+#site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+.geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+.geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+.geodir-details-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+.geodir-details-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+.geodir-details-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+.geodir-details-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav {
+  top: 15%;
+}
+
 #secondary .widget.geodir_bestof_widget dl.geodir-tab-head dd,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget dl.geodir-tab-head dd,
+.geodir-sidebar-left .widget.geodir_bestof_widget dl.geodir-tab-head dd,
+.geodir-sidebar-right .widget.geodir_bestof_widget dl.geodir-tab-head dd,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget dl.geodir-tab-head dd,
 .geodir-details-sidebar-right .widget.geodir_bestof_widget dl.geodir-tab-head dd {
   width: 100%;
@@ -2882,6 +3002,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_bestof_widget dl.geodir-tab-head dd:last-of-type,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget dl.geodir-tab-head dd:last-of-type,
+.geodir-sidebar-left .widget.geodir_bestof_widget dl.geodir-tab-head dd:last-of-type,
+.geodir-sidebar-right .widget.geodir_bestof_widget dl.geodir-tab-head dd:last-of-type,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget dl.geodir-tab-head dd:last-of-type,
 .geodir-details-sidebar-right .widget.geodir_bestof_widget dl.geodir-tab-head dd:last-of-type {
   margin-bottom: 0;
@@ -2889,6 +3011,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title,
+.geodir-sidebar-left .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title,
+.geodir-sidebar-right .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title,
 .geodir-details-sidebar-right .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title {
   margin: 25px 0;
@@ -2896,6 +3020,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a,
+.geodir-sidebar-left .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a,
+.geodir-sidebar-right .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a,
 .geodir-details-sidebar-right .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a {
   width: 100%;
@@ -2905,6 +3031,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_bestof_widget .geodir_category_list_view li,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li,
+.geodir-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li,
+.geodir-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li,
 .geodir-details-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li {
   padding-bottom: 0;
@@ -2912,6 +3040,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_bestof_widget .geodir_category_list_view li:first-of-type,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li:first-of-type,
+.geodir-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li:first-of-type,
+.geodir-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li:first-of-type,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li:first-of-type,
 .geodir-details-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li:first-of-type {
   padding-top: 0;
@@ -2923,6 +3053,12 @@ dl.geodir-tab-head {
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-content,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo,
+.geodir-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
+.geodir-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-content,
+.geodir-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo,
+.geodir-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
+.geodir-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-content,
+.geodir-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-content,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo,
@@ -2935,6 +3071,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
 #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
+.geodir-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
+.geodir-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
 .geodir-details-sidebar-left .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img,
 .geodir-details-sidebar-right .widget.geodir_bestof_widget .geodir_category_list_view li .geodir-post-img {
   margin-bottom: 20px;
@@ -2942,6 +3080,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_cpt_categories_widget .gd-cptcat-row,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget .gd-cptcat-row,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget .gd-cptcat-row,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget .gd-cptcat-row,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget .gd-cptcat-row,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget .gd-cptcat-row {
   width: 100%;
@@ -2949,6 +3089,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_cpt_categories_widget .gd-cptcat-title,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget .gd-cptcat-title,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget .gd-cptcat-title,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget .gd-cptcat-title,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget .gd-cptcat-title,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget .gd-cptcat-title {
   border: none;
@@ -2958,6 +3100,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_cpt_categories_widget ul,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget ul,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget ul,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget ul,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget ul,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget ul {
   padding-left: 0;
@@ -2965,6 +3109,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_cpt_categories_widget ul li,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget ul li,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget ul li,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget ul li,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget ul li,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget ul li {
   list-style: none;
@@ -2975,6 +3121,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_cpt_categories_widget ul li h3,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget ul li h3,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget ul li h3,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget ul li h3,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget ul li h3,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget ul li h3 {
   font-size: 14px;
@@ -2984,6 +3132,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_cpt_categories_widget ul li h3 a,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget ul li h3 a,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget ul li h3 a,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget ul li h3 a,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget ul li h3 a,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget ul li h3 a {
   display: inline-block;
@@ -2995,6 +3145,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_cpt_categories_widget ul li h3 img,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget ul li h3 img,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget ul li h3 img,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget ul li h3 img,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget ul li h3 img,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget ul li h3 img {
   width: 16px;
@@ -3004,6 +3156,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count,
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count,
+.geodir-sidebar-left .widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count,
+.geodir-sidebar-right .widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count,
 .geodir-details-sidebar-left .widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count,
 .geodir-details-sidebar-right .widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count {
   color: inherit;
@@ -3014,6 +3168,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
 #site-footer-widgets.site-footer-section .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
+.geodir-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
+.geodir-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
 .geodir-details-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
 .geodir-details-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image {
   padding: 0;
@@ -3024,6 +3180,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
 #site-footer-widgets.site-footer-section .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
+.geodir-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
+.geodir-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
 .geodir-details-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
 .geodir-details-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n) {
   margin-right: 0;
@@ -3032,18 +3190,24 @@ dl.geodir-tab-head {
 @media (max-width: 992px) {
   #secondary .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
   #site-footer-widgets.site-footer-section .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
+  .geodir-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
+  .geodir-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
   .geodir-details-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
   .geodir-details-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image {
     width: 17.60%;
   }
   #secondary .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
   #site-footer-widgets.site-footer-section .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
+  .geodir-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
+  .geodir-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
   .geodir-details-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
   .geodir-details-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n) {
     margin: 0 3% 3% 0;
   }
   #secondary .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
   #site-footer-widgets.site-footer-section .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
+  .geodir-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
+  .geodir-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
   .geodir-details-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
   .geodir-details-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n) {
     margin-right: 0;
@@ -3053,18 +3217,24 @@ dl.geodir-tab-head {
 @media (max-width: 480px) {
   #secondary .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
   #site-footer-widgets.site-footer-section .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
+  .geodir-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
+  .geodir-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
   .geodir-details-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image,
   .geodir-details-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image {
     width: 31.33%;
   }
   #secondary .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
   #site-footer-widgets.site-footer-section .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
+  .geodir-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
+  .geodir-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
   .geodir-details-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n),
   .geodir-details-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(5n) {
     margin: 0 3% 3% 0;
   }
   #secondary .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
   #site-footer-widgets.site-footer-section .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
+  .geodir-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
+  .geodir-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
   .geodir-details-sidebar-left .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n),
   .geodir-details-sidebar-right .widget.Geo.Dir.Flickr.Photos .flickr_badge_image:nth-of-type(3n) {
     margin-right: 0;
@@ -3073,6 +3243,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_listing_slider_view .geodir_flexslider,
 #site-footer-widgets.site-footer-section .widget.geodir_listing_slider_view .geodir_flexslider,
+.geodir-sidebar-left .widget.geodir_listing_slider_view .geodir_flexslider,
+.geodir-sidebar-right .widget.geodir_listing_slider_view .geodir_flexslider,
 .geodir-details-sidebar-left .widget.geodir_listing_slider_view .geodir_flexslider,
 .geodir-details-sidebar-right .widget.geodir_listing_slider_view .geodir_flexslider {
   background: transparent;
@@ -3081,6 +3253,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_listing_slider_view .geodir_flexslider .geodir-slides,
 #site-footer-widgets.site-footer-section .widget.geodir_listing_slider_view .geodir_flexslider .geodir-slides,
+.geodir-sidebar-left .widget.geodir_listing_slider_view .geodir_flexslider .geodir-slides,
+.geodir-sidebar-right .widget.geodir_listing_slider_view .geodir_flexslider .geodir-slides,
 .geodir-details-sidebar-left .widget.geodir_listing_slider_view .geodir_flexslider .geodir-slides,
 .geodir-details-sidebar-right .widget.geodir_listing_slider_view .geodir_flexslider .geodir-slides {
   padding-left: 0;
@@ -3088,6 +3262,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_listing_slider_view #geodir_widget_slider li:hover .geodir-slider-title,
 #site-footer-widgets.site-footer-section .widget.geodir_listing_slider_view #geodir_widget_slider li:hover .geodir-slider-title,
+.geodir-sidebar-left .widget.geodir_listing_slider_view #geodir_widget_slider li:hover .geodir-slider-title,
+.geodir-sidebar-right .widget.geodir_listing_slider_view #geodir_widget_slider li:hover .geodir-slider-title,
 .geodir-details-sidebar-left .widget.geodir_listing_slider_view #geodir_widget_slider li:hover .geodir-slider-title,
 .geodir-details-sidebar-right .widget.geodir_listing_slider_view #geodir_widget_slider li:hover .geodir-slider-title {
   -webkit-transform: translateY(0);
@@ -3097,6 +3273,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_listing_slider_view #geodir_widget_slider li .geodir-slider-title,
 #site-footer-widgets.site-footer-section .widget.geodir_listing_slider_view #geodir_widget_slider li .geodir-slider-title,
+.geodir-sidebar-left .widget.geodir_listing_slider_view #geodir_widget_slider li .geodir-slider-title,
+.geodir-sidebar-right .widget.geodir_listing_slider_view #geodir_widget_slider li .geodir-slider-title,
 .geodir-details-sidebar-left .widget.geodir_listing_slider_view #geodir_widget_slider li .geodir-slider-title,
 .geodir-details-sidebar-right .widget.geodir_listing_slider_view #geodir_widget_slider li .geodir-slider-title {
   -webkit-transition: all 0.25s ease-in-out;
@@ -3109,6 +3287,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox ul,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox ul,
+.geodir-sidebar-left .widget.geodir_loginbox ul,
+.geodir-sidebar-right .widget.geodir_loginbox ul,
 .geodir-details-sidebar-left .widget.geodir_loginbox ul,
 .geodir-details-sidebar-right .widget.geodir_loginbox ul {
   padding-left: 0;
@@ -3117,6 +3297,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox ul li,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox ul li,
+.geodir-sidebar-left .widget.geodir_loginbox ul li,
+.geodir-sidebar-right .widget.geodir_loginbox ul li,
 .geodir-details-sidebar-left .widget.geodir_loginbox ul li,
 .geodir-details-sidebar-right .widget.geodir_loginbox ul li {
   border-bottom: none;
@@ -3124,6 +3306,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox ul li:last-of-type,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox ul li:last-of-type,
+.geodir-sidebar-left .widget.geodir_loginbox ul li:last-of-type,
+.geodir-sidebar-right .widget.geodir_loginbox ul li:last-of-type,
 .geodir-details-sidebar-left .widget.geodir_loginbox ul li:last-of-type,
 .geodir-details-sidebar-right .widget.geodir_loginbox ul li:last-of-type {
   margin-bottom: 0;
@@ -3131,6 +3315,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox ul li .signin:hover,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox ul li .signin:hover,
+.geodir-sidebar-left .widget.geodir_loginbox ul li .signin:hover,
+.geodir-sidebar-right .widget.geodir_loginbox ul li .signin:hover,
 .geodir-details-sidebar-left .widget.geodir_loginbox ul li .signin:hover,
 .geodir-details-sidebar-right .widget.geodir_loginbox ul li .signin:hover {
   color: #EF5350;
@@ -3138,6 +3324,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox ul li .signin:before,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox ul li .signin:before,
+.geodir-sidebar-left .widget.geodir_loginbox ul li .signin:before,
+.geodir-sidebar-right .widget.geodir_loginbox ul li .signin:before,
 .geodir-details-sidebar-left .widget.geodir_loginbox ul li .signin:before,
 .geodir-details-sidebar-right .widget.geodir_loginbox ul li .signin:before {
   content: "\f011";
@@ -3149,6 +3337,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-single,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-single,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-single,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-single,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-single,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-single {
   background: #fff;
@@ -3156,6 +3346,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-drop,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-drop,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-drop,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-drop,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-drop,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir-chosen-container.geodir-chosen-container-single .chosen-drop {
   background: #fff;
@@ -3164,6 +3356,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox .geodir_form_row .textfield,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir_form_row .textfield,
+.geodir-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield,
+.geodir-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield,
 .geodir-details-sidebar-left .widget.geodir_loginbox .geodir_form_row .textfield,
 .geodir-details-sidebar-right .widget.geodir_loginbox .geodir_form_row .textfield {
   background: #fff;
@@ -3171,6 +3365,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox p.geodir-new-forgot-link,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox p.geodir-new-forgot-link,
+.geodir-sidebar-left .widget.geodir_loginbox p.geodir-new-forgot-link,
+.geodir-sidebar-right .widget.geodir_loginbox p.geodir-new-forgot-link,
 .geodir-details-sidebar-left .widget.geodir_loginbox p.geodir-new-forgot-link,
 .geodir-details-sidebar-right .widget.geodir_loginbox p.geodir-new-forgot-link {
   margin: 0;
@@ -3180,6 +3376,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_loginbox p.geodir-new-forgot-link a,
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox p.geodir-new-forgot-link a,
+.geodir-sidebar-left .widget.geodir_loginbox p.geodir-new-forgot-link a,
+.geodir-sidebar-right .widget.geodir_loginbox p.geodir-new-forgot-link a,
 .geodir-details-sidebar-left .widget.geodir_loginbox p.geodir-new-forgot-link a,
 .geodir-details-sidebar-right .widget.geodir_loginbox p.geodir-new-forgot-link a {
   width: 100%;
@@ -3187,6 +3385,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_popular_post_category .geodir-category-list-in,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_category .geodir-category-list-in,
+.geodir-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in,
+.geodir-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in,
 .geodir-details-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in,
 .geodir-details-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in {
   padding: 0;
@@ -3196,6 +3396,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_popular_post_category .geodir-category-list-in ul,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_category .geodir-category-list-in ul,
+.geodir-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul,
+.geodir-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul,
 .geodir-details-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul,
 .geodir-details-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul {
   width: 100%;
@@ -3205,6 +3407,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_popular_post_category .geodir-category-list-in ul li,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_category .geodir-category-list-in ul li,
+.geodir-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li,
+.geodir-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li,
 .geodir-details-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li,
 .geodir-details-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li {
   width: 100%;
@@ -3214,6 +3418,8 @@ dl.geodir-tab-head {
 @media (max-width: 992px) {
   #secondary .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_category .geodir-category-list-in ul li,
+  .geodir-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li,
+  .geodir-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   .geodir-details-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   .geodir-details-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li {
     width: 18%;
@@ -3223,6 +3429,8 @@ dl.geodir-tab-head {
 @media (max-width: 768px) {
   #secondary .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_category .geodir-category-list-in ul li,
+  .geodir-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li,
+  .geodir-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   .geodir-details-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   .geodir-details-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li {
     width: 50%;
@@ -3232,6 +3440,8 @@ dl.geodir-tab-head {
 @media (max-width: 480px) {
   #secondary .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_category .geodir-category-list-in ul li,
+  .geodir-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li,
+  .geodir-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   .geodir-details-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li,
   .geodir-details-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li {
     width: 100%;
@@ -3241,6 +3451,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_popular_post_category .geodir-category-list-in ul li a,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_category .geodir-category-list-in ul li a,
+.geodir-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li a,
+.geodir-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li a,
 .geodir-details-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li a,
 .geodir-details-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li a {
   width: 100%;
@@ -3251,6 +3463,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_popular_post_category .geodir-category-list-in ul li a img,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_category .geodir-category-list-in ul li a img,
+.geodir-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li a img,
+.geodir-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li a img,
 .geodir-details-sidebar-left .widget.geodir_popular_post_category .geodir-category-list-in ul li a img,
 .geodir-details-sidebar-right .widget.geodir_popular_post_category .geodir-category-list-in ul li a img {
   position: absolute;
@@ -3260,6 +3474,10 @@ dl.geodir-tab-head {
 #secondary .widget.geodir_related_listing_post_view .geodir_category_list_view > li, #secondary .widget.geodir_popular_post_view .geodir_category_list_view > li,
 #site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view .geodir_category_list_view > li,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li,
 .geodir-details-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li,
 .geodir-details-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li,
@@ -3270,6 +3488,10 @@ dl.geodir-tab-head {
 #secondary .widget.geodir_related_listing_post_view .geodir_category_list_view > li:first-of-type, #secondary .widget.geodir_popular_post_view .geodir_category_list_view > li:first-of-type,
 #site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view .geodir_category_list_view > li:first-of-type,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li:first-of-type,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li:first-of-type,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li:first-of-type,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li:first-of-type,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li:first-of-type,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li:first-of-type,
 .geodir-details-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li:first-of-type,
 .geodir-details-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li:first-of-type,
@@ -3280,6 +3502,10 @@ dl.geodir-tab-head {
 #secondary .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview, #secondary .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
 #site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
 .geodir-details-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
 .geodir-details-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
@@ -3291,6 +3517,10 @@ dl.geodir-tab-head {
   #secondary .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview, #secondary .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
   #site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
   .geodir-details-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview,
   .geodir-details-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview,
@@ -3308,6 +3538,22 @@ dl.geodir-tab-head {
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
@@ -3337,6 +3583,22 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
@@ -3364,6 +3626,22 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
@@ -3391,6 +3669,22 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
@@ -3421,6 +3715,22 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
@@ -3449,6 +3759,22 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n),
@@ -3476,6 +3802,22 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n+1),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n+1),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n+1),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n+1),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n+1),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n+1),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n+1),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n+1),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n+1),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n+1),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n+1),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n+1),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n+1),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n+1),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n+1),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n+1),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n+1),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n+1),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(2n+1),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(2n+1),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(2n+1),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(2n+1),
@@ -3506,6 +3848,22 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth,
@@ -3542,6 +3900,38 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth:nth-child(5n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(3n),
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth:nth-child(5n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(3n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf:nth-child(5n),
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird:nth-child(3n),
@@ -3604,6 +3994,38 @@ dl.geodir-tab-head {
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-addinfo,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-content,
   #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-addinfo,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-content,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-addinfo,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-content,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-addinfo,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-content,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-addinfo,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-content,
+  .geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-addinfo,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-content,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-addinfo,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-content,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-addinfo,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-content,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-addinfo,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-content,
+  .geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-addinfo,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-content,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-addinfo,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-content,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-addinfo,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-content,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-addinfo,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-content,
+  .geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-addinfo,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-content,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-addinfo,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-content,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-addinfo,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-content,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefourth .geodir-addinfo,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-content,
+  .geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onefifth .geodir-addinfo,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-content,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onehalf .geodir-addinfo,
   .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li.geodir-gridview.gridview_onethird .geodir-content,
@@ -3651,6 +4073,18 @@ dl.geodir-tab-head {
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-post-img,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-content,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-addinfo,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-content,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-addinfo,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-post-img,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-content,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-addinfo,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-content,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-addinfo,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-post-img,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-content,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-addinfo,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-content,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-addinfo,
@@ -3670,6 +4104,10 @@ dl.geodir-tab-head {
 #secondary .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img, #secondary .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-post-img,
 #site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img,
 #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-post-img,
+.geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img,
+.geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-post-img,
+.geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img,
+.geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-post-img,
 .geodir-details-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img,
 .geodir-details-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view > li .geodir-post-img,
 .geodir-details-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view > li .geodir-post-img,
@@ -3679,6 +4117,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_recent_reviews .geodir_recent_reviews_section,
 #site-footer-widgets.site-footer-section .widget.geodir_recent_reviews .geodir_recent_reviews_section,
+.geodir-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews_section,
+.geodir-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews_section,
 .geodir-details-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews_section,
 .geodir-details-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews_section {
   padding: 0;
@@ -3686,6 +4126,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_recent_reviews .geodir_recent_reviews,
 #site-footer-widgets.site-footer-section .widget.geodir_recent_reviews .geodir_recent_reviews,
+.geodir-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews,
+.geodir-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews,
 .geodir-details-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews,
 .geodir-details-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews {
   padding-left: 0;
@@ -3693,6 +4135,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_recent_reviews .geodir_recent_reviews li,
 #site-footer-widgets.site-footer-section .widget.geodir_recent_reviews .geodir_recent_reviews li,
+.geodir-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews li,
+.geodir-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews li,
 .geodir-details-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews li,
 .geodir-details-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews li {
   list-style: none;
@@ -3701,6 +4145,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_recent_reviews .geodir_recent_reviews li:first-of-type,
 #site-footer-widgets.site-footer-section .widget.geodir_recent_reviews .geodir_recent_reviews li:first-of-type,
+.geodir-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews li:first-of-type,
+.geodir-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews li:first-of-type,
 .geodir-details-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews li:first-of-type,
 .geodir-details-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews li:first-of-type {
   padding-top: 0;
@@ -3708,6 +4154,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_recent_reviews .geodir_recent_reviews li:last-of-type,
 #site-footer-widgets.site-footer-section .widget.geodir_recent_reviews .geodir_recent_reviews li:last-of-type,
+.geodir-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews li:last-of-type,
+.geodir-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews li:last-of-type,
 .geodir-details-sidebar-left .widget.geodir_recent_reviews .geodir_recent_reviews li:last-of-type,
 .geodir-details-sidebar-right .widget.geodir_recent_reviews .geodir_recent_reviews li:last-of-type {
   padding-bottom: 0;
@@ -3715,6 +4163,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar,
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar,
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar,
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar,
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar,
 .geodir-details-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar {
   border: none;
@@ -3724,6 +4174,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in,
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in,
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in,
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in,
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in,
 .geodir-details-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in {
   background: none;
@@ -3732,6 +4184,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
 .geodir-details-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper {
   flex: inherit !important;
@@ -3741,6 +4195,8 @@ dl.geodir-tab-head {
 @media (max-width: 480px) {
   #secondary .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
   #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
+  .geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
+  .geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
   .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper,
   .geodir-details-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper {
     width: 100% !important;
@@ -3753,6 +4209,12 @@ dl.geodir-tab-head {
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select,
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text],
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input,
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select,
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text],
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input,
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select,
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text],
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input,
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select,
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text],
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input,
@@ -3769,6 +4231,12 @@ dl.geodir-tab-head {
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select:focus,
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text]:focus,
 #site-footer-widgets.site-footer-section .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input:focus,
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select:focus,
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text]:focus,
+.geodir-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input:focus,
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select:focus,
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text]:focus,
+.geodir-sidebar-right .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input:focus,
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select:focus,
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text]:focus,
 .geodir-details-sidebar-left .widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input:focus,
@@ -3781,6 +4249,10 @@ dl.geodir-tab-head {
 #secondary .widget.geodir_social_like_widget iframe.facebook, #secondary .widget.geodir_social_like_widget iframe.twitter-share-button,
 #site-footer-widgets.site-footer-section .widget.geodir_social_like_widget iframe.facebook,
 #site-footer-widgets.site-footer-section .widget.geodir_social_like_widget iframe.twitter-share-button,
+.geodir-sidebar-left .widget.geodir_social_like_widget iframe.facebook,
+.geodir-sidebar-left .widget.geodir_social_like_widget iframe.twitter-share-button,
+.geodir-sidebar-right .widget.geodir_social_like_widget iframe.facebook,
+.geodir-sidebar-right .widget.geodir_social_like_widget iframe.twitter-share-button,
 .geodir-details-sidebar-left .widget.geodir_social_like_widget iframe.facebook,
 .geodir-details-sidebar-left .widget.geodir_social_like_widget iframe.twitter-share-button,
 .geodir-details-sidebar-right .widget.geodir_social_like_widget iframe.facebook,
@@ -3790,6 +4262,8 @@ dl.geodir-tab-head {
 
 #secondary .widget.geodir_social_like_widget div,
 #site-footer-widgets.site-footer-section .widget.geodir_social_like_widget div,
+.geodir-sidebar-left .widget.geodir_social_like_widget div,
+.geodir-sidebar-right .widget.geodir_social_like_widget div,
 .geodir-details-sidebar-left .widget.geodir_social_like_widget div,
 .geodir-details-sidebar-right .widget.geodir_social_like_widget div {
   max-width: 60px;
@@ -3797,6 +4271,8 @@ dl.geodir-tab-head {
 
 #secondary .bestof-tabs-on-top .geodir_bestof_widget .geodir-tabs,
 #site-footer-widgets.site-footer-section .bestof-tabs-on-top .geodir_bestof_widget .geodir-tabs,
+.geodir-sidebar-left .bestof-tabs-on-top .geodir_bestof_widget .geodir-tabs,
+.geodir-sidebar-right .bestof-tabs-on-top .geodir_bestof_widget .geodir-tabs,
 .geodir-details-sidebar-left .bestof-tabs-on-top .geodir_bestof_widget .geodir-tabs,
 .geodir-details-sidebar-right .bestof-tabs-on-top .geodir_bestof_widget .geodir-tabs {
   margin: 0;
@@ -3804,6 +4280,8 @@ dl.geodir-tab-head {
 
 #secondary .bestof-tabs-on-left .geodir_bestof_widget .geodir-tabs,
 #site-footer-widgets.site-footer-section .bestof-tabs-on-left .geodir_bestof_widget .geodir-tabs,
+.geodir-sidebar-left .bestof-tabs-on-left .geodir_bestof_widget .geodir-tabs,
+.geodir-sidebar-right .bestof-tabs-on-left .geodir_bestof_widget .geodir-tabs,
 .geodir-details-sidebar-left .bestof-tabs-on-left .geodir_bestof_widget .geodir-tabs,
 .geodir-details-sidebar-right .bestof-tabs-on-left .geodir_bestof_widget .geodir-tabs {
   width: 100%;
@@ -3811,6 +4289,8 @@ dl.geodir-tab-head {
 
 #secondary .bestof-tabs-on-left .geodir_bestof_widget #geodir-bestof-places,
 #site-footer-widgets.site-footer-section .bestof-tabs-on-left .geodir_bestof_widget #geodir-bestof-places,
+.geodir-sidebar-left .bestof-tabs-on-left .geodir_bestof_widget #geodir-bestof-places,
+.geodir-sidebar-right .bestof-tabs-on-left .geodir_bestof_widget #geodir-bestof-places,
 .geodir-details-sidebar-left .bestof-tabs-on-left .geodir_bestof_widget #geodir-bestof-places,
 .geodir-details-sidebar-right .bestof-tabs-on-left .geodir_bestof_widget #geodir-bestof-places {
   margin: 0;
@@ -3821,6 +4301,10 @@ dl.geodir-tab-head {
 #secondary .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-addtofav i,
 #site-footer-widgets.site-footer-section .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments i,
 #site-footer-widgets.site-footer-section .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-addtofav i,
+.geodir-sidebar-left .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments i,
+.geodir-sidebar-left .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-addtofav i,
+.geodir-sidebar-right .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments i,
+.geodir-sidebar-right .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-addtofav i,
 .geodir-details-sidebar-left .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments i,
 .geodir-details-sidebar-left .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-addtofav i,
 .geodir-details-sidebar-right .bestof-tabs-on-left .geodir_bestof_widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments i,
@@ -3831,6 +4315,8 @@ dl.geodir-tab-head {
 @media (min-width: 1200px) {
   #secondary .geodir_map_container .map-category-listing-main .map_category,
   #site-footer-widgets.site-footer-section .geodir_map_container .map-category-listing-main .map_category,
+  .geodir-sidebar-left .geodir_map_container .map-category-listing-main .map_category,
+  .geodir-sidebar-right .geodir_map_container .map-category-listing-main .map_category,
   .geodir-details-sidebar-left .geodir_map_container .map-category-listing-main .map_category,
   .geodir-details-sidebar-right .geodir_map_container .map-category-listing-main .map_category {
     width: 80%;
@@ -3840,10 +4326,160 @@ dl.geodir-tab-head {
 @media (min-width: 1200px) {
   #secondary .geodir_map_container .map-category-listing-main .map_category .main_list li,
   #site-footer-widgets.site-footer-section .geodir_map_container .map-category-listing-main .map_category .main_list li,
+  .geodir-sidebar-left .geodir_map_container .map-category-listing-main .map_category .main_list li,
+  .geodir-sidebar-right .geodir_map_container .map-category-listing-main .map_category .main_list li,
   .geodir-details-sidebar-left .geodir_map_container .map-category-listing-main .map_category .main_list li,
   .geodir-details-sidebar-right .geodir_map_container .map-category-listing-main .map_category .main_list li {
     width: 100%;
   }
+}
+
+.widget.geodir_related_listing_post_view .geodir-viewall, .widget.geodir_popular_post_view .geodir-viewall {
+  width: auto;
+  float: right;
+  display: inline-block;
+}
+
+.widget.geodir_related_listing_post_view .geodir_category_list_view, .widget.geodir_popular_post_view .geodir_category_list_view {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel {
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer {
+  z-index: 1;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item {
+  display: inline-block;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li {
+  width: 100%;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 35%;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #000;
+  padding: 0;
+  font-size: 0;
+  line-height: normal;
+  display: inline-block;
+  opacity: 0.25;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
+.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover {
+  opacity: 1;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
+.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled {
+  opacity: 0;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev {
+  float: left;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before {
+  content: "\f053";
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next {
+  float: right;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before {
+  content: "\f054";
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .fieldset-separator,
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir_more_info, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .fieldset-separator,
+.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir_more_info {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-content,
+  .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-post-img,
+  .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-addinfo, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-content,
+  .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-post-img,
+  .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-addinfo {
+    width: 100%;
+    margin: 0 0 10px;
+    float: none;
+  }
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3 {
+  margin: 0 0 15px;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img {
+  margin-bottom: 25px;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content {
+  width: 100%;
+  margin: 0;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content {
+  display: none;
+  margin-bottom: 15px;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p {
+  padding-top: 0;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo {
+  width: 100%;
+  margin: 0;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon {
+  font-size: inherit;
+}
+
+.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i {
+  position: relative;
+  left: 3px;
 }
 
 .geodir_map_container {
@@ -3864,6 +4500,11 @@ dl.geodir-tab-head {
   background: #f6f8f9;
   padding: 10px;
   border-radius: 6px;
+}
+
+.geodir_map_container .map_background {
+  position: relative;
+  z-index: 1;
 }
 
 .geodir_map_container .main_map_wrapper {
@@ -3898,8 +4539,16 @@ dl.geodir-tab-head {
   margin: 0;
 }
 
+.geodir_map_container .map-category-listing-main {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
 .geodir_map_container .map-category-listing-main .map-category-listing {
   width: 100%;
+  position: static;
 }
 
 .geodir_map_container .map-category-listing-main .gd-trigger {
@@ -3921,7 +4570,8 @@ dl.geodir-tab-head {
 }
 
 .geodir_map_container .map-category-listing-main .map_category {
-  width: 50%;
+  width: 300px;
+  height: 100%;
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -3929,6 +4579,10 @@ dl.geodir-tab-head {
   .geodir_map_container .map-category-listing-main .map_category {
     width: 70%;
   }
+}
+
+.geodir_map_container .map-category-listing-main .map_category input[type="text"] {
+  color: #999;
 }
 
 .geodir_map_container .map-category-listing-main .map_category #geodir_map_v3_home_map_3_search_string {
@@ -3984,23 +4638,18 @@ dl.geodir-tab-head {
 }
 
 .geodir_map_container .map-category-listing-main .map_category .main_list li {
-  width: 33.33%;
-  padding-right: 15px;
+  width: 100%;
+  padding-left: 25px;
   margin-bottom: 10px;
   list-style: none;
   display: inline-block;
-}
-
-@media (max-width: 992px) {
-  .geodir_map_container .map-category-listing-main .map_category .main_list li {
-    width: 100%;
-  }
+  position: relative;
 }
 
 .geodir_map_container .map-category-listing-main .map_category .main_list li .group_selector {
-  margin-right: 5px;
-  position: relative;
+  position: absolute;
   top: 2px;
+  left: 0;
 }
 
 .geodir_map_container .map-category-listing-main .map_category .main_list li label {

@@ -21,8 +21,48 @@
   * Enqueue scripts and styles.
   */
  function flocks_geodirectory_themepack_enqueue_scripts() {
-    wp_register_style( 'flocks-geodirectory-themepack-stylesheet', plugins_url( '/assets/css/themepack.css', __FILE__ ), array( 'flocks-style' ), '1.0' );
+    $gd_related_listing_postview = is_active_widget( false, '', 'geodir_related_listing_postview' );
+    $gd_popular_postview = is_active_widget( false, '', 'geodir_popular_postview' );
+
+    wp_register_style(
+        'flocks-geodirectory-themepack-stylesheet',
+        plugins_url( '/assets/css/themepack.css', __FILE__ ),
+        array( 'flocks-style' ),
+        '1.0'
+    );
     wp_enqueue_style( 'flocks-geodirectory-themepack-stylesheet' );
+
+    wp_register_style(
+        'flocks-geodirectory-themepack-owl-carousel',
+        plugins_url( '/assets/css/owl.carousel.min.css', __FILE__ ),
+        array( 'flocks-style' ),
+        '1.0'
+    );
+    wp_enqueue_style( 'flocks-geodirectory-themepack-owl-carousel' );
+
+    wp_register_style(
+        'flocks-geodirectory-themepack-owl-carousel-skin',
+        plugins_url( '/assets/css/owl.theme.default.min.css', __FILE__ ),
+        array( 'flocks-style' ),
+        '1.0'
+    );
+    wp_enqueue_style( 'flocks-geodirectory-themepack-owl-carousel-skin' );
+
+    wp_enqueue_script(
+        'flocks-geodirectory-owl-carousel',
+        plugins_url( '/assets/js/owl.carousel.min.js', __FILE__ ),
+        array('jquery'),
+        '1.0'
+    );
+
+
+    wp_enqueue_script(
+        'flocks-geodirectory-themepack-script',
+        plugins_url( '/assets/js/themepack.js', __FILE__ ),
+        array('jquery'),
+        '1.0'
+    );
+
 	return;
 }
 
@@ -52,10 +92,31 @@ function flocks_geodirectory_action_calls()
     remove_action('geodir_author_page_title', 'geodir_action_author_page_title', 10);
 
     // Remove Details Slider
-    remove_action('geodir_details_main_content', 'geodir_action_details_slider', 30);
+    // remove_action('geodir_details_main_content', 'geodir_action_details_slider', 30);
 
     // Add the DetailsSlider
-    add_action('flocks_action_header_slider', 'geodir_action_details_slider', 10);
+    // add_action('flocks_action_header_slider', 'geodir_action_details_slider', 10);
+
+}
+
+
+add_filter('geodir_filter_media_image_large_width', 'flocks_gd_filter_media_image_large_width', 10, 3 );
+/**
+ * Change the size of the gd image width.
+ *
+ * @param int $width           Large image width.
+ * @param int $default         Default width.
+ * @param string|array $params Image parameters.
+ *
+ * @since 1.0.0
+ * @package Flocks GeoDirectory Themepack
+ */
+function flocks_gd_filter_media_image_large_width( $width, $default, $params ) {
+
+    $width = 2500;
+
+    return $width;
+
 }
 
 
@@ -69,7 +130,7 @@ add_action('geodir_wrapper_open', 'flocks_geodirectory_home_header');
 function flocks_geodirectory_home_header() {
     $enable_gd_home_header = apply_filters('flocks_enable_gd_home_header', true);
     $enable_map = apply_filters('flocks_enable_gd_home_map', true);
-    $map_atts = apply_filters('flocks_gd_home_map_atts', 'width=100% height=425 maptype="ROADMAP" scrollwheel=false');
+    $map_atts = apply_filters('flocks_gd_home_map_atts', 'width=100% height=425 maptype="ROADMAP" zoom="10" scrollwheel=false');
     $enable_search = apply_filters('flocks_enable_gd_home_search', true);
 
     if (is_page(geodir_home_page_id()) && $enable_gd_home_header) { ?>
@@ -79,17 +140,29 @@ function flocks_geodirectory_home_header() {
 
             <?php if ($enable_map) { ?>
 
-                <?php echo do_shortcode( '[gd_homepage_map ' . $map_atts . ' ]' ); ?>
+                <div class="flocks-map-container">
 
-            <?php } ?>
+                    <?php echo do_shortcode( '[gd_homepage_map ' . $map_atts . ' ]' ); ?>
 
-            <?php if ($enable_search) { ?>
-
-                <?php echo do_shortcode( '[gd_advanced_search]' ); ?>
+                </div>
 
             <?php } ?>
 
             <?php do_action('flocks_after_gd_home_map_content'); ?>
+
+            <div class="flocks-widget-container">
+
+                <?php do_action('flocks_before_header_widget_content'); ?>
+
+                <?php if ($enable_search) { ?>
+
+                    <?php echo do_shortcode( '[gd_advanced_search]' ); ?>
+
+                <?php } ?>
+
+                <?php do_action('flocks_after_header_widget_content'); ?>
+
+            </div>
 
         </div>
     <?php }
@@ -148,73 +221,61 @@ function flocks_gd_the_cover_image() { ?>
         get_option('geodir_listing_no_img')
     );
 	?>
-    <?php if ( ! is_page( geodir_home_page_id() ) ): ?>
+    <?php if ( ! is_page( geodir_home_page_id() ) && geodir_is_geodir_page() ) : ?>
 
-        <?php if ( geodir_is_geodir_page() && is_singular() && ! empty( $post_images ) ): ?>
+        <div class="flocks-gd-cover-image" id="cover-image">
 
-            <div class="flocks-gd-header-slider">
+            <div id="cover-image-wrap" class="<?php echo sanitize_html_class( $meta_header_size ); ?> <?php echo sanitize_html_class( $meta_header_alignment ); ?>">
 
-                <?php do_action('flocks_action_header_slider'); ?>
+                <div id="cover-image-inner-wrap">
 
-            </div>
+                    <div id="cover-image-copy">
 
-        <?php elseif ( geodir_is_geodir_page() ) : ?>
+                        <div class="container">
 
-            <div class="flocks-gd-cover-image" id="cover-image">
+                            <?php if ( is_singular() ): ?>
 
-                <div id="cover-image-wrap" class="<?php echo sanitize_html_class( $meta_header_size ); ?> <?php echo sanitize_html_class( $meta_header_alignment ); ?>">
+                                <?php  the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-                    <div id="cover-image-inner-wrap">
+                                <?php if ( ! empty( $meta_header_sub_title ) ) { ?>
 
-                        <div id="cover-image-copy">
+                                    <div class="heading-lead">
 
-                            <div class="container">
+                                        <?php echo wp_kses( $meta_header_sub_title, wp_kses_allowed_html( 'post' ) ); ?>
 
-                                <?php if ( is_singular() ): ?>
+                                    </div>
 
-                                    <?php  the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                                <?php } ?>
 
-                                    <?php if ( ! empty( $meta_header_sub_title ) ) { ?>
+                            <?php endif; ?>
 
-                                        <div class="heading-lead">
+                            <?php if ( is_archive() ): ?>
 
-                                            <?php echo wp_kses( $meta_header_sub_title, wp_kses_allowed_html( 'post' ) ); ?>
+                                <?php geodir_action_listings_title(); ?>
 
-                                        </div>
+                                <?php the_archive_description( '<div class="heading-lead">', '</div>' ); ?>
 
-                                    <?php } ?>
+                            <?php endif; ?>
 
-                                <?php endif; ?>
+                            <?php if ( geodir_is_page('search') ): ?>
 
-                                <?php if ( is_archive() ): ?>
+                                <?php geodir_action_listings_title(); ?>
 
-                                    <?php geodir_action_listings_title(); ?>
+                            <?php endif; ?>
 
-                                    <?php the_archive_description( '<div class="heading-lead">', '</div>' ); ?>
+                            <?php if ( geodir_is_page('author') ): ?>
 
-                                <?php endif; ?>
+                                <?php geodir_action_listings_title(); ?>
 
-                                <?php if ( geodir_is_page('search') ): ?>
+                            <?php endif; ?>
 
-                                    <?php geodir_action_listings_title(); ?>
+                            <?php geodir_breadcrumb(); ?>
 
-                                <?php endif; ?>
-
-                                <?php if ( geodir_is_page('author') ): ?>
-
-                                    <?php geodir_action_listings_title(); ?>
-
-                                <?php endif; ?>
-
-                                <?php geodir_breadcrumb(); ?>
-
-                            </div><!--.container-->
-                        </div><!--#cover-image-copy-->
-                    </div>
+                        </div><!--.container-->
+                    </div><!--#cover-image-copy-->
                 </div>
             </div>
-
-        <?php endif; ?>
+        </div>
 
     <?php endif; ?>
 

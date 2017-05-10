@@ -22,13 +22,9 @@
 
 .flocks-gd-cover-image {
     .geodir-breadcrumb {
-        margin: 3.5em auto 0;
         padding: 0;
         position: relative;
         z-index: 2;
-        @media(max-width: 1200px) {
-            margin: 0 auto 1.25em;
-        }
         ul {
             li {
                 color: #fff;
@@ -42,9 +38,24 @@
     &#cover-image {
         h1.entry-title {
             margin-top: 1em;
+            @media(max-width: 1200px) {
+                margin: 2.15em auto 1.5em;
+            }
+            + .geodir-breadcrumb {
+                margin: 1.5em auto 2.5em;
+                @media(max-width: 1200px) {
+                    margin: 0 auto 3.25em;
+                }
+            }
         }
         .heading-lead {
             margin-bottom: 25px;
+            + .geodir-breadcrumb {
+                margin: 1.5em auto 2.5em;
+                @media(max-width: 1200px) {
+                    margin: 0 auto 3.25em;
+                }
+            }
         }
     }
 }

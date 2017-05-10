@@ -55,6 +55,9 @@
     display: inline-block;
     border-radius: 4px;
     cursor: pointer;
+    &:hover {
+        opacity: 0.84;
+    }
 }
 // DropDown
 

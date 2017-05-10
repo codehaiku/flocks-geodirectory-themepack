@@ -15,7 +15,10 @@
             border-radius: 6px;
         }
     }
-
+    .map_background {
+        position: relative;
+        z-index: 1;
+    }
     .main_map_wrapper {
         min-width: 100%;
         max-width: 100%;
@@ -44,8 +47,13 @@
 
     // Map Category Filter button
     .map-category-listing-main {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
         .map-category-listing {
             width: 100%;
+            position: static;
         }
 
         .gd-trigger {
@@ -66,10 +74,14 @@
             }
         }
         .map_category {
-            width: 50%;
+            width: 300px;
+            height: 100%;
             background: rgba(0, 0, 0, 0.7);
             @media(max-width: 480px) {
                 width: 70%;
+            }
+            input[type="text"] {
+                color: #999;
             }
             #geodir_map_v3_home_map_3_search_string {
                 background: transparent;
@@ -114,18 +126,17 @@
                 padding-left: 0;
                 margin-bottom: 0;
                 li {
-                    width: 33.33%;
-                    padding-right: 15px;
+                    width: 100%;
+                    padding-left: 25px;
                     margin-bottom: 10px;
                     list-style: none;
                     display: inline-block;
-                    @media(max-width: 992px) {
-                        width: 100%;
-                    }
+                    position: relative;
+
                     .group_selector {
-                        margin-right: 5px;
-                        position: relative;
+                        position: absolute;
                         top: 2px;
+                        left: 0;
                     }
                     label {
                         margin: 0;
