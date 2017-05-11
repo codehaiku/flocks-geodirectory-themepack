@@ -74,6 +74,16 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   display: inline-block;
 }
 
+.err-no-rating {
+  width: 100%;
+  color: #EF5350;
+  background: #ffffff;
+  font-size: 14px;
+  border: none;
+  border-left: 5px solid #EF5350;
+  left: auto;
+}
+
 .flocks-gd-cover-image .geodir-breadcrumb {
   padding: 0;
   position: relative;
@@ -1041,19 +1051,40 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   padding-bottom: 7.5px;
 }
 
-.geodir_flex-container .geodir_flexslider#geodir_slider li {
-  background: #000;
+.geodir_flex-container .geodir_flexslider#geodir_slider .geodir-viewport {
+  width: 100%;
+  float: left;
+}
+
+.geodir_flex-container .geodir_flexslider#geodir_slider .geodir-slides li {
+  height: 50px;
+  float: left;
+}
+
+.geodir_flex-container .geodir_flexslider#geodir_slider .geodir-slides li.geodir-active-slide {
+  height: auto;
+}
+
+.geodir_flex-container .geodir_flexslider#geodir_slider .geodir-slides li img:nth-child(2) {
+  max-height: none !important;
 }
 
 .geodir_flex-container .geodir_flexslider .geodir-direction-nav li a {
+  width: auto;
   background: none;
   text-indent: inherit;
   font-size: 0;
 }
 
 .geodir_flex-container .geodir_flexslider .geodir-direction-nav li a:before {
-  font-size: 30px;
+  width: 30px;
+  height: 30px;
   color: #fff;
+  background: #000;
+  font-size: 26px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
 }
 
 .geodir_flex-container .geodir_flexslider .geodir-direction-nav li .geodir-prev {
@@ -1061,7 +1092,8 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 }
 
 .geodir_flex-container .geodir_flexslider .geodir-direction-nav li .geodir-prev:before {
-  content: "\f137";
+  content: "\f104";
+  padding-right: 2.5px;
 }
 
 .geodir_flex-container .geodir_flexslider .geodir-direction-nav li .geodir-next {
@@ -1069,7 +1101,8 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 }
 
 .geodir_flex-container .geodir_flexslider .geodir-direction-nav li .geodir-next:before {
-  content: "\f138";
+  content: "\f105";
+  padding-left: 2.5px;
 }
 
 .geodir_flex-container .geodir_flexslider#geodir_carousel {
@@ -1344,6 +1377,11 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   bottom: 0;
 }
 
+.gd-pagination-details,
+.gd-navi {
+  margin: 15px 0;
+}
+
 .gd-navi {
   display: inline-block;
 }
@@ -1364,6 +1402,11 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   -webkit-user-select: none;
   text-align: center;
   float: left;
+}
+
+.gd-navi .on:nth-child(1),
+.gd-navi > a:nth-child(1) {
+  margin-left: 0;
 }
 
 .gd-navi .on,
@@ -1657,6 +1700,32 @@ dl.geodir-tab-head dd a {
 
 .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments {
   margin-top: 0;
+}
+
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .err-no-rating {
+  position: absolute;
+  bottom: 0;
+}
+
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .err-no-rating + .br-widget {
+  width: 100%;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .br-wrapper {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .logged-in-as {
+  position: absolute;
+  right: 15px;
+}
+
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .logged-in-as ~ .comment-form-comment {
+  margin-top: 40px;
 }
 
 .geodir-tabs ul.geodir-tabs-content #reviewsTab .comment-form-comment {
@@ -1982,12 +2051,43 @@ dl.geodir-tab-head dd a {
   position: relative;
 }
 
+#reviewsTab .comments-area ol.commentlist li article ~ .comment-respond {
+  margin-top: 15px;
+}
+
 #reviewsTab .comments-area ol.commentlist li article header,
 #reviewsTab .comments-area ol.commentlist li article .comment-content {
   width: 100%;
   padding-left: 105px;
   padding-right: 0;
   margin: 0;
+}
+
+#reviewsTab .comments-area ol.commentlist li article .comment-content {
+  margin-top: -20px;
+}
+
+#reviewsTab .comments-area ol.commentlist li article .comment-content > div:nth-child(1) {
+  float: right;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+#reviewsTab .comments-area ol.commentlist li article .comment-content > div:nth-child(1) .gd-star-rating {
+  margin-right: 0;
+}
+
+#reviewsTab .comments-area ol.commentlist li article .comment-content > div:nth-child(1) .gd-star-rating i:last-of-type {
+  margin-right: 0 !important;
+}
+
+#reviewsTab .comments-area ol.commentlist li article .comment-content .gd-star-rating {
+  line-height: normal;
+}
+
+#reviewsTab .comments-area ol.commentlist li article .comment-content .description p {
+  margin-bottom: 0;
 }
 
 #reviewsTab .comments-area ol.commentlist li article header {
@@ -2147,6 +2247,22 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   border-radius: 5px;
   margin-bottom: 30px;
   border: none;
+}
+
+#geodir-sidebar .geodir-sidebar-wrap .geodir-company_info.geodir-details-sidebar-rating .item {
+  width: 100%;
+  display: inline-block;
+}
+
+#geodir-sidebar .geodir-sidebar-wrap .geodir-company_info.geodir-details-sidebar-rating .item .fn {
+  width: 100%;
+  font-weight: 600;
+  margin: 0 0 7.5px;
+  display: inline-block;
+}
+
+#geodir-sidebar .geodir-sidebar-wrap .geodir-company_info.geodir-details-sidebar-rating .item img {
+  width: 100%;
 }
 
 .geodir-sidebar-wrap .likethis {
@@ -2883,6 +2999,11 @@ body .geodir-widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count {
   font-size: 18px;
   margin-right: 5px;
   position: relative;
+}
+
+.widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments i {
+  font-size: 20px;
+  left: 1.5px;
 }
 
 .widget .geodir_category_list_view li .geodir-addinfo .geodir-addtofav i {
@@ -4691,6 +4812,8 @@ dl.geodir-tab-head {
   min-height: 30px;
   text-align: center;
   padding: 0;
+  top: auto !important;
+  bottom: 300px;
 }
 
 .stick_trigger_container .trigger_sticky:before {
@@ -4712,8 +4835,6 @@ dl.geodir-tab-head {
 
 .stick_trigger_container .trigger_sticky.triggeroff_sticky {
   margin-right: 20px;
-  top: auto !important;
-  bottom: 300px;
 }
 
 .stick_trigger_container .trigger_sticky.triggeroff_sticky:before {

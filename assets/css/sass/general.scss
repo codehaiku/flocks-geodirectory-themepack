@@ -17,7 +17,15 @@
         display: inline-block;
     }
 }
-
+.err-no-rating {
+    width: 100%;
+    color: #EF5350;
+    background: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-left: 5px solid #EF5350;
+    left: auto;
+}
 
 
 .flocks-gd-cover-image {

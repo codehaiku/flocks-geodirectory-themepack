@@ -100,6 +100,25 @@ function flocks_geodirectory_action_calls()
 }
 
 
+add_filter('geodir_filter_media_image_large_height', 'flocks_gd_filter_media_image_large_height', 10, 3 );
+/**
+ * Change the size of the gd image width.
+ *
+ * @param int $height          Large image height.
+ * @param int $default         Default height.
+ * @param string|array $params Image parameters.
+ *
+ * @since 1.0.0
+ * @package Flocks GeoDirectory Themepack
+ */
+function flocks_gd_filter_media_image_large_height( $height, $default, $params ) {
+
+    $height = 1500;
+
+    return $height;
+
+}
+
 add_filter('geodir_filter_media_image_large_width', 'flocks_gd_filter_media_image_large_width', 10, 3 );
 /**
  * Change the size of the gd image width.
@@ -113,7 +132,7 @@ add_filter('geodir_filter_media_image_large_width', 'flocks_gd_filter_media_imag
  */
 function flocks_gd_filter_media_image_large_width( $width, $default, $params ) {
 
-    $width = 2500;
+    $width = 1500;
 
     return $width;
 

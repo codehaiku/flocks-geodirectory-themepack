@@ -6,6 +6,21 @@
             border-radius: 5px;
             margin-bottom: 30px;
             border: none;
+            &.geodir-details-sidebar-rating {
+                .item {
+                    width: 100%;
+                    display: inline-block;
+                    .fn {
+                        width: 100%;
+                        font-weight: 600;
+                        margin: 0 0 7.5px;
+                        display: inline-block;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
@@ -724,6 +739,12 @@ body .geodir-widget {
                         font-size: 18px;
                         margin-right: 5px;
                         position: relative;
+                    }
+                }
+                .geodir-pcomments {
+                    i {
+                        font-size: 20px;
+                        left: 1.5px;
                     }
                 }
                 .geodir-addtofav {

@@ -112,32 +112,57 @@
         border: none;
         &#geodir_slider {
             padding-bottom: 7.5px;
-            li {
-                background: #000;
+            .geodir-viewport {
+                width: 100%;
+                float: left;
+            }
+            .geodir-slides {
+
+                li {
+                    height: 50px;
+                    float: left;
+                    &.geodir-active-slide {
+                        height: auto;
+                    }
+                    img {
+                        &:nth-child(2) {
+                            max-height: none!important;
+                        }
+                    }
+                }
             }
         }
         .geodir-direction-nav {
             li {
                 a {
+                    width: auto;
                     background: none;
                     text-indent: inherit;
                     font-size: 0;
                     @extend .themepack_font_awesome_before;
                     &:before {
-                        font-size: 30px;
+                        width: 30px;
+                        height: 30px;
                         color: #fff;
+                        background: #000;
+                        font-size: 26px;
+                        line-height: 28px;
+                        text-align: center;
+                        border-radius: 50%;
                     }
                 }
                 .geodir-prev {
                     left: 15px;
                     &:before {
-                        content: "\f137";
+                        content: "\f104";
+                        padding-right: 2.5px;
                     }
                 }
                 .geodir-next {
                     right: 15px;
                     &:before {
-                        content: "\f138";
+                        content: "\f105";
+                        padding-left: 2.5px;
                     }
                 }
             }
@@ -367,6 +392,10 @@
     }
 }
 // Pagination
+.gd-pagination-details,
+.gd-navi {
+    margin: 15px 0;
+}
 .gd-navi {
     display: inline-block;
     .on,
@@ -385,6 +414,9 @@
         -webkit-user-select: none;
         text-align: center;
         float: left;
+        &:nth-child(1) {
+            margin-left: 0;
+        }
     }
     .on,
     > a:hover {
@@ -665,6 +697,29 @@ dl.geodir-tab-head dd a {
         #reviewsTab {
             #comments {
                 margin-top: 0;
+                .comment-respond {
+                    .err-no-rating {
+                        position: absolute;
+                        bottom: 0;
+                        + .br-widget {
+                            width: 100%;
+                            margin-bottom: 45px;
+                            display: inline-block;
+                        }
+                    }
+                    .br-wrapper {
+                        width: 100%;
+                        float: left;
+                        position: relative;
+                    }
+                    .logged-in-as {
+                        position: absolute;
+                        right: 15px;
+                        ~ .comment-form-comment {
+                            margin-top: 40px;
+                        }
+                    }
+                }
             }
             .comment-form-comment {
                 margin: 10px 0;
@@ -936,12 +991,40 @@ dl.geodir-tab-head dd a {
                     padding: 20px 0;
                     border-bottom: 1px solid #ebebeb;
                     position: relative;
+                    ~ .comment-respond {
+                        margin-top: 15px;
+                    }
                     header,
                     .comment-content {
                         width: 100%;
                         padding-left: 105px;
                         padding-right: 0;
                         margin: 0;
+                    }
+                    .comment-content {
+                        margin-top: -20px;
+                        > div:nth-child(1) {
+                            float: right;
+                            position: absolute;
+                            top: 50px;
+                            right: 0;
+                            .gd-star-rating {
+                                margin-right: 0;
+                                i {
+                                    &:last-of-type {
+                                        margin-right: 0!important;
+                                    }
+                                }
+                            }
+                        }
+                        .gd-star-rating {
+                            line-height: normal;
+                        }
+                        .description {
+                            p {
+                                margin-bottom: 0;
+                            }
+                        }
                     }
                     header {
                         min-height: 85px;
@@ -1018,6 +1101,7 @@ dl.geodir-tab-head dd a {
         }
     }
 }
+
 
 body .simplemodal-container#simplemodal-container {
     min-width: 450px;
