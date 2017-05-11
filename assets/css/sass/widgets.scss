@@ -286,21 +286,31 @@ body .geodir-widget {
             padding: 0;
         }
         .geodir_reviewer_image {
-            width: 60px;
-            margin: 0 15px 0 0;
+            width: 14%;
+            margin: 0;
             a,
             img {
                 width: 100%;
                 display: inline-block;
             }
         }
+        .geodir_reviewer_content {
+            width: 86%;
+            padding-left: 15px;
+            p {
+                margin-bottom: 0;
+            }
+        }
         .geodir_recent_reviews {
             padding-left: 0;
+            margin-bottom: 0;
             li {
                 list-style: none;
                 border: none;
+                padding: 15px 0 0;
                 &:first-of-type {
                     padding-top: 0;
+                    padding-bottom: 15px;
                 }
                 &:last-of-type {
                     padding-bottom: 0;
@@ -736,14 +746,14 @@ body .geodir-widget {
                     margin: 0 0 5px;
                     display: inline-block;
                     i {
-                        font-size: 18px;
+                        font-size: 14px;
                         margin-right: 5px;
                         position: relative;
                     }
                 }
                 .geodir-pcomments {
                     i {
-                        font-size: 20px;
+                        font-size: 15px;
                         left: 1.5px;
                     }
                 }
@@ -1281,6 +1291,7 @@ dl.geodir-tab-head {
         }
     }
 }
+
 .widget {
     &.geodir_related_listing_post_view,
     &.geodir_popular_post_view {
@@ -1291,71 +1302,13 @@ dl.geodir-tab-head {
             display: inline-block;
         }
         .geodir_category_list_view {
-            opacity: 0;
-            -webkit-transition: all 0.5s ease-in-out;
-               -moz-transition: all 0.5s ease-in-out;
-                    transition: all 0.5s ease-in-out;
-        }
-        .flocks_geodirectory_owl_carousel {
-            opacity: 1;
-            overflow: hidden;
-            position: relative;
-
-            .owl-stage-outer {
-                z-index: 1;
-            }
-            .owl-item  {
-                display: inline-block;
-                li {
-                    width: 100%;
-                }
-            }
-            .owl-nav {
-                position: absolute;
-                width: 100%;
-                height: auto;
-                top: 35%;
-
-                .owl-prev,
-                .owl-next {
-                    width: 40px;
-                    height: 40px;
-                    color: #fff;
-                    background: #000;
-                    padding: 0;
-                    font-size: 0;
-                    line-height: normal;
-                    display: inline-block;
-                    opacity: 0.25;
-                    position: relative;
-                    z-index: 10;
-                    -webkit-transition: all 0.25s ease-in-out;
-                       -moz-transition: all 0.25s ease-in-out;
-                            transition: all 0.25s ease-in-out;
-                    @extend .themepack_font_awesome_before;
-                    &:hover {
-                        opacity: 1;
-                    }
-                    &:before {
-                        width: 40px;
-                        height: 40px;
-                        line-height: 40px;
-                        text-align: center;
-                    }
-                    &.disabled {
-                        opacity: 0;
-                    }
-                }
-                .owl-prev {
-                    float: left;
-                    &:before {
-                        content: "\f053";
-                    }
-                }
-                .owl-next {
-                    float: right;
-                    &:before {
-                        content: "\f054";
+            li {
+                &.geodir-listview {
+                    padding: 15px 0 22.5px;
+                    margin-bottom: 0;
+                    border-bottom: 1px solid #e1e1e1;
+                    &:last-of-type {
+                        border-bottom: none;
                     }
                 }
             }
@@ -1372,34 +1325,134 @@ dl.geodir-tab-head {
                     float: none;
                 }
             }
-            .geodir-gridview {
-                h3 {
-                    margin: 0 0 15px;
+        }
+    }
+}
+#secondary,
+#geodir-sidebar-left,
+#geodir-sidebar-right {
+    .widget {
+        &.geodir_related_listing_post_view,
+        &.geodir_popular_post_view {
+            .geodir_category_list_view {
+                opacity: 0;
+                -webkit-transition: all 0.5s ease-in-out;
+                   -moz-transition: all 0.5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
+            }
+            .flocks_geodirectory_owl_carousel {
+                opacity: 1;
+                overflow: hidden;
+                position: relative;
+
+                .owl-stage-outer {
+                    z-index: 1;
                 }
-                .geodir-post-img {
-                    margin-bottom: 25px;
-                }
-                .geodir-content {
-                    width: 100%;
-                    margin: 0;
-                }
-                .geodir-entry-content {
-                    display: none;
-                    margin-bottom: 15px;
-                    p {
-                        padding-top: 0;
+                .owl-item  {
+                    display: inline-block;
+                    li {
+                        width: 100%;
+                        &:first-of-type {
+                            padding-top: 0;
+                        }
+                        &:first-of-type {
+                            padding-bottom: 0;
+                        }
                     }
                 }
-                .geodir-addinfo {
+                .owl-nav {
+                    position: absolute;
                     width: 100%;
-                    margin: 0;
-                    .geodir-addtofav-icon {
-                        font-size: inherit;
+                    height: auto;
+                    top: 22.5%;
+
+                    .owl-prev,
+                    .owl-next {
+                        width: 40px;
+                        height: 40px;
+                        color: #fff;
+                        background: #000;
+                        padding: 0;
+                        font-size: 0;
+                        line-height: normal;
+                        display: inline-block;
+                        opacity: 0.25;
+                        position: relative;
+                        z-index: 10;
+                        -webkit-transition: all 0.25s ease-in-out;
+                           -moz-transition: all 0.25s ease-in-out;
+                                transition: all 0.25s ease-in-out;
+                        @extend .themepack_font_awesome_before;
+                        &:hover {
+                            opacity: 1;
+                        }
+                        &:before {
+                            width: 40px;
+                            height: 40px;
+                            font-size: 35px;
+                            line-height: 40px;
+                            text-align: center;
+                        }
+                        &.disabled {
+                            opacity: 0;
+                        }
                     }
-                    .geodir-pcomments {
-                        i {
-                            position: relative;
-                            left: 3px;
+                    .owl-prev {
+                        float: left;
+                        &:before {
+                            content: "\f104";
+                            padding-right: 5px;
+                        }
+                    }
+                    .owl-next {
+                        float: right;
+                        &:before {
+                            content: "\f105";
+                            padding-left: 5px;
+                        }
+                    }
+                }
+                .geodir-listview {
+                    .geodir-content,
+                    .geodir-post-img,
+                    .geodir-addinfo {
+                        width: 100%;
+                        margin: 0 0 10px;
+                        float: none;
+                    }
+                    .geodir-addinfo {
+                        margin-bottom: 0;
+                    }
+                }
+                .geodir-gridview {
+                    h3 {
+                        margin: 0 0 15px;
+                    }
+                    .geodir-post-img {
+                        margin-bottom: 25px;
+                    }
+                    .geodir-content {
+                        width: 100%;
+                        margin: 0;
+                    }
+                    .geodir-entry-content {
+                        display: none;
+                        margin-bottom: 15px;
+                        p {
+                            padding-top: 0;
+                        }
+                    }
+                    .geodir-addinfo {
+                        width: 100%;
+                        margin: 0;
+                        .geodir-addtofav-icon {
+                            font-size: inherit;
+                        }
+                        .geodir-pcomments {
+                            i {
+                                position: relative;
+                                left: 3px;
+                            }
                         }
                     }
                 }

@@ -28,9 +28,17 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 .geodir-sidebar-left .widget.geodir_loginbox ul li .signin:before,
 .geodir-sidebar-right .widget.geodir_loginbox ul li .signin:before,
 .geodir-details-sidebar-left .widget.geodir_loginbox ul li .signin:before,
-.geodir-details-sidebar-right .widget.geodir_loginbox ul li .signin:before, .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
-.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .stick_trigger_container .trigger_sticky:before {
+.geodir-details-sidebar-right .widget.geodir_loginbox ul li .signin:before, #secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .stick_trigger_container .trigger_sticky:before, .geodir-bubble_desc .geodir_more_info > ul li:before, .geodir-bubble_desc .geodir_more_info.geodir_property_features_checkbox ul li:before, .geodir-bubble_desc .geodir-i-location ~ span:before {
   content: "";
   font-family: FontAwesome;
   font-weight: normal;
@@ -245,7 +253,7 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   color: #adb5c0;
 }
 
-.flocks-geodirectory-button, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button, #reviewsTab .comments-area ol.commentlist li article .comment-links .reply a, body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .button, .geodir_preview_section .geodir_goback, .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a, .widget.geodir_related_listing_post_view .geodir-viewall, .widget.geodir_popular_post_view .geodir-viewall {
+.flocks-geodirectory-button, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd-cancel-replaylink #cancel-comment-reply-link, #reviewsTab .comments-area ol.commentlist li article .comment-links .reply a, body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .button, .geodir_preview_section .geodir_goback, .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a, .widget.geodir_related_listing_post_view .geodir-viewall, .widget.geodir_popular_post_view .geodir-viewall {
   background-color: #22b5ce;
   border: 0 none;
   padding: 5px 10px;
@@ -255,7 +263,7 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   cursor: pointer;
 }
 
-.flocks-geodirectory-button:hover, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button:hover, #reviewsTab .comments-area ol.commentlist li article .comment-links .reply a:hover, body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .button:hover, .geodir_preview_section .geodir_goback:hover, .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a:hover, .widget.geodir_related_listing_post_view .geodir-viewall:hover, .widget.geodir_popular_post_view .geodir-viewall:hover {
+.flocks-geodirectory-button:hover, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button:hover, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd-cancel-replaylink #cancel-comment-reply-link:hover, #reviewsTab .comments-area ol.commentlist li article .comment-links .reply a:hover, body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .button:hover, .geodir_preview_section .geodir_goback:hover, .widget.geodir_bestof_widget #geodir-bestof-places .bestof-cat-title a:hover, .widget.geodir_related_listing_post_view .geodir-viewall:hover, .widget.geodir_popular_post_view .geodir-viewall:hover {
   opacity: 0.84;
 }
 
@@ -980,6 +988,63 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   }
 }
 
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget {
+  background: none;
+  padding: 0;
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-loc-bar,
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-loc-bar-in {
+  padding: 0;
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search button {
+  height: 45px;
+  width: 55px;
+  font-size: 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin: 0 !important;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search button:hover {
+  opacity: 0.87;
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search button:focus {
+  box-shadow: none;
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-input-wrapper {
+  margin: 0;
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-field-search {
+  padding-right: 15px;
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-field-near {
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-field-near input[type=text] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search select,
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text],
+body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search input[type=text].ac_input {
+  height: 45px;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
 #geodir-wrapper {
   padding-bottom: 0;
 }
@@ -1056,6 +1121,10 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   float: left;
 }
 
+.geodir_flex-container .geodir_flexslider#geodir_slider .geodir-slides {
+  background: #000;
+}
+
 .geodir_flex-container .geodir_flexslider#geodir_slider .geodir-slides li {
   height: 50px;
   float: left;
@@ -1129,6 +1198,7 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
 .widget .geodir_category_list_view > li,
 #related_listingTab .geodir_category_list_view > li,
 #geodir-main-content .geodir_category_list_view > li {
+  max-width: 100%;
   border-bottom: 1px solid #eee;
   padding: 15px 0 30px;
 }
@@ -1322,6 +1392,17 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   margin-right: 8px;
 }
 
+#geodir-main-content .widget .geodir_category_list_view li.geodir-gridview .geodir-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#geodir-main-content .widget .geodir_category_list_view li.geodir-gridview .geodir-post-img,
+#geodir-main-content .widget .geodir_category_list_view li.geodir-gridview .geodir-addinfo {
+  width: 100%;
+  margin-left: 0;
+}
+
 #geodir-main-content .geodir_category_list_view li.geodir-gridview {
   background: #f6f8f9;
   border: none;
@@ -1375,6 +1456,7 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   position: absolute;
   left: 0;
   bottom: 0;
+  display: none;
 }
 
 .gd-pagination-details,
@@ -1711,6 +1793,11 @@ dl.geodir-tab-head dd a {
   width: 100%;
   margin-bottom: 45px;
   display: inline-block;
+}
+
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd-cancel-replaylink #cancel-comment-reply-link {
+  min-height: 32px;
+  line-height: 20px;
 }
 
 .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .br-wrapper {
@@ -2521,8 +2608,8 @@ body .geodir-widget.geodir_recent_reviews .geodir_recent_reviews_section {
 }
 
 body .geodir-widget.geodir_recent_reviews .geodir_reviewer_image {
-  width: 60px;
-  margin: 0 15px 0 0;
+  width: 14%;
+  margin: 0;
 }
 
 body .geodir-widget.geodir_recent_reviews .geodir_reviewer_image a,
@@ -2531,17 +2618,29 @@ body .geodir-widget.geodir_recent_reviews .geodir_reviewer_image img {
   display: inline-block;
 }
 
+body .geodir-widget.geodir_recent_reviews .geodir_reviewer_content {
+  width: 86%;
+  padding-left: 15px;
+}
+
+body .geodir-widget.geodir_recent_reviews .geodir_reviewer_content p {
+  margin-bottom: 0;
+}
+
 body .geodir-widget.geodir_recent_reviews .geodir_recent_reviews {
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 body .geodir-widget.geodir_recent_reviews .geodir_recent_reviews li {
   list-style: none;
   border: none;
+  padding: 15px 0 0;
 }
 
 body .geodir-widget.geodir_recent_reviews .geodir_recent_reviews li:first-of-type {
   padding-top: 0;
+  padding-bottom: 15px;
 }
 
 body .geodir-widget.geodir_recent_reviews .geodir_recent_reviews li:last-of-type {
@@ -2996,13 +3095,13 @@ body .geodir-widget.geodir_cpt_categories_widget ul li h3 .gd-cptcat-count {
 
 .widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments i,
 .widget .geodir_category_list_view li .geodir-addinfo .geodir-addtofav i {
-  font-size: 18px;
+  font-size: 14px;
   margin-right: 5px;
   position: relative;
 }
 
 .widget .geodir_category_list_view li .geodir-addinfo .geodir-pcomments i {
-  font-size: 20px;
+  font-size: 15px;
   left: 1.5px;
 }
 
@@ -4461,41 +4560,117 @@ dl.geodir-tab-head {
   display: inline-block;
 }
 
-.widget.geodir_related_listing_post_view .geodir_category_list_view, .widget.geodir_popular_post_view .geodir_category_list_view {
+.widget.geodir_related_listing_post_view .geodir_category_list_view li.geodir-listview, .widget.geodir_popular_post_view .geodir_category_list_view li.geodir-listview {
+  padding: 15px 0 22.5px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.widget.geodir_related_listing_post_view .geodir_category_list_view li.geodir-listview:last-of-type, .widget.geodir_popular_post_view .geodir_category_list_view li.geodir-listview:last-of-type {
+  border-bottom: none;
+}
+
+.widget.geodir_related_listing_post_view .geodir_category_list_view .fieldset-separator,
+.widget.geodir_related_listing_post_view .geodir_category_list_view .geodir_more_info, .widget.geodir_popular_post_view .geodir_category_list_view .fieldset-separator,
+.widget.geodir_popular_post_view .geodir_category_list_view .geodir_more_info {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .widget.geodir_related_listing_post_view .geodir_category_list_view .geodir-content,
+  .widget.geodir_related_listing_post_view .geodir_category_list_view .geodir-post-img,
+  .widget.geodir_related_listing_post_view .geodir_category_list_view .geodir-addinfo, .widget.geodir_popular_post_view .geodir_category_list_view .geodir-content,
+  .widget.geodir_popular_post_view .geodir_category_list_view .geodir-post-img,
+  .widget.geodir_popular_post_view .geodir_category_list_view .geodir-addinfo {
+    width: 100%;
+    margin: 0 0 10px;
+    float: none;
+  }
+}
+
+#secondary .widget.geodir_related_listing_post_view .geodir_category_list_view, #secondary .widget.geodir_popular_post_view .geodir_category_list_view,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .geodir_category_list_view,
+#geodir-sidebar-left .widget.geodir_popular_post_view .geodir_category_list_view,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .geodir_category_list_view,
+#geodir-sidebar-right .widget.geodir_popular_post_view .geodir_category_list_view {
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel {
   opacity: 1;
   overflow: hidden;
   position: relative;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-stage-outer {
   z-index: 1;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item {
   display: inline-block;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li {
   width: 100%;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type {
+  padding-top: 0;
+}
+
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-item li:first-of-type {
+  padding-bottom: 0;
+}
+
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav {
   position: absolute;
   width: 100%;
   height: auto;
-  top: 35%;
+  top: 22.5%;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
-.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next {
   width: 40px;
   height: 40px;
   color: #fff;
@@ -4512,93 +4687,180 @@ dl.geodir-tab-head {
   transition: all 0.25s ease-in-out;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
-.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
+#secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:hover,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:hover {
   opacity: 1;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
-.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before {
   width: 40px;
   height: 40px;
+  font-size: 35px;
   line-height: 40px;
   text-align: center;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
-.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
+#secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev.disabled,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next.disabled {
   opacity: 0;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev {
   float: left;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before {
-  content: "\f053";
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-prev:before {
+  content: "\f104";
+  padding-right: 5px;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next {
   float: right;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before {
-  content: "\f054";
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .owl-nav .owl-next:before {
+  content: "\f105";
+  padding-left: 5px;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .fieldset-separator,
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir_more_info, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .fieldset-separator,
-.widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir_more_info {
-  display: none;
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-content,
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-post-img,
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-content,
+#secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-post-img,
+#secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-content,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-post-img,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-content,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-post-img,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-content,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-post-img,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-content,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-post-img,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo {
+  width: 100%;
+  margin: 0 0 10px;
+  float: none;
 }
 
-@media (max-width: 768px) {
-  .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-content,
-  .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-post-img,
-  .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-addinfo, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-content,
-  .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-post-img,
-  .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-addinfo {
-    width: 100%;
-    margin: 0 0 10px;
-    float: none;
-  }
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-listview .geodir-addinfo {
+  margin-bottom: 0;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3 {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview h3 {
   margin: 0 0 15px;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-post-img {
   margin-bottom: 25px;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-content {
   width: 100%;
   margin: 0;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content {
   display: none;
   margin-bottom: 15px;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-entry-content p {
   padding-top: 0;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo {
   width: 100%;
   margin: 0;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-addtofav-icon {
   font-size: inherit;
 }
 
-.widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i, .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i {
+#secondary .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i, #secondary .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i,
+#geodir-sidebar-left .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i,
+#geodir-sidebar-left .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i,
+#geodir-sidebar-right .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i,
+#geodir-sidebar-right .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-gridview .geodir-addinfo .geodir-pcomments i {
   position: relative;
   left: 3px;
 }
@@ -4618,9 +4880,11 @@ dl.geodir-tab-head {
 }
 
 .geodir_map_container.stickymap .map_background {
-  background: #f6f8f9;
+  background: #f7f8f9;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 0;
+  box-shadow: 10px 25em 100px 12px #969696;
+  border: 1px solid #eee;
 }
 
 .geodir_map_container .map_background {
@@ -4693,7 +4957,7 @@ dl.geodir-tab-head {
 .geodir_map_container .map-category-listing-main .map_category {
   width: 300px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.87);
 }
 
 @media (max-width: 480px) {
@@ -4779,6 +5043,7 @@ dl.geodir-tab-head {
 
 .geodir_map_container .map-category-listing-main .map_category .main_list li label img {
   width: 20px;
+  height: auto;
 }
 
 .geodir_map_container.geodir-map-full .map_background .triggermap, .geodir_map_container.geodir-map-small .map_background .triggermap {
@@ -4792,6 +5057,10 @@ dl.geodir-tab-head {
 .geodir_map_container.geodir-map-full .map_background .triggermap:hover, .geodir_map_container.geodir-map-small .map_background .triggermap:hover {
   font-size: 15px;
   background: black;
+}
+
+.geodir_map_container.geodir-map-full .map_category, .geodir_map_container.geodir-map-small .map_category {
+  max-height: 100% !important;
 }
 
 .gd-map-osm .advmap_notloaded {
@@ -4866,6 +5135,151 @@ dl.geodir-tab-head {
   margin-bottom: 45px;
   position: fixed;
   bottom: 35px;
+}
+
+.geodir-bubble_desc .geodir_more_info {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding-left: 25px;
+}
+
+.geodir-bubble_desc .geodir_more_info:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.geodir-bubble_desc .geodir_more_info a {
+  color: #22b5ce;
+}
+
+.geodir-bubble_desc .geodir_more_info.post_address, .geodir-bubble_desc .geodir_more_info.geodir_twitterusername {
+  padding-left: 0;
+}
+
+.geodir-bubble_desc .geodir_more_info.gd_placecategory {
+  width: 100%;
+  display: inline-block;
+  padding-left: 25px;
+  position: relative;
+}
+
+.geodir-bubble_desc .geodir_more_info.geodir_timing {
+  padding-left: 25px;
+}
+
+.geodir-bubble_desc .geodir_more_info.geodir_timing .geodir-i-time {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.geodir-bubble_desc .geodir_more_info > ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.geodir-bubble_desc .geodir_more_info > ul li {
+  padding: 0 0 0 40px;
+  border-bottom: none;
+  list-style: none;
+  position: relative;
+}
+
+.geodir-bubble_desc .geodir_more_info > ul li:before {
+  content: "\f111";
+  font-size: 8px;
+  position: absolute;
+  top: 7.5px;
+  left: 25px;
+}
+
+.geodir-bubble_desc .geodir_more_info.geodir_property_features_checkbox .geodir-i-select {
+  width: 100%;
+  display: inline-block;
+}
+
+.geodir-bubble_desc .geodir_more_info.geodir_property_features_checkbox ul {
+  padding-left: 25px;
+  margin-bottom: 0;
+}
+
+.geodir-bubble_desc .geodir_more_info.geodir_property_features_checkbox ul li {
+  padding-left: 17.5px;
+  position: relative;
+}
+
+.geodir-bubble_desc .geodir_more_info.geodir_property_features_checkbox ul li:before {
+  content: "\f111";
+  font-size: 8px;
+  position: absolute;
+  top: 4.5px;
+  left: 1.5px;
+}
+
+.geodir-bubble_desc .geodir_more_info.geodir-custom-file-box i.fa {
+  float: left;
+}
+
+.geodir-bubble_desc .geodir_more_info.geodir-custom-file-box .geodir-custom-post-gallery {
+  width: 100%;
+  margin: 15px 0 0;
+  border: 1px #eee solid;
+}
+
+.geodir-bubble_desc .geodir_more_info i.fa {
+  width: 15px;
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  top: auto;
+}
+
+.geodir-bubble_desc .geodir_more_info > p {
+  padding-left: 25px;
+}
+
+.geodir-bubble_desc .geodir_more_info.post_address span {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.geodir-bubble_desc .geodir_more_info.post_address span:last-of-type {
+  margin-bottom: 0;
+}
+
+.geodir-bubble_desc .geodir-i-location ~ span {
+  padding-left: 25px;
+  position: relative;
+}
+
+.geodir-bubble_desc .geodir-i-location ~ span:before {
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+}
+
+.geodir-bubble_desc .geodir-i-location ~ span[itemprop="streetAddress"]:before {
+  content: "\f018";
+}
+
+.geodir-bubble_desc .geodir-i-location ~ span[itemprop="addressLocality"]:before {
+  content: "\f1ad";
+}
+
+.geodir-bubble_desc .geodir-i-location ~ span[itemprop="addressRegion"]:before {
+  content: "\f277";
+}
+
+.geodir-bubble_desc .geodir-i-location ~ span[itemprop="postalCode"]:before {
+  content: "\f276";
+  left: 3.5px;
+}
+
+.geodir-bubble_desc .geodir-i-location ~ span[itemprop="addressCountry"]:before {
+  content: "\f0ac";
 }
 
 /*# sourceMappingURL=themepack.css.map */
