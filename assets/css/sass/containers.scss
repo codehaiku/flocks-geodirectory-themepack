@@ -57,7 +57,11 @@ body .flocks-widget-container {
                                 border-top-left-radius: 0;
                                 border-bottom-left-radius: 0;
                                 margin: 0!important;
-                                box-shadow: 1px 2px 5px rgba(0,0,0,.26);
+                                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+                                z-index: 0;
+                                -webkit-transition: all 0.25s ease-in-out;
+                                   -moz-transition: all 0.25s ease-in-out;
+                                        transition: all 0.25s ease-in-out;
                                 &:hover {
                                     opacity: 0.87;
                                 }
@@ -70,12 +74,33 @@ body .flocks-widget-container {
                             .gd-search-input-wrapper {
                                 margin: 0;
                             }
+                            .gd-search-field-search,
+                            .gd-search-field-near {
+                                @extend .themepack_font_awesome_before;
+                                position: relative;
+                                &:before {
+                                    color: #999;
+                                    font-size: 18px;
+                                    position: absolute;
+                                    top: 12.5px;
+                                    left: 15px;
+                                }
+                            }
                             .gd-search-field-search {
                                 padding-right: 15px;
+                                &:before {
+                                    content: "\f1ad";
+                                }
                             }
                             .gd-search-field-near {
                                 padding-left: 15px;
                                 padding-right: 0;
+                                position: relative;
+                                z-index: 1;
+                                &:before {
+                                    content: "\f277";
+                                    left: 25px;
+                                }
                                 input[type=text] {
                                     border-top-right-radius: 0;
                                     border-bottom-right-radius: 0;
@@ -86,6 +111,7 @@ body .flocks-widget-container {
                             input[type=text].ac_input {
                                 height: 45px;
                                 padding: 10px 15px;
+                                padding-left: 35px;
                                 font-size: 18px;
                                 border-radius: 4px;
                                 border: 1px solid #eee;

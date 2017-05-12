@@ -252,12 +252,30 @@
     }
 }
 
+.geodir-bubble-meta-side {
+    padding-top: 10px;
+}
+.geodir-bubble-meta-bottom {
+    .geodir-addtofav {
+        a {
+            i {
+                font-size: 15px;
+            }
+        }
+    }
+}
 .geodir-bubble_desc {
+    h2,
+    h4 {
+        @extend .flocks-geodirectory-heading-font;
+    }
     .geodir_more_info {
         display: inline-block;
         width: 100%;
         position: relative;
-        padding-left: 25px;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        @extend .flocks-geodirectory-body-font;
 
         &:last-of-type {
             padding-bottom: 0;
@@ -274,7 +292,7 @@
         &.gd_placecategory {
             width: 100%;
             display: inline-block;
-            padding-left: 25px;
+            padding-left: 30px;
             position: relative;
         }
         &.geodir_timing {
@@ -337,10 +355,10 @@
         }
         i.fa {
             width: 15px;
-            font-size: 15px;
+            font-size: 14px;
             position: absolute;
-            left: 0;
-            top: auto;
+            top: 1px;
+            left: 5px;
         }
         > p {
             padding-left: 25px;
@@ -349,6 +367,7 @@
             span {
                 width: 100%;
                 display: inline-block;
+                padding-left: 30px;
                 margin-bottom: 10px;
                 &:last-of-type {
                     margin-bottom: 0;
@@ -363,9 +382,10 @@
             position: relative;
             @extend .themepack_font_awesome_before;
             &:before {
-                font-size: 15px;
+                font-size: 14px;
                 position: absolute;
-                left: 0;
+                top: 1px;
+                left: 5px;
             }
         }
         ~ span[itemprop="streetAddress"] {

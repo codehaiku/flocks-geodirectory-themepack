@@ -66,7 +66,6 @@
 	return;
 }
 
-
 add_action('after_setup_theme', 'flocks_geodirectory_action_calls', 11);
 /**
  * Action calls for Flocks theme compatibility.
