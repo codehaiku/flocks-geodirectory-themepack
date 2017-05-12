@@ -69,6 +69,20 @@
                 top: 6.5px;
                 left: 2.5px;
             }
+            .fa-pencil {
+                color: #fbc02d;
+            }
+            .geodir-addtofav a {
+                &.geodir-removetofav-icon {
+                    i {
+                        color: #d81b60;
+                    }
+                }
+                i {
+                    color: #F06292;
+                    text-shadow: none;
+                }
+            }
         }
     }
 
@@ -1365,7 +1379,18 @@ dl.geodir-tab-head {
                     width: 100%;
                     height: auto;
                     top: 22.5%;
-
+                    @media(max-width: 992px) {
+                        top: 15.5%;
+                    }
+                    @media(max-width: 768px) {
+                        top: 32.5%;
+                    }
+                    @media(max-width: 480px) {
+                        top: 25.5%;
+                    }
+                    @media(max-width: 375px) {
+                        top: 22.5%;
+                    }
                     .owl-prev,
                     .owl-next {
                         width: 40px;
@@ -1395,6 +1420,7 @@ dl.geodir-tab-head {
                         }
                         &.disabled {
                             opacity: 0;
+                            visibility: hidden;
                         }
                     }
                     .owl-prev {

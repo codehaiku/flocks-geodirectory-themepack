@@ -159,10 +159,12 @@
 // Add Listing form
 #propertyform {
     #geodir_fieldset_details {
-        font-size: 18px;
+        font-size: 22px;
+        padding: 0;
         line-height: 1.6;
-        border-bottom: 2px solid #22b5ce;
+        border-bottom: none;
         display: inline-block;
+        @extend .flocks-geodirectory-heading-font;
     }
     #geodir_post_mapview_row {
         .geodir_user_define {
@@ -289,7 +291,7 @@
         }
 
         label {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             span {
                 color: #22b5ce;
@@ -305,7 +307,7 @@
         }
         .geodir_message_error,
         .geodir_message_note {
-            font-size: 12px;
+            font-size: 14px;
         }
         :not(#post_imagesdropbox) {
             .plupload-upload-uic {
@@ -462,6 +464,9 @@
         }
 
         // Tiny MCE
+        .editor {
+            margin-top: -35px;
+        }
         .wp-editor-wrap {
             .wp-editor-tabs {
                 .wp-switch-editor  {

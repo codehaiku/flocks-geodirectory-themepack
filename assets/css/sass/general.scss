@@ -26,7 +26,9 @@
     border-left: 5px solid #EF5350;
     left: auto;
 }
-
+.geodir-note {
+    color: #FFC107;
+}
 
 .flocks-gd-cover-image {
     .geodir-breadcrumb {
@@ -35,9 +37,8 @@
         z-index: 2;
         ul {
             li {
-                color: #fff;
+                color: #9ea9ef;
                 font-size: 14px;
-                text-transform: uppercase;
                 padding: 0;
                 float: none;
             }
@@ -59,7 +60,7 @@
         .heading-lead {
             margin-bottom: 25px;
             + .geodir-breadcrumb {
-                margin: 1.5em auto 2.5em;
+                margin: 1.5em auto 0;
                 @media(max-width: 1200px) {
                     margin: 0 auto 3.25em;
                 }

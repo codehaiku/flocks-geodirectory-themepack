@@ -98,6 +98,23 @@ function flocks_geodirectory_action_calls()
 
 }
 
+add_filter( 'body_class', 'flocks_geodirectory_body_class' );
+/**
+ * Add the Flocks GeoDirectory Body class.
+ *
+ * @param string|array $classes The class list.
+ *
+ * @since 1.0.0
+ * @package Flocks GeoDirectory Themepack
+ */
+function flocks_geodirectory_body_class( $classes ) {
+    if ( is_page( geodir_add_listing_page_id() ) ) {
+        $classes[] = 'gd_add_listing_page';
+    }
+
+    return $classes;
+}
+
 
 add_filter('geodir_filter_media_image_large_height', 'flocks_gd_filter_media_image_large_height', 10, 3 );
 /**
@@ -239,7 +256,7 @@ function flocks_gd_the_cover_image() { ?>
         get_option('geodir_listing_no_img')
     );
 	?>
-    <?php if ( ! is_page( geodir_home_page_id() ) && geodir_is_geodir_page() ) : ?>
+    <?php if ( ! is_page( array( geodir_home_page_id(), geodir_add_listing_page_id() ) ) && geodir_is_geodir_page() ) : ?>
 
         <div class="flocks-gd-cover-image" id="cover-image">
 
