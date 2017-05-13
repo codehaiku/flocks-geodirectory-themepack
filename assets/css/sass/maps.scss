@@ -5,16 +5,28 @@
 
     &.stickymap {
         border: none!important;
+        height: 400px;
         min-width: 370px;
         margin-top: -30px;
         top: auto!important;
         bottom: 0;
         .map_background {
-            background: #f7f8f9 ;
+            height: 100%;
+            background: #f7f8f9;
             padding: 10px;
             border-radius: 0;
-            box-shadow: 10px 25em 100px 12px #969696 ;
+            box-shadow: 10px 25em 100px 12px #969696;
             border: 1px solid #eee;
+        }
+        .top_banner_section_in {
+            height: 100%;
+            .main_map_wrapper,
+            .geodir_marker_cluster {
+                min-height: 100%;
+            }
+            .iprelative {
+               height: 100%;
+            }
         }
     }
     .map_background {
@@ -300,7 +312,6 @@
             .geodir-i-time {
                 width: 100%;
                 display: inline-block;
-                position: relative;
             }
         }
         > ul {

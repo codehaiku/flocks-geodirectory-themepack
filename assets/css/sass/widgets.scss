@@ -741,6 +741,7 @@ body .geodir-widget {
             }
             .geodir-content{
                 p {
+                    height: auto;
                     max-height: 165px;
                     font-size: 14px;
                     padding-bottom: 0;
@@ -767,6 +768,7 @@ body .geodir-widget {
                 }
                 .geodir-pcomments {
                     i {
+                        color: #FFB74D;
                         font-size: 15px;
                         left: 1.5px;
                     }
@@ -1321,6 +1323,9 @@ dl.geodir-tab-head {
                     padding: 15px 0 22.5px;
                     margin-bottom: 0;
                     border-bottom: 1px solid #e1e1e1;
+                    &:first-of-type {
+                        padding-top: 0;
+                    }
                     &:last-of-type {
                         border-bottom: none;
                     }
@@ -1343,6 +1348,7 @@ dl.geodir-tab-head {
     }
 }
 #secondary,
+#geodir-sidebar,
 #geodir-sidebar-left,
 #geodir-sidebar-right {
     .widget {
@@ -1364,6 +1370,14 @@ dl.geodir-tab-head {
                 }
                 .owl-item  {
                     display: inline-block;
+                    .gd_rating_show {
+                        .geodir_Star {
+                            img {
+                                display: inline-block;
+                                width: 20%;
+                            }
+                        }
+                    }
                     li {
                         width: 100%;
                         &:first-of-type {
@@ -1483,6 +1497,45 @@ dl.geodir-tab-head {
                     }
                 }
             }
+        }
+    }
+}
+// Home Map
+.body_fullscreen {
+    #secondary,
+    #site-footer-widgets.site-footer-section,
+    #geodir-wrapper .geodir_full_page,
+    #geodir-wrapper-content #geodir-main-content,
+    #geodir-wrapper + .geodir_full_page,
+    #geodir-sidebar,
+    #geodir-sidebar-left,
+    #geodir-sidebar-right {
+        .stick_trigger_container {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+#secondary,
+#site-footer-widgets.site-footer-section,
+#geodir-wrapper .geodir_full_page,
+#geodir-wrapper-content #geodir-main-content,
+#geodir-wrapper + .geodir_full_page,
+#geodir-sidebar,
+#geodir-sidebar-left,
+#geodir-sidebar-right {
+    .stick_trigger_container {
+        width: 100%;
+        background: #f6f8f9;
+        padding: 15px 20px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+    }
+    .geodir-map-listing-page {
+        .stick_trigger_container {
+            padding: 0;
+            margin-bottom: 0;
         }
     }
 }
