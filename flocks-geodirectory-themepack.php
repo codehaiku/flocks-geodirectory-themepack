@@ -203,6 +203,76 @@ function flocks_geodirectory_home_header() {
 }
 
 
+add_action('geodir_wrapper_open', 'flocks_geodirectory_places_archive_header');
+/**
+ * Adds [gd_listing_map] and [gd_advanced_search] shortcode in the Places archive page.
+ *
+ * @since 1.0.0
+ * @package Flocks GeoDirectory Themepack
+ */
+function flocks_geodirectory_places_archive_header() {
+    $enable_gd_places_archive_header = apply_filters('flocks_enable_gd_places_archive_header', true);
+    $enable_map = apply_filters('flocks_enable_gd_places_archive_map', true);
+    $map_atts = apply_filters('flocks_gd_places_archive_map_atts', 'width=100% height=425 maptype="ROADMAP" zoom="10" scrollwheel=false');
+    $enable_search = apply_filters('flocks_enable_gd_places_archive_search', true);
+
+    if ( is_tax( 'gd_placecategory' ) && $enable_gd_places_archive_header ) { ?>
+        <div class="flocks-places-archive-map-container">
+
+            <?php do_action('flocks_before_gd_places_archive_map_content'); ?>
+
+            <?php if ($enable_map) { ?>
+
+                <div class="flocks-map-container">
+
+                    <?php echo do_shortcode( '[gd_listing_map ' . $map_atts . ' ]' ); ?>
+
+                </div>
+
+            <?php } ?>
+
+            <?php do_action('flocks_after_gd_places_archive_map_content'); ?>
+
+            <div class="flocks-heading-container">
+
+                <div class="flocks-heading-wrap">
+
+                    <div class="flocks-heading-inner-wrap">
+
+                        <div class="flocks-heading-info-wrap">
+                            <?php geodir_action_listings_title(); ?>
+
+                            <?php the_archive_description( '<div class="heading-lead">', '</div>' ); ?>
+
+                            <?php geodir_breadcrumb(); ?>
+
+                        </div>
+
+                        <div class="flocks-widget-container flocks-gd-places-archive-search">
+
+                            <?php do_action('flocks_before_places_archive_header_widget_content'); ?>
+
+                            <?php if ($enable_search) { ?>
+
+                                <?php echo do_shortcode( '[gd_advanced_search]' ); ?>
+
+                            <?php } ?>
+
+                            <?php do_action('flocks_after_places_archive_header_widget_content'); ?>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    <?php }
+}
+
+
 add_filter('geodir_breadcrumb_separator', 'flocks_change_gd_breadcrumb_separator');
 /**
  * change the gd breadcrumb separator.
@@ -255,7 +325,7 @@ function flocks_gd_the_cover_image() { ?>
         get_option('geodir_listing_no_img')
     );
 	?>
-    <?php if ( ! is_page( array( geodir_home_page_id(), geodir_add_listing_page_id() ) ) && geodir_is_geodir_page() ) : ?>
+    <?php if ( ! is_page( array( geodir_home_page_id(), geodir_add_listing_page_id() ) ) && geodir_is_geodir_page() && ! is_tax( 'gd_placecategory' ) ) : ?>
 
         <div class="flocks-gd-cover-image" id="cover-image">
 

@@ -1,4 +1,5 @@
-.flocks-home-map-container {
+.flocks-home-map-container,
+.flocks-places-archive-map-container {
     .geodir-widget.widget,
     .top_banner_section {
         margin-bottom: 0;
@@ -30,6 +31,7 @@
 .flocks-map-container {
     margin-bottom: 50px;
 }
+.flocks-heading-wrap,
 .flocks-widget-container {
     padding: 0 15px;
     margin-right: auto;
@@ -42,6 +44,77 @@
     }
     @media (min-width: 1200px) {
         width: 1170px;
+    }
+}
+.flocks-places-archive-map-container {
+    .flocks-map-container {
+        margin-bottom: 0;
+    }
+}
+.flocks-heading-container {
+    background: #f6f8f9;
+    width: 100%;
+    margin: 0 auto;
+    .flocks-heading-wrap {
+        padding: 25px 15px;
+    }
+    .flocks-heading-info-wrap,
+    .flocks-gd-places-archive-search {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .flocks-heading-info-wrap {
+        width: 25%;
+        @media(max-width: 768px) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+    .flocks-gd-places-archive-search {
+        width: 74%;
+        padding: 0;
+        position: relative;
+        right: -0.75%;
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+
+        .gd-search-field-search,
+        .gd-search-field-near {
+            @media(max-width: 992px) {
+                max-width: 44%;
+            }
+            @media(max-width: 768px) {
+                max-width: none;
+            }
+        }
+    }
+
+    .entry-header {
+        width: 100%;
+    }
+    .entry-title {
+        font-size: 20px;
+        color: #444;
+    }
+
+    .heading-lead {
+        width: 100%;
+        max-width: none;
+        color: #444;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .geodir-breadcrumb {
+        padding: 0;
+        li {
+            padding-bottom: 0;
+        }
     }
 }
 body .flocks-widget-container {
@@ -213,6 +286,66 @@ body .flocks-widget-container {
     margin-bottom: 0;
     &:empty {
         padding: 0;
+    }
+}
+#geodir-wrapper-content {
+    .login_form_l,
+    .registration_form_r {
+        width: 50%;
+        padding: 0;
+        margin: 0 0 50px;
+        border: none;
+        display: inline-block;
+        form {
+            padding-bottom: 0;
+        }
+        .login_form_box,
+        .registration_form_box {
+            background: #f6f8f9;
+            height: 100%;
+            min-height: 290px;
+            padding: 20px;
+            border-radius: 6px;
+            .form_row {
+                padding: 0;
+                .textfield {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    .form_row {
+        #reg_passmail {
+            margin-bottom: 15px;
+        }
+    }
+    .geodir_button {
+        padding: 10px 15px;
+    }
+
+    .login_form_l {
+        padding-right: 20px;
+        .geodir_button {
+            ~ a {
+                padding: 10px 15px;
+                float: right;
+                @extend .flocks-geodirectory-button;
+            }
+        }
+        #lostpassword_form {
+            border-top: 1px solid #dddddd;
+            padding: 20px 20px 0 20px;
+            margin: 25px -20px 0px;
+        }
+    }
+    .registration_form_r {
+        padding-left: 20px;
+        .geodir_button{
+            margin-top: 18px;
+        }
     }
 }
 
@@ -506,6 +639,7 @@ body .flocks-widget-container {
                 }
                 .geodir-pcomments {
                     i {
+                        color: #FFB74D;
                         font-size: 16px;
                         margin-right: 8px;
                     }
