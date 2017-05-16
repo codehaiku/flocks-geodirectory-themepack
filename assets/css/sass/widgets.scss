@@ -18,7 +18,9 @@
             &.geodir-details-sidebar-google-analytics {
                 min-height: initial;
                 margin-bottom: 10px;
+
                 .gdga-show-analytics {
+                    color: #fff;
                     background: #ee790c;
                     width: 100%;
                     font-size: 16px;
@@ -36,6 +38,40 @@
                         position: relative;
                         top: 0.5px;
                     }
+                }
+                .gdga-analytics-box {
+                    color: #fff;
+                    background: #ee790c;
+                    width: 100%;
+                    font-size: 16px;
+                    text-align: left;
+                    padding: 20px;
+                    border-radius: 6px;
+                    &:hover {
+                        background: #f3a358;
+                        .gd-ActiveUsers {
+                            background: #f3a358;
+                            border: 1px solid #ffb300;
+                        }
+                    }
+                    .fa#gdga-loader-icon {
+                        color: #fff;
+                    }
+                    #ga-analytics-title {
+                        @extend .themepack_font_awesome_before;
+                        &:before {
+                            content: "\f1fe";
+                            font-size: 20px;
+                            margin-right: 7.5px;
+                            position: relative;
+                            top: 0.5px;
+                        }
+                    }
+                    .gd-ActiveUsers {
+                        background: #f3a358;
+                        border: 1px solid #ee790c;
+                    }
+
                 }
             }
 

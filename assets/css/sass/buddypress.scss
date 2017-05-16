@@ -1,0 +1,30 @@
+#buddypress {
+    #item-body {
+        .item-list-tabs {
+            ~ h3 {
+                @extend .flocks-gd-screen-reader;
+            }
+        }
+    }
+    #geodir-wrapper-content {
+        padding-top: 0;
+    }
+    #reviewsTab {
+        .comments-area {
+            margin-top: 0;
+            .comment-content {
+                p {
+                    margin-bottom: 0;
+                }
+                .edit-link {
+                    margin-top: -27.5px;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            ol.commentlist {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
