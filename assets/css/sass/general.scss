@@ -64,6 +64,18 @@
         font-weight: normal;
     }
 }
+.geodir_category_list_view li.no-listing,
+.no-listing {
+    @extend .err-no-rating;
+    background: #f6f8f9;
+    text-align: left;
+    margin-left: 0;
+    padding: 10px 15px;
+    border-bottom: none;
+    strong {
+        font-weight: normal;
+    }
+}
 .geodir-note {
     color: #FFC107;
 }

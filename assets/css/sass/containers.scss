@@ -312,7 +312,7 @@ body .flocks-widget-container {
                 .textfield {
                     width: 100%;
                     margin-bottom: 15px;
-                    border-radius: 4px;
+                    border-radius: 5px;
                 }
             }
             .error_msg {
@@ -607,6 +607,7 @@ body .flocks-widget-container {
                 }
             }
             h3 {
+                margin-top: 0;
                 margin-bottom: 5px;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -845,6 +846,8 @@ body .flocks-widget-container {
         background-color: #22b5ce;
         border-color: transparent;
     }
+    .gd-page-sc-fst,
+    .gd-page-sc-lst,
     > a strong {
         font-size: 0;
         @extend .themepack_font_awesome_before;
@@ -865,6 +868,18 @@ body .flocks-widget-container {
         &:before {
             content: "\f105";
         }
+    }
+    .gd-page-sc-fst {
+      &:before {
+        content: "\f100";
+        line-height: 25px;
+      }
+    }
+    .gd-page-sc-lst {
+      &:before {
+        content: "\f101";
+        line-height: 25px;
+      }
     }
 }
 // Prev Next Navigation

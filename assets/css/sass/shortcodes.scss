@@ -493,3 +493,90 @@
         }
     }
 }
+// Login Shortcode
+.loginform1 {
+    background: #f6f8f9;
+    height: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    .user_login1,
+    .user_pass1 {
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+    .goedir-newuser-link,
+    .goedir-forgot-link {
+        @extend .flocks-geodirectory-button;
+    }
+    .geodir_form_row {
+        padding: 0;
+    }
+    .b_signin,
+    .goedir-newuser-link,
+    .goedir-forgot-link {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .geodir-new-forgot-link {
+        float: right;
+        padding: 0;
+        margin: 0;
+    }
+    .goedir-newuser-link {
+        margin-right: 15px;
+    }
+}
+// Popular Category Shortcode
+.geodir-category-list-in {
+    .geodir-cat-list {
+        width: 100%;
+        background: #f6f8f9;
+        padding: 15px 20px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        ul {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: normal;
+            @extend .flocks-geodirectory-heading-font;
+        }
+        li {
+            @extend .flocks-geodirectory-body-font;
+            width: 18%;
+            padding: 10px 0;
+            background: #fff;
+            padding: 0 0 0 15px;
+            max-height: 46px;
+            border-right: 5px solid #777;
+            border-radius: 5px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            -webkit-transition: all 0.25s ease-in-out;
+               -moz-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
+            &:hover {
+                border-right-color: #22b5ce;
+            }
+            @media(max-width: 480px) {
+                font-size: 14px;
+            }
+            a {
+                color: #777;
+                width: 100%;
+                display: inline-block;
+                position: relative;
+                padding: 13px 15px 13px 25px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                img {
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

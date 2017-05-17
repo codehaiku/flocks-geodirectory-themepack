@@ -499,6 +499,9 @@ body .geodir-widget {
                 li {
                     width: 18%;
                     padding: 10px 0;
+                    background: white;
+                    padding: 10px 15px;
+                    border-radius: 5px;
                     @media(max-width: 480px) {
                         font-size: 14px;
                     }
@@ -557,23 +560,42 @@ body .geodir-widget {
             font-size: 14px;
             font-weight: 600;
         }
-        ul {
-            padding-left: 0;
+        .gd-cptcat-ul.gd-cptcat-parent.gd-cpt-flat {
+            width: 18%;
+            min-width: initial;
+            background: white;
+            margin: 0 15px 15px 0;
+            border-right: 5px solid #777;
+            border-radius: 5px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            -webkit-transition: all 0.25s ease-in-out;
+               -moz-transition: all 0.25s ease-in-out;
+                    transition: all 0.25s ease-in-out;
+            &:hover {
+                border-right-color: #22b5ce;
+            }
             li {
                 list-style: none;
                 display: inline-block;
                 vertical-align: top;
                 width: 100%;
+                margin: 0;
                 h3 {
                     font-size: 14px;
                     font-weight: normal;
-                    line-height: inherit;
+                    line-height: normal;
+                    margin: 0;
                     a {
+                        @extend .flocks-geodirectory-body-font;
+                        color: #777;
                         display: inline-block;
                         width: 100%;
-                        position: relative;
                         line-height: inherit;
-                        padding-left:  22px;
+                        padding: 10px 15px 10px 22px;
+                        min-width: 100%;
+                        position: relative;
+                        top: 2.5px;
                     }
                     img {
                         width: 16px;
@@ -584,7 +606,7 @@ body .geodir-widget {
                         color: inherit;
                         line-height: inherit;
                         position: relative;
-                        top: 2.5px;
+                        top: -0.5px;
                     }
                 }
             }
@@ -752,6 +774,9 @@ body .geodir-widget {
         .geo-bestof-contentwrap {
             border: none;
         }
+        .geodir-listview {
+            border-bottom: 1px solid #eee;
+        }
         #geodir-bestof-places {
             padding: 0;
             .bestof-cat-title {
@@ -770,6 +795,7 @@ body .geodir-widget {
                     position: relative;
                     top: -1.5px;
                     @extend .flocks-geodirectory-button;
+                    @extend .flocks-geodirectory-body-font;
                 }
             }
         }
@@ -779,6 +805,7 @@ body .geodir-widget {
                 height: 60px;
                 background: none;
                 margin-right: 7.5px;
+                margin-bottom: 15px;
                 border: none;
                 &:hover,
                 &.geodir-tab-active {
@@ -959,6 +986,9 @@ dl.geodir-tab-head {
         .geodir-tabs {
             margin-bottom: 25px;
         }
+    }
+    .geodir-chosen-container.geodir-chosen-container-single .chosen-single {
+        border: 1px solid #ddd;
     }
 }
 .single-gd_place {
@@ -1470,6 +1500,7 @@ dl.geodir-tab-head {
     }
 }
 #secondary,
+#site-footer-widgets.site-footer-section,
 #geodir-sidebar,
 #geodir-sidebar-left,
 #geodir-sidebar-right {
@@ -1595,6 +1626,7 @@ dl.geodir-tab-head {
                     }
                     .geodir-content {
                         width: 100%;
+                        padding: 0 15px;
                         margin: 0;
                     }
                     .geodir-entry-content {
@@ -1607,6 +1639,7 @@ dl.geodir-tab-head {
                     .geodir-addinfo {
                         width: 100%;
                         margin: 0;
+                        padding: 0 15px 15px;
                         .geodir-addtofav-icon {
                             font-size: inherit;
                         }
@@ -1620,8 +1653,113 @@ dl.geodir-tab-head {
                 }
             }
         }
+        &.geodir_advance_search_widget {
+            .geodir-listing-search.gd-search-bar-style {
+                .geodir-loc-bar {
+                    .clearfix.geodir-loc-bar-in {
+                        .geodir-search {
+                            .gd-search-field-search,
+                            .gd-search-field-near {
+                                padding: 0;
+                                margin-bottom: 15px;
+                                input[type=text]  {
+                                    border-radius: 5px;
+                                }
+                            }
+                            .gd-search-field-near {
+                                &:before {
+                                    left: 12.5px;
+                                }
+                            }
+                            .geodir_submit_search {
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.geodir_loginbox {
+            .loginform1 {
+                padding: 0;
+            }
+            .geodir-new-forgot-link {
+                width: 100%;
+                a {
+                    width: auto;
+                    padding: 0;
+                    background: none;
+                    color: #22b5ce;
+                    margin: 0;
+                }
+                .goedir-newuser-link {
+                    float: left;
+                }
+            }
+        }
     }
 }
+#site-footer-widgets.site-footer-section {
+    .widget {
+        &.geodir_related_listing_post_view,
+        &.geodir_popular_post_view {
+            a {
+                &:hover {
+                    color: #22b5ce;
+                }
+            }
+            .geodir-entry-title a {
+                color: #444;
+                &:hover {
+                    color: #444;
+                }
+            }
+        }
+        .geodir-viewall {
+            color: #fff;
+        }
+
+        &.geodir_advance_search_widget {
+            padding-top: 15px;
+            .geodir-listing-search.gd-search-bar-style {
+                .geodir-loc-bar {
+                    .clearfix.geodir-loc-bar-in {
+                        .geodir-search {
+                            .gd-search-field-search,
+                            .gd-search-field-near {
+                                input[type=text]  {
+                                    color: #888;
+                                    font-size: 13px;
+                                    border: 1px solid #22b5ce;
+                                    padding-top: 6px;
+                                    &::-webkit-input-placeholder {
+                                       color: #fff;
+                                    }
+
+                                    &:-moz-placeholder { /* Firefox 18- */
+                                       color: #fff;
+                                    }
+
+                                    &::-moz-placeholder {  /* Firefox 19+ */
+                                       color: #fff;
+                                    }
+
+                                    &:-ms-input-placeholder {
+                                       color: #fff;
+                                    }
+                                }
+                            }
+                            .geodir_submit_search {
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 #geodir-sidebar {
     .widget,
     .geodir-widget.widget {
@@ -1646,7 +1784,6 @@ dl.geodir-tab-head {
         }
     }
 }
-
 #secondary,
 #site-footer-widgets.site-footer-section,
 #geodir-wrapper .geodir_full_page,
