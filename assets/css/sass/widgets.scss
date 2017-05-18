@@ -93,7 +93,7 @@
                     .fa-pencil + a,
                     .geodir-addtofav a {
                         width: 100%;
-                        padding: 20px;
+                        padding: 22px 20px;
                         font-size: 16px;
                         border-radius: 6px;
                         display: inline-block;
@@ -198,9 +198,9 @@
             }
         }
         .geodir_more_info {
-            display: inline-block;
             width: 100%;
-
+            margin-top: 0;
+            display: inline-block;
             &:last-of-type {
                 padding-bottom: 0;
             }
@@ -453,10 +453,16 @@ body .geodir-widget {
                                 width: 100%!important;
                             }
                         }
-                        select,
                         input[type=text],
                         input[type=text].ac_input {
                             border-radius: 0;
+                            border: 1px solid #e1e1e1;
+                            &:focus {
+                                border-color: #22b5ce;
+                            }
+                        }
+                        select {
+                            border-radius: 5px;
                             border: 1px solid #e1e1e1;
                             &:focus {
                                 border-color: #22b5ce;
@@ -500,8 +506,7 @@ body .geodir-widget {
                     width: 18%;
                     padding: 10px 0;
                     background: white;
-                    padding: 10px 15px;
-                    border-radius: 5px;
+                    padding: 0 0 0 15px;
                     @media(max-width: 480px) {
                         font-size: 14px;
                     }
@@ -999,14 +1004,26 @@ dl.geodir-tab-head {
         }
     }
 }
+.single-gd_event,
+.single-gd_place {
+    #geodir-wrapper-content {
+        @media (min-width: 1200px) {
+            width: 70%;
+        }
+    }
+}
 
-// Left & Right GeoDirectory Sidebars
+// Left & Right GeoDirectory Details Sidebars
 .geodir-details-sidebar-left,
 .geodir-details-sidebar-right {
     padding: 0 15px;
-    margin: 0;
+    margin: 0 0 50px;
     @media (min-width: 1200px) {
-        width: 25%;
+        width: 30%;
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 35px 0 0;
     }
 }
 #secondary,
@@ -1373,10 +1390,34 @@ dl.geodir-tab-head {
                                     width: 100%!important;
                                 }
                             }
+                            .gd-search-field-cpt {
+                                padding: 0;
+                                margin-bottom: 15px;
+                                &:before {
+                                    font-size: 14px;
+                                    top: 16px;
+                                }
+                                &:after {
+                                    right: 15px;
+                                }
+                            }
+
+                            .gd-search-field-search{
+                                &:before {
+                                    left: 15px;
+                                }
+                            }
                             select,
                             input[type=text],
                             input[type=text].ac_input {
                                 border-radius: 0;
+                                border: 1px solid #e1e1e1;
+                                &:focus {
+                                    border-color: #22b5ce;
+                                }
+                            }
+                            select {
+                                border-radius: 5px;
                                 border: 1px solid #e1e1e1;
                                 &:focus {
                                     border-color: #22b5ce;
@@ -1725,13 +1766,42 @@ dl.geodir-tab-head {
                 .geodir-loc-bar {
                     .clearfix.geodir-loc-bar-in {
                         .geodir-search {
+                            .gd-search-field-cpt {
+                                padding: 0;
+                                margin-bottom: 15px;
+                                &:after {
+                                    top: 12.5px;
+                                    font-size: 18px;
+                                }
+                                select {
+                                    color: #888;
+                                    font-size: 13px;
+                                    border: 1px solid #22b5ce;
+                                    border-radius: 5px;
+                                    padding-top: 9px;
+                                }
+                                + .gd-search-field-search {
+                                    margin-top: 15px;
+                                }
+                            }
+                            .gd-search-field-cpt {
+                                font-size: 14px;
+                                top: 14px;
+                            }
+                            .gd-search-field-search,
+                            .gd-search-field-near {
+                                &:before {
+                                    font-size: 16px;
+                                    top: 14px;
+                                }
+                            }
                             .gd-search-field-search,
                             .gd-search-field-near {
                                 input[type=text]  {
                                     color: #888;
                                     font-size: 13px;
                                     border: 1px solid #22b5ce;
-                                    padding-top: 6px;
+                                    padding-top: 9px;
                                     &::-webkit-input-placeholder {
                                        color: #fff;
                                     }

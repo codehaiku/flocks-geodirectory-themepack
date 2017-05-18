@@ -128,7 +128,7 @@ add_filter('geodir_filter_media_image_large_height', 'flocks_gd_filter_media_ima
  */
 function flocks_gd_filter_media_image_large_height( $height, $default, $params ) {
 
-    $height = 1500;
+    $height = 450;
 
     return $height;
 
@@ -147,7 +147,7 @@ add_filter('geodir_filter_media_image_large_width', 'flocks_gd_filter_media_imag
  */
 function flocks_gd_filter_media_image_large_width( $width, $default, $params ) {
 
-    $width = 1500;
+    $width = 850;
 
     return $width;
 

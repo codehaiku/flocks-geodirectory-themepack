@@ -158,6 +158,7 @@
 }
 // Add Listing form
 #propertyform {
+    margin-bottom: 50px;
     #geodir_fieldset_details {
         font-size: 22px;
         padding: 0;
@@ -709,4 +710,9 @@
             }
         }
     }
+}
+.geodir-event-filter {
+    position: relative;
+    display: inline-block;
+    @extend .geodir-list-view-select;
 }

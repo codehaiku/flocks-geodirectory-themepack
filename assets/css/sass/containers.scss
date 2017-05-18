@@ -11,6 +11,7 @@
         border: 1px solid #eee;
         border-radius: 4px;
         box-shadow: 0px 6px 25px -3px #bdbdbd;
+        margin-bottom: 50px;
     }
 }
 #geodir-wrapper,
@@ -138,7 +139,7 @@ body .flocks-widget-container {
                                 border-top-left-radius: 0;
                                 border-bottom-left-radius: 0;
                                 margin: 0!important;
-                                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+                                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.26);
                                 z-index: 0;
                                 -webkit-transition: all 0.25s ease-in-out;
                                    -moz-transition: all 0.25s ease-in-out;
@@ -155,6 +156,7 @@ body .flocks-widget-container {
                             .gd-search-input-wrapper {
                                 margin: 0;
                             }
+                            .gd-search-field-cpt,
                             .gd-search-field-search,
                             .gd-search-field-near {
                                 @extend .themepack_font_awesome_before;
@@ -172,6 +174,33 @@ body .flocks-widget-container {
                                     left: 15px;
                                 }
                             }
+                            .gd-search-field-cpt {
+                                padding: 0;
+                                padding-right: 15px;
+                                @extend .themepack_font_awesome_after;
+                                &:before {
+                                    content: "\f03a";
+                                }
+                                &:after {
+                                    content: "\f107";
+                                    color: #999;
+                                    font-size: 18px;
+                                    text-align: center;
+                                    position: absolute;
+                                    top: 14px;
+                                    right: 30px;
+                                }
+                                select {
+                                    @extend .flocks-geodirectory-body-font;
+                                    line-height: 20px;
+                                }
+                                + .gd-search-field-search {
+                                    padding-left: 15px;
+                                    &:before {
+                                        left: 27.5px;
+                                    }
+                                }
+                            }
                             .gd-search-field-search {
                                 padding-right: 15px;
                                 @media(max-width: 768px) {
@@ -179,6 +208,7 @@ body .flocks-widget-container {
                                 }
                                 &:before {
                                     content: "\f1ad";
+                                    top: 14.5px;
                                 }
                             }
                             .gd-search-field-near {
@@ -534,6 +564,9 @@ body .flocks-widget-container {
             &:last-of-type {
                 border-bottom: none;
             }
+            &.no-listing {
+                padding: 10px 15px;
+            }
             &.geodir-listview {
                 .geodir-content  {
                     padding-right: 3%;
@@ -549,7 +582,7 @@ body .flocks-widget-container {
                 .geodir-addinfo {
                     width: 100%;
                     text-align: right;
-                    @media(max-width: 480px) {
+                    @media(max-width: 768px) {
                         text-align: left;
                     }
                     .gd-star-rating {
@@ -1172,10 +1205,26 @@ dl.geodir-tab-head dd a {
 
         }
         #related_listingTab {
+            .geodir_location_listing {
+                h3 {
+                    font-size: 16px;
+                }
+            }
             .geodir_category_list_view {
                 li {
                     border: none;
                     padding-bottom: 15px;
+
+                    &.geodir-listview {
+                        border-bottom: 1px solid #eee;
+                        &:first-of-type {
+                            padding-top: 0;
+                        }
+                        &:last-of-type {
+                            border-bottom: none;
+                            padding-bottom: 0;
+                        }
+                    }
                     .geodir-post-img {
                         margin-bottom: 15px;
                     }
@@ -1225,7 +1274,52 @@ dl.geodir-tab-head dd a {
         }
     }
 }
-
+.geodir-company_info {
+    .geodir-event-dates {
+        .fa {
+            width: 15px;
+            font-size: 15px;
+            margin-right: 10px;
+        }
+        .gde-recurring-cont {
+            padding: 0;
+            margin-top: 10px;
+            a {
+                color: #777;
+                cursor: pointer;
+                &:hover {
+                    color: #22b5ce;
+                }
+            }
+        }
+    }
+    .geodir_schedule_start,
+    .geodir_schedule_end {
+        i {
+            width: 15px;
+            font-size: 15px;
+            margin-right: 10px;
+        }
+    }
+    .geodir_schedule_start {
+        margin-bottom: 10px;
+        display: inline-block;
+        i {
+            &:before {
+                content: "\f274";
+                color: #7CB342;
+            }
+        }
+    }
+    .geodir_schedule_end {
+        i {
+            &:before {
+                content: "\f273";
+                color: #E91E63;
+            }
+        }
+    }
+}
 .fieldset-separator {
     font-size: 15px;
     padding-bottom: 10px;
@@ -1627,5 +1721,25 @@ body .simplemodal-container#simplemodal-container {
     border: none;
     .geodir_goback {
         @extend .flocks-geodirectory-button;
+    }
+}
+.geodir_category_list_view {
+    .geodir-event-meta {
+        font-size: 14px;
+        color: #999;
+        .fa {
+            font-size: 15px;
+            margin-right: 10px;
+        }
+        .geodir-i-datepicker {
+            i:before {
+                color: #00BCD4;
+            }
+        }
+        .geodir-i-time{
+            i:before {
+                color: #81C784;
+            }
+        }
     }
 }
