@@ -8,6 +8,10 @@
     }
     #geodir-wrapper-content {
         padding-top: 0;
+        @media(max-width: 1200px) {
+            float: none;
+            margin-bottom: 50px;
+        }
     }
     #reviewsTab {
         .comments-area {

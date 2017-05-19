@@ -159,6 +159,14 @@
 // Add Listing form
 #propertyform {
     margin-bottom: 50px;
+    h5 {
+        color: #333;
+        font-size: 18px;
+    }
+    label {
+        color: #444;
+        font-size: 16px;
+    }
     #geodir_fieldset_details {
         font-size: 22px;
         padding: 0;
@@ -169,8 +177,14 @@
     }
     #geodir_post_mapview_row {
         .geodir_user_define {
+            color: #444;
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 7.5px;
             display: inline-block;
-            margin-right: 15px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
             input[type=checkbox],
             input[type=radio] {
                 position: relative;
@@ -192,9 +206,12 @@
         .gd-input-group {
             position: relative;
             width: 100%;
+            .geodir_textfield  {
+                min-height: 47px;
+            }
             .gd-input-group-addon {
-                height: 34px;
-                width: 35px;
+                height: 47px;
+                width: 47px;
                 background: #22b5ce;
                 border: none;
                 text-align: center;
@@ -209,6 +226,7 @@
                 i {
                     width: 100%;
                     color: #fff;
+                    line-height: 33.5px;
                     &:before {
                         color: #fff;
                     }
@@ -281,11 +299,69 @@
                 }
             }
         }
+        #gd_eventcategory {
+            min-width: 100%;
+            .geodir-chosen-container .chosen-search:after {
+                top: 17.5px;
+                right: 15px;
+            }
+        }
         .geodir_textfield,
         .geodir_textarea,
         .chosen-search input[type="text"],
         #geodir_post_address_row #post_address {
             @extend .flocks-geodirectory-text;
+            color: #444;
+            font-size: 16px;
+            padding: 10px 15px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
+            &:focus {
+                background: #fff;
+            }
+            &::-webkit-input-placeholder {
+               color: #444;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+               color: #444;
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+               color: #444;
+            }
+
+            &:-ms-input-placeholder {
+               color: #444;
+            }
+        }
+        .geodir_textarea {
+            min-height: 150px;
+        }
+        .gd_multi_choice {
+            @extend .flocks-geodirectory-text;
+            li {
+                color: #444;
+                font-size: 16px;
+                margin-bottom: 7.5px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .geodir-chosen-container-multi {
+            .chosen-choices {
+                li.search-field {
+                    input[type="text"] {
+                        color: #444;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .geodir-chosen-container.geodir-chosen-container-multi {
+            .chosen-choices:after {
+                top: 14.5px;
+            }
         }
         #gd_placecategory {
             min-width: 100%;
@@ -586,6 +662,16 @@
                     background-size: 20px;
                     background-position: right center;
                     background-position-x: 105%;
+                }
+                .ui-datepicker-month,
+                .ui-datepicker-year {
+                    color: #fff;
+                }
+                select {
+                    &.ui-datepicker-month,
+                    &.ui-datepicker-year {
+                        color: #999;
+                    }
                 }
                 .ui-datepicker-month {
                     float: left;

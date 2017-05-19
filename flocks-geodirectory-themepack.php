@@ -215,8 +215,14 @@ function flocks_geodirectory_places_archive_header() {
     $enable_map = apply_filters('flocks_enable_gd_places_archive_map', true);
     $map_atts = apply_filters('flocks_gd_places_archive_map_atts', 'width=100% height=425 maptype="ROADMAP" zoom="10" scrollwheel=false');
     $enable_search = apply_filters('flocks_enable_gd_places_archive_search', true);
+    $taxonomy_list = array(
+        'gd_placecategory',
+        'gd_place_tags',
+        'gd_eventcategory',
+        'gd_event_tags'
+    );
 
-    if ( is_tax( 'gd_placecategory' ) && $enable_gd_places_archive_header ) { ?>
+    if ( is_tax( $taxonomy_list ) && $enable_gd_places_archive_header ) { ?>
         <div class="flocks-places-archive-map-container">
 
             <?php do_action('flocks_before_gd_places_archive_map_content'); ?>
