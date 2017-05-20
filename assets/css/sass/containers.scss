@@ -50,9 +50,12 @@
 .flocks-places-archive-map-container {
     .flocks-map-container {
         margin-bottom: 0;
+        .stick_trigger_container {
+            margin-bottom: 0;
+        }
     }
 }
-.flocks-heading-container {
+body .flocks-heading-container {
     background: #f6f8f9;
     width: 100%;
     margin: 0 auto;
@@ -72,13 +75,14 @@
             margin-bottom: 15px;
         }
     }
-    .flocks-gd-places-archive-search {
+    .flocks-widget-container.flocks-gd-places-archive-search {
         width: 74%;
         padding: 0;
         position: relative;
         right: -0.75%;
         @media(max-width: 768px) {
             width: 100%;
+            right: auto;
         }
 
         .gd-search-field-search,
@@ -90,6 +94,90 @@
                 max-width: none;
             }
         }
+        .geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style {
+            .geodir-loc-bar {
+                .clearfix.geodir-loc-bar-in .geodir-search {
+
+                    .gd-search-field-search,
+                    .gd-search-field-near {
+                        @media(max-width: 992px) {
+                            margin-bottom: 0;
+                        }
+                        @media(max-width: 480px) {
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    .gd-search-field-cpt,
+                    .gd-search-field-cpt ~ .gd-search-field-search,
+                    .gd-search-field-cpt ~ .gd-search-field-near {
+                        @media(max-width: 1200px) {
+                            width: 30%!important;
+                        }
+                    }
+
+                    .gd-search-field-cpt {
+                        @media(max-width: 1200px) {
+                            padding: 0;
+                            margin-bottom: 0;
+                        }
+                        @media(max-width: 992px) {
+                            width: 100%!important;
+                            margin-bottom: 15px;
+                        }
+                        ~ .gd-search-field-search,
+                        ~ .gd-search-field-near {
+                            @media(max-width: 992px) {
+                                width: 50%!important;
+                                margin-bottom: 0
+                            }
+                            @media(max-width: 768px) {
+                                margin-bottom: 20px;
+                                input[type=text] {
+                                    border-radius: 5px;
+                                }
+                            }
+                            @media(max-width: 480px) {
+                                width: 100%!important;
+                            }
+                        }
+                        ~ .gd-search-field-search {
+                            @media(max-width: 1200px) {
+                                padding-right: 0;
+                            }
+                        }
+                        ~ .gd-search-field-near {
+                            @media(max-width: 992px) {
+                                padding-left: 15px;
+                                &:before {
+                                    left: 25px;
+                                }
+                            }
+                            @media(max-width: 480px) {
+                                padding-left: 0;
+                                &:before {
+                                    left: 9.5px;
+                                }
+                            }
+                        }
+                        ~ .geodir_submit_search {
+                            @media(max-width: 1200px) {
+                                flex: initial;
+                            }
+                            @media(max-width: 992px) {
+                                flex: auto;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            @media(max-width: 768px) {
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     .entry-header {
@@ -144,6 +232,11 @@ body .flocks-widget-container {
                                 -webkit-transition: all 0.25s ease-in-out;
                                    -moz-transition: all 0.25s ease-in-out;
                                         transition: all 0.25s ease-in-out;
+                                position: relative;
+                                z-index: 20;
+                                @media(max-width: 992px) {
+                                    border-radius: 5px;
+                                }
                                 &:hover {
                                     opacity: 0.87;
                                 }
@@ -161,8 +254,7 @@ body .flocks-widget-container {
                             .gd-search-field-near {
                                 @extend .themepack_font_awesome_before;
                                 position: relative;
-                                @media(max-width: 768px) {
-                                    width: 100%!important;
+                                @media(max-width: 992px) {
                                     margin-bottom: 20px;
                                 }
                                 &:before {
@@ -178,6 +270,9 @@ body .flocks-widget-container {
                                 padding: 0;
                                 padding-right: 15px;
                                 @extend .themepack_font_awesome_after;
+                                @media(max-width: 992px) {
+                                    padding: 0;
+                                }
                                 &:before {
                                     content: "\f03a";
                                 }
@@ -189,6 +284,9 @@ body .flocks-widget-container {
                                     position: absolute;
                                     top: 14px;
                                     right: 30px;
+                                    @media(max-width: 992px) {
+                                        right: 15px;
+                                    }
                                 }
                                 select {
                                     @extend .flocks-geodirectory-body-font;
@@ -196,15 +294,42 @@ body .flocks-widget-container {
                                 }
                                 + .gd-search-field-search {
                                     padding-left: 15px;
+                                    @media(max-width: 992px) {
+                                        padding: 0;
+                                    }
                                     &:before {
                                         left: 27.5px;
+                                        @media(max-width: 992px) {
+                                            left: 15px;
+                                        }
                                     }
+                                }
+                            }
+                            .gd-search-field-cpt {
+                                ~ .gd-search-field-search,
+                                ~ .gd-search-field-near {
+                                    @media(max-width: 992px) {
+                                        margin-bottom: 0
+                                    }
+                                    @media(max-width: 480px) {
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+
+                            .gd-search-field-search,
+                            .gd-search-field-near {
+                                @media(max-width: 992px) {
+                                    width: 40%!important;
+                                }
+                                @media(max-width: 480px) {
+                                    width: 100%!important;
                                 }
                             }
                             .gd-search-field-search {
                                 padding-right: 15px;
-                                @media(max-width: 768px) {
-                                    padding: 0;
+                                @media(max-width: 480px) {
+                                    padding-right: 0;
                                 }
                                 &:before {
                                     content: "\f1ad";
@@ -216,21 +341,33 @@ body .flocks-widget-container {
                                 padding-right: 0;
                                 position: relative;
                                 z-index: 1;
-                                @media(max-width: 768px) {
-                                    padding: 0;
+                                @media(max-width: 480px) {
+                                    padding-left: 0;
                                 }
                                 &:before {
                                     content: "\f041";
                                     font-size: 22px;
                                     top: 10px;
                                     left: 25px;
-                                    @media(max-width: 768px) {
-                                        left: 12.5px;
+                                    @media(max-width: 480px) {
+                                        left: 9.5px;
                                     }
                                 }
                                 input[type=text] {
                                     border-top-right-radius: 0;
                                     border-bottom-right-radius: 0;
+                                    @media(max-width: 480px) {
+                                        border-radius: 5px;
+                                    }
+                                }
+                            }
+                            .geodir_submit_search {
+                                @media(max-width: 992px) {
+                                    border-top-left-radius: 0;
+                                    border-bottom-left-radius: 0;
+                                }
+                                @media(max-width: 480px) {
+                                    border-radius: 5px;
                                 }
                             }
                             select,
@@ -563,6 +700,7 @@ body .flocks-widget-container {
             padding: 15px 0 30px;
             &:last-of-type {
                 border-bottom: none;
+                padding-bottom: 0;
             }
             &.no-listing {
                 padding: 10px 15px;
@@ -1200,6 +1338,24 @@ dl.geodir-tab-head dd a {
                         ~ .comment-form-comment {
                             margin-top: 40px;
                         }
+                    }
+                }
+                .comment-list {
+                    li {
+                        &:first-of-type {
+                            .comment-body {
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                }
+                .gd_comment_replaylink {
+                    display: inline-block;
+                }
+                .description {
+                    p {
+                        width: 100%;
+                        display: inline-block;
                     }
                 }
             }

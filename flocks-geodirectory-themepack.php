@@ -215,6 +215,10 @@ function flocks_geodirectory_places_archive_header() {
     $enable_map = apply_filters('flocks_enable_gd_places_archive_map', true);
     $map_atts = apply_filters('flocks_gd_places_archive_map_atts', 'width=100% height=425 maptype="ROADMAP" zoom="10" scrollwheel=false');
     $enable_search = apply_filters('flocks_enable_gd_places_archive_search', true);
+    $post_type_list = array(
+        'gd_place',
+        'gd_event',
+    );
     $taxonomy_list = array(
         'gd_placecategory',
         'gd_place_tags',
@@ -222,7 +226,7 @@ function flocks_geodirectory_places_archive_header() {
         'gd_event_tags'
     );
 
-    if ( is_tax( $taxonomy_list ) && $enable_gd_places_archive_header ) { ?>
+    if ( is_tax( $taxonomy_list ) && $enable_gd_places_archive_header || is_post_type_archive( $post_type_list ) ) { ?>
         <div class="flocks-places-archive-map-container">
 
             <?php do_action('flocks_before_gd_places_archive_map_content'); ?>
@@ -330,8 +334,18 @@ function flocks_gd_the_cover_image() { ?>
         get_the_ID(), 'thumbnail',
         get_option('geodir_listing_no_img')
     );
+    $post_type_list = array(
+        'gd_place',
+        'gd_event',
+    );
+    $taxonomy_list = array(
+        'gd_placecategory',
+        'gd_place_tags',
+        'gd_eventcategory',
+        'gd_event_tags'
+    );
 	?>
-    <?php if ( ! is_page( array( geodir_home_page_id(), geodir_add_listing_page_id() ) ) && geodir_is_geodir_page() && ! is_tax( 'gd_placecategory' ) ) : ?>
+    <?php if ( ! is_page( array( geodir_home_page_id(), geodir_add_listing_page_id() ) ) && geodir_is_geodir_page() && ! is_tax( $taxonomy_list ) && ! is_post_type_archive( $post_type_list ) ) : ?>
 
         <div class="flocks-gd-cover-image" id="cover-image">
 

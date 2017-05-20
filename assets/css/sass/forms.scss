@@ -148,6 +148,9 @@
 .geodir-chosen-container-active {
     border: 1px solid #22b5ce;
     border-radius: 6px;
+    a {
+        border: none;
+    }
     .chosen-single {
         div b {
             &:after {

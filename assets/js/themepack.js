@@ -8,6 +8,12 @@ jQuery(document).ready( function($) {
         nav:true,
         lazyLoad: true,
         margin:10
-    })
+    });
+
+    if ( $('#site-footer-widgets #widget-collections').find('.flocks_geodirectory_owl_carousel').length != 0 ) {
+        $('#site-footer-widgets #widget-collections').isotope({
+            layoutMode: 'fitRows'
+        });
+    }
 
 });

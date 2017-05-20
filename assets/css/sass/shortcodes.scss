@@ -1,20 +1,65 @@
 //  Login Shortcode
 .geodir-loginbox-list {
-    padding-left: 0;
-    margin-bottom: 0;
+    background: #f6f8f9;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
     li {
         border-bottom: none;
+        &:first-of-type {
+            .signin {
+                @extend .flocks-geodirectory-button;
+                background: #EF5350;
+                color: #fff;
+                min-height: 40px;
+                line-height: 22px;
+                padding: 7.5px 15px;
+            }
+        }
         &:last-of-type {
             margin-bottom: 0;
+        }
+        &:nth-child(4),
+        &:nth-child(5) {
+            @extend .flocks-geodirectory-button;
+            color: #fff;
+            min-height: 40px;
+            line-height: 22px;
+            padding: 7.5px 15px;
+            &:hover {
+                opacity: 0.80;
+            }
+            a {
+                color: #fff;
+            }
+        }
+        &:nth-child(5) {
+            float: right;
         }
         select {
             width: 100%;
             height: 42.5px;
+            background: #fff;
+            color: #999;
+        }
+        .geodir-chosen-container {
+            .geodir-chosen-container-multi .chosen-choices,
+            .geodir-chosen-container-single .chosen-single {
+                color: #999;
+                background: #fff;
+                border: 1px solid #999;
+            }
+            .geodir-chosen-container-multi.geodir-chosen-container-active .chosen-choices,
+            .geodir-chosen-container-single.geodir-chosen-container-active .chosen-single {
+                a {
+                    border: none;
+                }
+            }
         }
         .signin {
             @extend .themepack_font_awesome_before;
             &:hover {
-                color: #EF5350;
+                opacity: 0.80;
             }
             &:before {
                 content: "\f011";
@@ -108,8 +153,9 @@
 // Popular Categories Shortcode
 .geodir-category-list-in {
     padding: 0;
-    background: none;
+    border-radius: 5px;
     border: none;
+    background: #f6f8f9;
     ul {
         width: 100%;
         padding: 0;
@@ -394,7 +440,7 @@
             .clearfix.geodir-loc-bar-in {
                 .geodir-search {
                     button {
-                        height: 45px;
+                        height: 42px;
                         width: 55px;
                         font-size: 20px;
                         border-top-left-radius: 0;
@@ -405,6 +451,9 @@
                         -webkit-transition: all 0.25s ease-in-out;
                            -moz-transition: all 0.25s ease-in-out;
                                 transition: all 0.25s ease-in-out;
+                        @media(max-width: 992px) {
+                            border-radius: 5px;
+                        }
                         &:hover {
                             opacity: 0.87;
                         }
@@ -432,8 +481,10 @@
                     .gd-search-field-near {
                         @extend .themepack_font_awesome_before;
                         position: relative;
-                        @media(max-width: 768px) {
+                        min-width: 28%!important;
+                        @media(max-width: 992px) {
                             width: 100%!important;
+                            padding: 0;
                             margin-bottom: 20px;
                         }
                         &:before {
@@ -449,6 +500,9 @@
                         padding: 0;
                         padding-right: 15px;
                         @extend .themepack_font_awesome_after;
+                        @media(max-width: 992px) {
+                            padding-right: 0;
+                        }
                         &:before {
                             content: "\f03a";
                             top: 14px;
@@ -462,6 +516,9 @@
                             top: 10.5px;
                             right: 30px;
                             color: #999;
+                            @media(max-width: 992px) {
+                                right: 15px;
+                            }
                         }
                         select {
                             @extend .flocks-geodirectory-body-font;
@@ -470,15 +527,21 @@
                         }
                         + .gd-search-field-search {
                             padding-left: 15px;
+                            @media(max-width: 992px) {
+                                padding: 0;
+                            }
                             &:before {
                                 top: 14.5px;
                                 left: 27.5px;
+                                @media(max-width: 992px) {
+                                    left: 15px;
+                                }
                             }
                         }
                     }
                     .gd-search-field-search {
                         padding-right: 15px;
-                        @media(max-width: 768px) {
+                        @media(max-width: 992px) {
                             padding: 0;
                         }
                         &:before {
@@ -487,7 +550,7 @@
                     }
                     .gd-search-field-search {
                         padding-right: 15px;
-                        @media(max-width: 768px) {
+                        @media(max-width: 992px) {
                             padding: 0;
                         }
                         &:before {
@@ -499,7 +562,7 @@
                         padding-right: 0;
                         position: relative;
                         z-index: 1;
-                        @media(max-width: 768px) {
+                        @media(max-width: 992px) {
                             padding: 0;
                         }
                         &:before {
@@ -507,8 +570,8 @@
                             font-size: 22px;
                             top: 10px;
                             left: 25px;
-                            @media(max-width: 768px) {
-                                left: 12.5px;
+                            @media(max-width: 992px) {
+                                left: 9.5px;
                             }
                         }
                         input[type=text] {

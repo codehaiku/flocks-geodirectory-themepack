@@ -33,6 +33,9 @@
         position: relative;
         z-index: 1;
     }
+    .map-places-listing {
+        background: #000;
+    }
     .main_map_wrapper {
         min-width: 100%;
         max-width: 100%;
@@ -200,6 +203,7 @@
 
 // Stickymap
 .stick_trigger_container {
+    margin-bottom: 30px;
     .trigger_sticky {
         color: #fff;
         background: rgba(0, 0, 0, 0.45);
@@ -244,6 +248,7 @@
 .body_fullscreen {
     .stick_trigger_container {
         position: absolute;
+        z-index: 99999999;
     }
     .geodir_map_container.geodir_map_container_fullscreen {
         .map_background .TopLeft {
@@ -255,6 +260,11 @@
             bottom: 40px;
             left: 10px !important;
             z-index: 999999!important;
+
+            &.map-places-listing {
+                bottom: 0;
+                left: 0!important;
+            }
         }
         .map-category-listing-main {
             .gd-trigger {
