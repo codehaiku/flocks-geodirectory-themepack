@@ -10,7 +10,7 @@ jQuery(document).ready( function($) {
         margin:10
     });
 
-    if ( $('#site-footer-widgets #widget-collections').find('.flocks_geodirectory_owl_carousel').length != 0 ) {
+    if ( $('#site-footer-widgets #widget-collections').find('.flocks_geodirectory_owl_carousel, .geodir_event_listing_calendar').length != 0 ) {
         $('#site-footer-widgets #widget-collections').isotope({
             layoutMode: 'fitRows'
         });

@@ -751,6 +751,7 @@ body .flocks-widget-container {
             }
             .geodir-post-img {
                 border: none;
+                top: 7.5px;
                 .geodir_thumbnail {
                     min-width: 100%;
                     margin: 0;
@@ -1387,6 +1388,7 @@ dl.geodir-tab-head dd a {
                     }
                     .geodir-post-img {
                         margin-bottom: 15px;
+                        top: 0;
                     }
                     .geodir-entry-content {
                         p {
@@ -1706,7 +1708,7 @@ dl.geodir-tab-head dd a {
                     }
                     .comment-content {
                         margin-top: -20px;
-                        > div:nth-child(1) {
+                        > div:nth-child(1):not(.description) {
                             float: right;
                             position: absolute;
                             top: 50px;

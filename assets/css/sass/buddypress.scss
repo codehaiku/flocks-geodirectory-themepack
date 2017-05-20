@@ -28,6 +28,20 @@
             }
             ol.commentlist {
                 margin-bottom: 0;
+                li {
+                    margin: 0 0 0 0rem;
+                }
+            }
+        }
+    }
+    #geodir-main-content {
+        .geodir_category_list_view {
+            padding: 0 0 35px;
+            > li {
+                padding-top: 0;
+                h3 {
+                    font-size: 15px;
+                }
             }
         }
     }
