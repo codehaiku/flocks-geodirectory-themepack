@@ -53,6 +53,22 @@ function flocks_geodirectory_themepack_enqueue_scripts() {
     );
     wp_enqueue_script ('flocks-geodirectory-owl-carousel');
 
+    wp_register_style(
+        'flocks-geodirectory-themepack-magnific-popup-skin',
+        plugins_url( '/assets/css/magnific-popup.css', __FILE__ ),
+        array( 'flocks-style' ),
+        '1.0'
+    );
+    wp_enqueue_style( 'flocks-geodirectory-themepack-magnific-popup-skin' );
+
+    wp_register_script(
+        'flocks-geodirectory-magnific-popup',
+        plugins_url( '/assets/js/jquery.magnific-popup.min.js', __FILE__ ),
+        array('jquery'),
+        '1.0'
+    );
+    wp_enqueue_script ('flocks-geodirectory-magnific-popup');
+
     wp_register_script(
         'flocks-geodirectory-themepack-script',
         plugins_url( '/assets/js/themepack.js', __FILE__ ),
@@ -89,11 +105,19 @@ function flocks_geodirectory_action_calls()
     remove_action('geodir_author_page_title', 'geodir_action_author_page_title', 10);
 
     // Remove Details Slider
-    // remove_action('geodir_details_main_content', 'geodir_action_details_slider', 30);
+    remove_action('geodir_details_main_content', 'geodir_action_details_slider', 30);
 
-    // Add the DetailsSlider
-    // add_action('flocks_action_header_slider', 'geodir_action_details_slider', 10);
+    // Remove Taxonomy Section
+    remove_action('geodir_details_main_content', 'geodir_action_details_taxonomies', 40);
 
+    // Add Single Header Slider
+    add_action('geodir_wrapper_open', 'flocks_gd_single_header_slider', 0);
+
+    // Add Single Title Header
+    add_action('geodir_wrapper_open', 'flocks_gd_single_title_header', 0);
+
+    // Add Taxonomy Section After Main Content
+    add_action('geodir_after_single_post', 'geodir_action_details_taxonomies', 10);
 }
 
 
@@ -151,6 +175,65 @@ function flocks_gd_filter_media_image_large_width( $width, $default, $params ) {
 
     return $width;
 
+}
+
+
+function flocks_gd_single_title_header() {
+    $post_images = geodir_get_images(
+        get_the_ID(), 'thumbnail',
+        get_option('geodir_listing_no_img')
+    );
+	?>
+    <?php if( ! empty( $post_images ) ) { ?>
+    	<div class="flocks-single-heading-container">
+    		<div class="container">
+    			<div class="flocks-single-heading-inner-container">
+
+        			<div class="row">
+    		             <div class="left-section col-lg-8 col-md-8 col-sm-12">
+                            <?php  the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+                            <?php if ( ! empty( $meta_header_sub_title ) ) { ?>
+
+                                <div class="heading-lead">
+
+                                    <?php echo wp_kses( $meta_header_sub_title, wp_kses_allowed_html( 'post' ) ); ?>
+
+                                </div>
+                            <?php } ?>
+                            <?php geodir_breadcrumb(); ?>
+            			</div>
+                        <div class="right-section col-lg-4 col-md-4 col-sm-12">
+                            <?php geodir_social_sharing_buttons(); ?>
+            			</div>
+        			</div>
+
+    			</div>
+            </div>
+        </div>
+	<?php }
+}
+
+
+function flocks_gd_single_header_slider() {
+
+	global $post;
+	$post_images = geodir_get_images( $post->ID, 'thumbnail' );
+
+	if( ! empty( $post_images ) ) { ?>
+		<div class="flocks-single-geodirectory-carousel-container">
+            <ul class="flocks-single-header-carousel">
+
+                <?php foreach( $post_images as $image ) { ?>
+                    <li>
+                        <a href="<?php echo esc_url($image->src); ?>" class="magnify-link"></a>
+                        <img src="<?php echo esc_url($image->src); ?>" title="<?php esc_attr_e($image->title); ?>">
+                    </li>
+                <?php } ?>
+
+            </ul>
+        </div>
+	<?php }
 }
 
 
@@ -321,7 +404,8 @@ add_action('geodir_wrapper_open', 'flocks_gd_the_cover_image');
 /**
  * The cover photo for wordpress posts and taxonomies
  */
-function flocks_gd_the_cover_image() { ?>
+function flocks_gd_the_cover_image()
+{ ?>
 	<?php
 	$content_header = flocks_get_content_header_meta();
 	$meta_header_background = $content_header['image'];
@@ -345,7 +429,7 @@ function flocks_gd_the_cover_image() { ?>
         'gd_event_tags'
     );
 	?>
-    <?php if ( ! is_page( array( geodir_home_page_id(), geodir_add_listing_page_id() ) ) && geodir_is_geodir_page() && ! is_tax( $taxonomy_list ) && ! is_post_type_archive( $post_type_list ) ) : ?>
+    <?php if ( ! is_page( array( geodir_home_page_id(), geodir_add_listing_page_id() ) ) && geodir_is_geodir_page() && ! is_tax( $taxonomy_list ) && ! is_post_type_archive( $post_type_list ) && empty( $post_images )) : ?>
 
         <div class="flocks-gd-cover-image" id="cover-image">
 
