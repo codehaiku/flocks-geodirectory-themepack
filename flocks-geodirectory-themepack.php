@@ -184,7 +184,7 @@ function flocks_gd_single_title_header() {
         get_option('geodir_listing_no_img')
     );
 	?>
-    <?php if( ! empty( $post_images ) ) { ?>
+    <?php if( geodir_is_geodir_page() && is_singular() && ! empty( $post_images ) ) { ?>
     	<div class="flocks-single-heading-container">
     		<div class="container">
     			<div class="flocks-single-heading-inner-container">
@@ -220,7 +220,7 @@ function flocks_gd_single_header_slider() {
 	global $post;
 	$post_images = geodir_get_images( $post->ID, 'thumbnail' );
 
-	if( ! empty( $post_images ) ) { ?>
+	if( geodir_is_geodir_page() && is_singular() && ! empty( $post_images ) ) { ?>
 		<div class="flocks-single-geodirectory-carousel-container">
             <ul class="flocks-single-header-carousel">
 
