@@ -484,7 +484,7 @@ body .flocks-widget-container {
                 }
             }
             .error_msg {
-                @extend .err-no-rating;
+                @extend .flocks-gd-error;
             }
         }
     }
@@ -1321,6 +1321,17 @@ dl.geodir-tab-head dd a {
                             display: inline-block;
                         }
                     }
+                    .gd_rating {
+                        + .err-no-rating {
+                            height: auto;
+                            padding: 10px 15px;
+                            margin-top: 20px;
+                            display: inline-block;
+                            position: relative;
+                            bottom: auto;
+                            z-index: 999;
+                        }
+                    }
                     .gd-cancel-replaylink {
                         #cancel-comment-reply-link {
                             @extend .flocks-geodirectory-button;
@@ -1682,18 +1693,89 @@ dl.geodir-tab-head dd a {
 }
 .logged-out {
     .geodir-tabs ul.geodir-tabs-content #reviewsTab {
-        #comments .comment-respond .br-wrapper {
-            width: auto;
-        }
-        .comment-form-comment {
-            margin-top: 0;
+        #comments {
+            .comment-respond .br-wrapper {
+                width: auto;
+                position: static;
+            }
+            .comment-form {
+                .comment-form-author,
+                .comment-form-email,
+                .comment-form-url {
+                    @media(max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+            }
+            .comment-form-comment {
+                margin-top: 0;
+                @media(max-width: 768px) {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+            .comment-form-email,
+            .comment-form-url {
+                input {
+                    margin-bottom: 0;
+                }
+            }
+            .comment-respond {
+                .gd_rating {
+                    margin-bottom: 28.5px;
+                    @media(max-width: 768px) {
+                        width: 100%;
+                    }
+                    + .err-no-rating {
+                        width: 35%;
+                        position: absolute;
+                        bottom: 0;
+                        @media(max-width: 768px) {
+                            width: 100%;
+                            bottom: 55px;
+
+                        }
+                        ~ .comment-form-url {
+                            margin-bottom: 45px;
+                            @media(max-width: 768px) {
+                                margin-bottom: 85px;
+                            }
+                        }
+                    }
+                }
+            }
+            .comment-form {
+                .br-theme-fontawesome-stars {
+                    .err-no-rating {
+                        width: 270px;
+                        bottom: 0;
+                        @media(max-width: 768px) {
+                            width: 100%;
+                            bottom: 45px;
+                        }
+                    }
+                    .br-widget {
+                        margin-bottom: 20px;
+                    }
+                    ~ .comment-form-url {
+                        margin-bottom: 35px;
+                        @media(max-width: 768px) {
+                            margin-bottom: 55px;
+                        }
+                    }
+                }
+            }
         }
     }
 
     #reviewsTab {
         .comment-form {
-            .br-wrapper  {
+            .br-theme-fontawesome-stars {
                 width: auto;
+                .br-widget {
+                    position: relative;
+                    top: -10px;
+                }
             }
             .comment-form-comment {
                 margin: 0;
@@ -1709,12 +1791,16 @@ dl.geodir-tab-head dd a {
 }
 // Review
 #reviewsTab {
+    .comment-form {
+        position: relative;
+    }
     .comments-area {
         ol.commentlist {
             padding-left: 0;
             margin-bottom: 35px;
             li {
                 border: none;
+                list-style: none;
                 article {
                     margin: 0;
                     padding: 20px 0;
@@ -1730,7 +1816,27 @@ dl.geodir-tab-head dd a {
                         padding-right: 0;
                         margin: 0;
                     }
+                    .comment-awaiting-moderation {
+                        background: #fff;
+                        width: calc(100% - 105px);
+                        margin-top: -20px;
+                        padding: 10px 15px;
+                        margin-bottom: 40px;
+                        border-left: 5px solid #22b5ce;
+                        display: inline-block;
+                        position: relative;
+                        left: 105px;
+                        @media(max-width: 480px) {
+                            width: 100%;
+                            margin: 15px 0;
+                            left: auto;
+                        }
+                    }
                     .comment-content {
+                        @media(max-width: 480px) {
+                            padding: 0;
+                            margin: 0;
+                        }
                         margin-top: -20px;
                         > div:nth-child(1):not(.description) {
                             float: right;
@@ -1752,16 +1858,28 @@ dl.geodir-tab-head dd a {
                         .description {
                             p {
                                 margin-bottom: 0;
+                                @media(max-width: 480px) {
+                                    margin-bottom: 1.5em;
+                                }
                             }
                         }
                     }
                     header {
                         min-height: 85px;
                         position: relative;
+                        overflow: visible;
+                        @media(max-width: 480px) {
+                            width: 100%;
+                            padding: 0;
+                        }
                         img {
                             position: absolute;
                             width: 85px;
                             border-radius: 0;
+                            @media(max-width: 480px) {
+                                position: relative;
+                                margin-bottom: 35px;
+                            }
                         }
                         cite,
                         span.item,
@@ -1773,6 +1891,8 @@ dl.geodir-tab-head dd a {
                         cite {
                             width: 100%;
                             margin-bottom: 10px;
+                            position: relative;
+                            top: -4.5px;
                             span {
                                 background: #22b5ce;
                                 font-size: inherit;
@@ -1825,6 +1945,9 @@ dl.geodir-tab-head dd a {
                 }
                 .children {
                     margin: 0;
+                    @media(max-width: 480px) {
+                        padding-left: 0;
+                    }
                 }
             }
         }
@@ -1971,9 +2094,7 @@ body .simplemodal-container#simplemodal-container {
             bottom: 0;
             opacity: 0;
             transition:     opacity .2s;
-            @media(max-width: 480px) {
-                top: 35%;
-            }
+
             &:before {
                 @extend .themepack_font_awesome_before;
                 content: "\f0b2";

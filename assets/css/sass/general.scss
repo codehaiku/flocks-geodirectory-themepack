@@ -46,6 +46,7 @@
         display: inline-block;
     }
 }
+.flocks-gd-error,
 .err-no-rating {
     width: 100%;
     color: #EF5350;
@@ -57,7 +58,7 @@
     @extend .flocks-geodirectory-body-font;
 }
 .error_msg_fix {
-    @extend .err-no-rating;
+    @extend .flocks-gd-error;
     background: #f6f8f9;
     text-align: left;
     strong {
@@ -66,7 +67,7 @@
 }
 .geodir_category_list_view li.no-listing,
 .no-listing {
-    @extend .err-no-rating;
+    @extend .flocks-gd-error;
     background: #f6f8f9;
     text-align: left;
     margin-left: 0;

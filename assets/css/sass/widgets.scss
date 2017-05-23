@@ -993,6 +993,9 @@ body .geodir-widget {
                 border: none;
                 tr {
                     td {
+                        .gdem-loading {
+                            color: #fff;
+                        }
                         img {
                             position: relative;
                             top: -4px;
@@ -1942,6 +1945,81 @@ dl.geodir-tab-head {
         }
     }
 }
+body #site-footer-widgets.site-footer-section {
+    .widget {
+        input[type=text],
+        input[type=tel],
+        input[type=url],
+        input[type=password],
+        input[type=search],
+        input[type=email],
+        input[type=number],
+        input[type=datetime],
+        input[type=datetime-local],
+        input[type=time],
+        input[type=week],
+        input[type=month],
+        textarea,
+        select {
+            background: #000;
+            border: 1px solid #22b5ce;
+        }
+        &.geodir_bestof_widget,
+        &.geodir_event_listing {
+            .geodir_category_list_view {
+                li {
+                    background: rgba(0, 0, 0, 0.25);
+                    border: 1px solid #000;
+                }
+            }
+            .flocks_geodirectory_owl_carousel {
+                .geodir-content {
+                    h3 {
+                        a {
+                            color: #888;
+                        }
+                    }
+                }
+            }
+        }
+        &.geodir_event_listing_calendar {
+            .geodir_event_cal_widget {
+                .geodir_event_calendar {
+                    .calendar_widget {
+                        background: none;
+                        margin-top: 5px;
+                        tr {
+                            td {
+                                color: #fff;
+                                background: rgba(0, 0, 0, 0.25);
+                                border: 1px solid #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.widget_gd_features .gd-features li {
+            border: 1px solid #000;
+            .gd-fe-title,
+            .gd-fe-desc {
+                background: rgba(0, 0, 0, 0.25);
+                border: 1px solid #000;
+            }
+        }
+        &.widget.geodir_loginbox {
+            .geodir-loginbox-list {
+                background: rgba(0, 0, 0, 0.25);
+                .geodir-chosen-container.geodir-chosen-container-single{
+                    .chosen-single,
+                    .chosen-drop {
+                        background: #000;
+                    }
+                }
+            }
+        }
+    }
+}
 #site-footer-widgets.site-footer-section {
     .widget {
         &.geodir_event_listing,
@@ -1981,7 +2059,15 @@ dl.geodir-tab-head {
                 }
             }
         }
-
+        &.geodir_loginbox {
+            .loginform1 {
+                background: none;
+                .geodir_form_row .textfield {
+                    background: #000;
+                    border: 1px solid #22b5ce;
+                }
+            }
+        }
         &.geodir_cpt_categories_widget {
             .gd-cptcat-ul.gd-cptcat-parent.gd-cpt-flat {
                 background-color: #000;

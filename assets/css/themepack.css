@@ -13,11 +13,12 @@
   }
 }
 
-.flocks-geodirectory-body-font, .err-no-rating, .error_msg_fix, .geodir_category_list_view li.no-listing,
+.flocks-geodirectory-body-font, .flocks-gd-error, .error_msg_fix, .geodir_category_list_view li.no-listing,
 .no-listing, #geodir-wrapper-content .login_form_l .login_form_box .error_msg,
 #geodir-wrapper-content .login_form_l .registration_form_box .error_msg,
 #geodir-wrapper-content .registration_form_r .login_form_box .error_msg,
-#geodir-wrapper-content .registration_form_r .registration_form_box .error_msg, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button, .geodir-page .ui-timepicker-div dl dt,
+#geodir-wrapper-content .registration_form_r .registration_form_box .error_msg,
+.err-no-rating, .geodir-page .ui-datepicker .ui-datepicker-buttonpane button, .geodir-page .ui-timepicker-div dl dt,
 .geodir-page .ui-timepicker-div dl dd, body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodir-listing-search.gd-search-bar-style .geodir-loc-bar .clearfix.geodir-loc-bar-in .geodir-search .gd-search-field-cpt select, .widget .geodir_category_list_view > li .geodir-content > h3,
 #related_listingTab .geodir_category_list_view > li .geodir-content > h3,
 #geodir-main-content .geodir_category_list_view > li .geodir-content > h3, body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal-data form .row.clearfix input[type=text],
@@ -169,11 +170,12 @@ body .flocks-widget-container .geodir-widget.geodir_advance_search_widget .geodi
   display: inline-block;
 }
 
-.err-no-rating, .error_msg_fix, .geodir_category_list_view li.no-listing,
+.flocks-gd-error, .error_msg_fix, .geodir_category_list_view li.no-listing,
 .no-listing, #geodir-wrapper-content .login_form_l .login_form_box .error_msg,
 #geodir-wrapper-content .login_form_l .registration_form_box .error_msg,
 #geodir-wrapper-content .registration_form_r .login_form_box .error_msg,
-#geodir-wrapper-content .registration_form_r .registration_form_box .error_msg {
+#geodir-wrapper-content .registration_form_r .registration_form_box .error_msg,
+.err-no-rating {
   width: 100%;
   color: #EF5350;
   background: #ffffff;
@@ -2794,29 +2796,25 @@ dl.geodir-tab-head dd a {
   margin-top: 0;
 }
 
-.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .err-no-rating, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg_fix, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond
-.no-listing, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond #geodir-wrapper-content .login_form_l .login_form_box .error_msg, #geodir-wrapper-content .login_form_l .login_form_box .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond
-#geodir-wrapper-content .login_form_l .registration_form_box .error_msg,
-#geodir-wrapper-content .login_form_l .registration_form_box .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond
-#geodir-wrapper-content .registration_form_r .login_form_box .error_msg,
-#geodir-wrapper-content .registration_form_r .login_form_box .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond
-#geodir-wrapper-content .registration_form_r .registration_form_box .error_msg,
-#geodir-wrapper-content .registration_form_r .registration_form_box .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg {
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .err-no-rating {
   position: absolute;
   bottom: 0;
 }
 
-.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .err-no-rating + .br-widget, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg_fix + .br-widget, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .geodir_category_list_view li.no-listing + .br-widget, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond
-.no-listing + .br-widget, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond #geodir-wrapper-content .login_form_l .login_form_box .error_msg + .br-widget, #geodir-wrapper-content .login_form_l .login_form_box .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg + .br-widget, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond
-#geodir-wrapper-content .login_form_l .registration_form_box .error_msg + .br-widget,
-#geodir-wrapper-content .login_form_l .registration_form_box .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg + .br-widget, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond
-#geodir-wrapper-content .registration_form_r .login_form_box .error_msg + .br-widget,
-#geodir-wrapper-content .registration_form_r .login_form_box .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg + .br-widget, .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond
-#geodir-wrapper-content .registration_form_r .registration_form_box .error_msg + .br-widget,
-#geodir-wrapper-content .registration_form_r .registration_form_box .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .error_msg + .br-widget {
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .err-no-rating + .br-widget {
   width: 100%;
   margin-bottom: 45px;
   display: inline-block;
+}
+
+.geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd_rating + .err-no-rating {
+  height: auto;
+  padding: 10px 15px;
+  margin-top: 20px;
+  display: inline-block;
+  position: relative;
+  bottom: auto;
+  z-index: 999;
 }
 
 .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd-cancel-replaylink #cancel-comment-reply-link {
@@ -3223,14 +3221,99 @@ dl.geodir-tab-head dd a {
 
 .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .br-wrapper {
   width: auto;
+  position: static;
 }
 
-.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab .comment-form-comment {
+@media (max-width: 768px) {
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form .comment-form-author,
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form .comment-form-email,
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form .comment-form-url {
+    width: 100%;
+  }
+}
+
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form-comment {
   margin-top: 0;
 }
 
-.logged-out #reviewsTab .comment-form .br-wrapper {
+@media (max-width: 768px) {
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form-comment {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form-email input,
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form-url input {
+  margin-bottom: 0;
+}
+
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd_rating {
+  margin-bottom: 28.5px;
+}
+
+@media (max-width: 768px) {
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd_rating {
+    width: 100%;
+  }
+}
+
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd_rating + .err-no-rating {
+  width: 35%;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd_rating + .err-no-rating {
+    width: 100%;
+    bottom: 55px;
+  }
+}
+
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd_rating + .err-no-rating ~ .comment-form-url {
+  margin-bottom: 45px;
+}
+
+@media (max-width: 768px) {
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-respond .gd_rating + .err-no-rating ~ .comment-form-url {
+    margin-bottom: 85px;
+  }
+}
+
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form .br-theme-fontawesome-stars .err-no-rating {
+  width: 270px;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form .br-theme-fontawesome-stars .err-no-rating {
+    width: 100%;
+    bottom: 45px;
+  }
+}
+
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form .br-theme-fontawesome-stars .br-widget {
+  margin-bottom: 20px;
+}
+
+.logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form .br-theme-fontawesome-stars ~ .comment-form-url {
+  margin-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+  .logged-out .geodir-tabs ul.geodir-tabs-content #reviewsTab #comments .comment-form .br-theme-fontawesome-stars ~ .comment-form-url {
+    margin-bottom: 55px;
+  }
+}
+
+.logged-out #reviewsTab .comment-form .br-theme-fontawesome-stars {
   width: auto;
+}
+
+.logged-out #reviewsTab .comment-form .br-theme-fontawesome-stars .br-widget {
+  position: relative;
+  top: -10px;
 }
 
 .logged-out #reviewsTab .comment-form .comment-form-comment {
@@ -3241,6 +3324,10 @@ dl.geodir-tab-head dd a {
   min-height: 300px;
 }
 
+#reviewsTab .comment-form {
+  position: relative;
+}
+
 #reviewsTab .comments-area ol.commentlist {
   padding-left: 0;
   margin-bottom: 35px;
@@ -3248,6 +3335,7 @@ dl.geodir-tab-head dd a {
 
 #reviewsTab .comments-area ol.commentlist li {
   border: none;
+  list-style: none;
 }
 
 #reviewsTab .comments-area ol.commentlist li article {
@@ -3269,8 +3357,35 @@ dl.geodir-tab-head dd a {
   margin: 0;
 }
 
+#reviewsTab .comments-area ol.commentlist li article .comment-awaiting-moderation {
+  background: #fff;
+  width: calc(100% - 105px);
+  margin-top: -20px;
+  padding: 10px 15px;
+  margin-bottom: 40px;
+  border-left: 5px solid #22b5ce;
+  display: inline-block;
+  position: relative;
+  left: 105px;
+}
+
+@media (max-width: 480px) {
+  #reviewsTab .comments-area ol.commentlist li article .comment-awaiting-moderation {
+    width: 100%;
+    margin: 15px 0;
+    left: auto;
+  }
+}
+
 #reviewsTab .comments-area ol.commentlist li article .comment-content {
   margin-top: -20px;
+}
+
+@media (max-width: 480px) {
+  #reviewsTab .comments-area ol.commentlist li article .comment-content {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 #reviewsTab .comments-area ol.commentlist li article .comment-content > div:nth-child(1):not(.description) {
@@ -3296,15 +3411,36 @@ dl.geodir-tab-head dd a {
   margin-bottom: 0;
 }
 
+@media (max-width: 480px) {
+  #reviewsTab .comments-area ol.commentlist li article .comment-content .description p {
+    margin-bottom: 1.5em;
+  }
+}
+
 #reviewsTab .comments-area ol.commentlist li article header {
   min-height: 85px;
   position: relative;
+  overflow: visible;
+}
+
+@media (max-width: 480px) {
+  #reviewsTab .comments-area ol.commentlist li article header {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 #reviewsTab .comments-area ol.commentlist li article header img {
   position: absolute;
   width: 85px;
   border-radius: 0;
+}
+
+@media (max-width: 480px) {
+  #reviewsTab .comments-area ol.commentlist li article header img {
+    position: relative;
+    margin-bottom: 35px;
+  }
 }
 
 #reviewsTab .comments-area ol.commentlist li article header cite,
@@ -3318,6 +3454,8 @@ dl.geodir-tab-head dd a {
 #reviewsTab .comments-area ol.commentlist li article header cite {
   width: 100%;
   margin-bottom: 10px;
+  position: relative;
+  top: -4.5px;
 }
 
 #reviewsTab .comments-area ol.commentlist li article header cite span {
@@ -3371,6 +3509,12 @@ dl.geodir-tab-head dd a {
 
 #reviewsTab .comments-area ol.commentlist li .children {
   margin: 0;
+}
+
+@media (max-width: 480px) {
+  #reviewsTab .comments-area ol.commentlist li .children {
+    padding-left: 0;
+  }
 }
 
 body .simplemodal-container#simplemodal-container {
@@ -3511,12 +3655,6 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   bottom: 0;
   opacity: 0;
   transition: opacity .2s;
-}
-
-@media (max-width: 480px) {
-  .flocks-single-geodirectory-carousel-container li .magnify-link {
-    top: 35%;
-  }
 }
 
 .flocks-single-geodirectory-carousel-container li .magnify-link:before {
@@ -4763,6 +4901,10 @@ body .geodir-widget.geodir_cpt_categories_widget .gd-cptcat-ul.gd-cptcat-parent.
 .widget.geodir_event_listing_calendar .geodir_event_cal_widget table.gd_cal_nav {
   background: #22b5ce;
   border: none;
+}
+
+.widget.geodir_event_listing_calendar .geodir_event_cal_widget table.gd_cal_nav tr td .gdem-loading {
+  color: #fff;
 }
 
 .widget.geodir_event_listing_calendar .geodir_event_cal_widget table.gd_cal_nav tr td img {
@@ -7708,6 +7850,63 @@ dl.geodir-tab-head {
   top: 0;
 }
 
+body #site-footer-widgets.site-footer-section .widget input[type=text],
+body #site-footer-widgets.site-footer-section .widget input[type=tel],
+body #site-footer-widgets.site-footer-section .widget input[type=url],
+body #site-footer-widgets.site-footer-section .widget input[type=password],
+body #site-footer-widgets.site-footer-section .widget input[type=search],
+body #site-footer-widgets.site-footer-section .widget input[type=email],
+body #site-footer-widgets.site-footer-section .widget input[type=number],
+body #site-footer-widgets.site-footer-section .widget input[type=datetime],
+body #site-footer-widgets.site-footer-section .widget input[type=datetime-local],
+body #site-footer-widgets.site-footer-section .widget input[type=time],
+body #site-footer-widgets.site-footer-section .widget input[type=week],
+body #site-footer-widgets.site-footer-section .widget input[type=month],
+body #site-footer-widgets.site-footer-section .widget textarea,
+body #site-footer-widgets.site-footer-section .widget select {
+  background: #000;
+  border: 1px solid #22b5ce;
+}
+
+body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .geodir_category_list_view li {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid #000;
+}
+
+body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .flocks_geodirectory_owl_carousel .geodir-content h3 a {
+  color: #888;
+}
+
+body #site-footer-widgets.site-footer-section .widget.geodir_event_listing_calendar .geodir_event_cal_widget .geodir_event_calendar .calendar_widget {
+  background: none;
+  margin-top: 5px;
+}
+
+body #site-footer-widgets.site-footer-section .widget.geodir_event_listing_calendar .geodir_event_cal_widget .geodir_event_calendar .calendar_widget tr td {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid #000;
+}
+
+body #site-footer-widgets.site-footer-section .widget.widget_gd_features .gd-features li {
+  border: 1px solid #000;
+}
+
+body #site-footer-widgets.site-footer-section .widget.widget_gd_features .gd-features li .gd-fe-title,
+body #site-footer-widgets.site-footer-section .widget.widget_gd_features .gd-features li .gd-fe-desc {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid #000;
+}
+
+body #site-footer-widgets.site-footer-section .widget.widget.geodir_loginbox .geodir-loginbox-list {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+body #site-footer-widgets.site-footer-section .widget.widget.geodir_loginbox .geodir-loginbox-list .geodir-chosen-container.geodir-chosen-container-single .chosen-single,
+body #site-footer-widgets.site-footer-section .widget.widget.geodir_loginbox .geodir-loginbox-list .geodir-chosen-container.geodir-chosen-container-single .chosen-drop {
+  background: #000;
+}
+
 #site-footer-widgets.site-footer-section .widget.geodir_event_listing a:hover, #site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view a:hover, #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view a:hover {
   color: #22b5ce;
 }
@@ -7737,6 +7936,15 @@ dl.geodir-tab-head {
   border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+#site-footer-widgets.site-footer-section .widget.geodir_loginbox .loginform1 {
+  background: none;
+}
+
+#site-footer-widgets.site-footer-section .widget.geodir_loginbox .loginform1 .geodir_form_row .textfield {
+  background: #000;
+  border: 1px solid #22b5ce;
 }
 
 #site-footer-widgets.site-footer-section .widget.geodir_cpt_categories_widget .gd-cptcat-ul.gd-cptcat-parent.gd-cpt-flat {
