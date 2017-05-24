@@ -7868,12 +7868,12 @@ body #site-footer-widgets.site-footer-section .widget select {
   border: 1px solid #22b5ce;
 }
 
-body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view li {
+body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view li {
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid #000;
 }
 
-body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-content h3 a {
+body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_related_listing_post_view .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-content h3 a {
   color: #888;
 }
 
