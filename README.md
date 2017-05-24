@@ -3,8 +3,6 @@
 A plugin for Flocks to handle the style of the GeoDirectory plugin. The said plugin handles the design of the GeoDirectory to make it compatible to Flocks.
 The said plugin is easy to use, just install and activate the said plugin and it will handle the GeoDirectory integration automatically.
 
-<strong>Current Version: 2.0.4</strong>
-
 <h3><strong>Setup and Installation</strong></h3>
 Flocks GeoDirectory Themepack requires few things in order to run properly.
 
