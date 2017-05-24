@@ -15,23 +15,23 @@ jQuery(document).ready( function($) {
     var single_owl_carousel = $('.flocks-single-geodirectory-carousel');
 
     $(single_owl_carousel).owlCarousel({
-        items:3,
+        items:flocks_geodirectory_single_carousel_object.items,
         margin:0,
-        loop:true,
-        autoWidth:true,
-        nav:true,
-        lazyLoad: true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause:true,
-        responsiveClass: true,
+        loop:flocks_geodirectory_single_carousel_object.loop,
+        autoWidth:flocks_geodirectory_single_carousel_object.autoWidth,
+        nav:flocks_geodirectory_single_carousel_object.nav,
+        lazyLoad:flocks_geodirectory_single_carousel_object.lazyLoad,
+        autoplay:flocks_geodirectory_single_carousel_object.autoplay,
+        autoplayTimeout:flocks_geodirectory_single_carousel_object.autoplayTimeout,
+        autoplayHoverPause:flocks_geodirectory_single_carousel_object.autoplayHoverPause,
+        responsiveClass:flocks_geodirectory_single_carousel_object.responsiveClass,
         responsive:{
             0: {
-              items: 1,
-              autoWidth:false
+              items:flocks_geodirectory_single_carousel_object.mobile_screens_items,
+              autoWidth:flocks_geodirectory_single_carousel_object.mobile_autoWidth
             },
             480: {
-              items: 3,
+              items:flocks_geodirectory_single_carousel_object.items,
             }
         }
     });
