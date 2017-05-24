@@ -7868,12 +7868,12 @@ body #site-footer-widgets.site-footer-section .widget select {
   border: 1px solid #22b5ce;
 }
 
-body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .geodir_category_list_view li {
+body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .geodir_category_list_view li, body #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .geodir_category_list_view li {
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid #000;
 }
 
-body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .flocks_geodirectory_owl_carousel .geodir-content h3 a {
+body #site-footer-widgets.site-footer-section .widget.geodir_bestof_widget .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_event_listing .flocks_geodirectory_owl_carousel .geodir-content h3 a, body #site-footer-widgets.site-footer-section .widget.geodir_popular_post_view .flocks_geodirectory_owl_carousel .geodir-content h3 a {
   color: #888;
 }
 
@@ -7899,7 +7899,8 @@ body #site-footer-widgets.site-footer-section .widget.widget_gd_features .gd-fea
 }
 
 body #site-footer-widgets.site-footer-section .widget.widget.geodir_loginbox .geodir-loginbox-list {
-  background: rgba(0, 0, 0, 0.25);
+  padding: 0;
+  background: none;
 }
 
 body #site-footer-widgets.site-footer-section .widget.widget.geodir_loginbox .geodir-loginbox-list .geodir-chosen-container.geodir-chosen-container-single .chosen-single,
@@ -8071,7 +8072,7 @@ body #site-footer-widgets.site-footer-section .widget.widget.geodir_loginbox .ge
 }
 
 #site-footer-widgets.site-footer-section .widget.geodir_loginbox .geodir-loginbox-list li:nth-child(4) {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 #site-footer-widgets.site-footer-section .widget.geodir_event_listing_calendar {
