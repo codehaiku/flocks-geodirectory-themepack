@@ -1,3 +1,19 @@
+.flocks-header-color-contrast-enabled {
+    #masthead {
+        background: rgba(0, 0, 0, 0.55);
+    }
+}
+.header-style-3,
+.header-style-4 {
+    #header-section.site {
+        z-index: 100;
+    }
+    .flocks-home-map-container {
+        .geodir_map_container .map-category-listing-main .map_category {
+            height: 80%;
+        }
+    }
+}
 .flocks-home-map-container,
 .flocks-places-archive-map-container {
     .geodir-widget.widget,

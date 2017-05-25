@@ -1199,6 +1199,20 @@ body .simplemodal-container#simplemodal-container .simplemodal-wrap .simplemodal
   display: inline-block;
 }
 
+.flocks-header-color-contrast-enabled #masthead {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.header-style-3 #header-section.site,
+.header-style-4 #header-section.site {
+  z-index: 100;
+}
+
+.header-style-3 .flocks-home-map-container .geodir_map_container .map-category-listing-main .map_category,
+.header-style-4 .flocks-home-map-container .geodir_map_container .map-category-listing-main .map_category {
+  height: 80%;
+}
+
 .flocks-home-map-container .geodir-widget.widget,
 .flocks-home-map-container .top_banner_section,
 .flocks-places-archive-map-container .geodir-widget.widget,

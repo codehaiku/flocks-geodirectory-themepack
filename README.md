@@ -3,6 +3,22 @@
 A plugin for Flocks to handle the style of the GeoDirectory plugin. The said plugin handles the design of the GeoDirectory to make it compatible to Flocks.
 The said plugin is easy to use, just install and activate the said plugin and it will handle the GeoDirectory integration automatically.
 
+<h3><strong>Features</strong></h3>
+
+We had integrated some jQuery plugin to make the Flocks GeoDirectory integration more awesome.
+
+<ul>
+<li><a href="https://owlcarousel2.github.io/OwlCarousel2/index.html">Integrated the Owl Carousel 2</a></li>
+<li><a href="http://dimsemenov.com/plugins/magnific-popup/">Integrated the Magnific Popup</a></li>
+</ul>
+
+<h3><strong>Supported GeoDirectory Add-ons</strong></h3>
+
+<ul>
+<li><a href="https://wpgeodirectory.com/downloads/buddypress-integration/">GeoDirectory BuddyPress Integration</a></li>
+<li><a href="https://wpgeodirectory.com/downloads/events/">GeoDirectory Events</a></li>
+</ul>
+
 <h3><strong>Setup and Installation</strong></h3>
 Flocks GeoDirectory Themepack requires few things in order to run properly.
 

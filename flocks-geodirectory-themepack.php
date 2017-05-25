@@ -19,6 +19,7 @@ class FlocksGeoDirectoryThemepack
 {
     public function __construct()
     {
+        add_action( 'cmb2_admin_init', array( $this, 'flocks_gd_register_cmb2_header_fields')  );
         add_action( 'wp_enqueue_scripts', array( $this, 'flocks_geodirectory_themepack_enqueue_scripts' ), 50 );
         add_action( 'wp_enqueue_scripts', array( $this, 'flocks_geodirectory_header_carousel_object' ), 50 );
         add_action( 'after_setup_theme', array( $this, 'flocks_geodirectory_action_calls' ), 11);
@@ -146,6 +147,52 @@ class FlocksGeoDirectoryThemepack
     }
 
     /**
+     * Register header options for individual post or pages.
+     *
+     * @since 1.0.0
+     * @package Flocks GeoDirectory Themepack
+     *
+     * @return void
+     */
+    public function flocks_gd_register_cmb2_header_fields() {
+
+      /**
+       * Initiate the footer meta box.
+       */
+      $cmb = new_cmb2_box( array(
+           'id'            => 'flocks_mb_header',
+           'title'         => esc_attr__( 'Header Style Color Contrast Option', 'flocks-geodirectory-themepack' ),
+           'object_types'  => array( 'page', 'gd_place' ), // Post type
+           'context'       => 'normal',
+           'priority'      => 'high',
+           'show_names'    => true, // Show field names on the left
+        ) );
+
+      $cmb->add_field( array(
+          'name'             => esc_attr__('Header Style Color Contrasts', 'flocks-geodirectory-themepack'),
+          'desc'             => esc_attr__('Check to enable the color contrast overlay for Header Style 3 and Header Style 4.', 'flocks-geodirectory-themepack'),
+          'id'               => 'flocks_gd_header_style_color_contrast',
+          'type'             => 'checkbox',
+          'show_option_none' => false,
+          'show_on_cb' => array( $this, 'is_header_style_need_contrast' ),
+      ) );
+
+    }
+
+    public function is_header_style_need_contrast( $field ) {
+        $header_style = get_post_meta( get_the_ID(), 'flocks_post_header_style', true );
+        $theme_mod_header = get_theme_mod( 'flocks_header_type', 'header-style-1');
+        $allowed_header_style = array( 'header-style-3', 'header-style-4');
+
+        if ( ! in_array( $header_style, $allowed_header_style ) ) {
+            if ( ! in_array( $theme_mod_header, $allowed_header_style ) ) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
      * Add the Flocks GeoDirectory Body class.
      *
      * @param string|array $classes The class list.
@@ -157,8 +204,14 @@ class FlocksGeoDirectoryThemepack
      */
     public function flocks_geodirectory_body_class( $classes )
     {
+        $is_header_color_contrast_enabled = get_post_meta( get_the_ID(), 'flocks_gd_header_style_color_contrast', true );
+
         if ( is_page( geodir_add_listing_page_id() ) ) {
             $classes[] = 'gd_add_listing_page';
+        }
+
+        if ( 'on' === $is_header_color_contrast_enabled && true === $this->is_header_style_need_contrast() ) {
+            $classes[] = 'flocks-header-color-contrast-enabled';
         }
 
         return $classes;

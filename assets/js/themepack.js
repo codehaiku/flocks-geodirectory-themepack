@@ -14,27 +14,29 @@ jQuery(document).ready( function($) {
 
     var single_owl_carousel = $('.flocks-single-geodirectory-carousel');
 
-    $(single_owl_carousel).owlCarousel({
-        items:flocks_geodirectory_single_carousel_object.items,
-        margin:0,
-        loop:flocks_geodirectory_single_carousel_object.loop,
-        autoWidth:flocks_geodirectory_single_carousel_object.autoWidth,
-        nav:flocks_geodirectory_single_carousel_object.nav,
-        lazyLoad:flocks_geodirectory_single_carousel_object.lazyLoad,
-        autoplay:flocks_geodirectory_single_carousel_object.autoplay,
-        autoplayTimeout:flocks_geodirectory_single_carousel_object.autoplayTimeout,
-        autoplayHoverPause:flocks_geodirectory_single_carousel_object.autoplayHoverPause,
-        responsiveClass:flocks_geodirectory_single_carousel_object.responsiveClass,
-        responsive:{
-            0: {
-              items:flocks_geodirectory_single_carousel_object.mobile_screens_items,
-              autoWidth:flocks_geodirectory_single_carousel_object.mobile_autoWidth
-            },
-            480: {
-              items:flocks_geodirectory_single_carousel_object.items,
+    if (typeof flocks_geodirectory_single_carousel_object !== 'undefined' && flocks_geodirectory_single_carousel_object !== null) {
+        $(single_owl_carousel).owlCarousel({
+            items:flocks_geodirectory_single_carousel_object.items,
+            margin:0,
+            loop:flocks_geodirectory_single_carousel_object.loop,
+            autoWidth:flocks_geodirectory_single_carousel_object.autoWidth,
+            nav:flocks_geodirectory_single_carousel_object.nav,
+            lazyLoad:flocks_geodirectory_single_carousel_object.lazyLoad,
+            autoplay:flocks_geodirectory_single_carousel_object.autoplay,
+            autoplayTimeout:flocks_geodirectory_single_carousel_object.autoplayTimeout,
+            autoplayHoverPause:flocks_geodirectory_single_carousel_object.autoplayHoverPause,
+            responsiveClass:flocks_geodirectory_single_carousel_object.responsiveClass,
+            responsive:{
+                0: {
+                  items:flocks_geodirectory_single_carousel_object.mobile_screens_items,
+                  autoWidth:flocks_geodirectory_single_carousel_object.mobile_autoWidth
+                },
+                480: {
+                  items:flocks_geodirectory_single_carousel_object.items,
+                }
             }
-        }
-    });
+        });
+    }
 
     $('.flocks-single-header-carousel .owl-item li').magnificPopup({
         delegate: '.magnify-link',
