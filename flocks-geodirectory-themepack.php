@@ -210,7 +210,7 @@ class FlocksGeoDirectoryThemepack
             $classes[] = 'gd_add_listing_page';
         }
 
-        if ( 'on' === $is_header_color_contrast_enabled && true === $this->is_header_style_need_contrast() ) {
+        if ( 'on' === $is_header_color_contrast_enabled && true === $this->is_header_style_need_contrast('') ) {
             $classes[] = 'flocks-header-color-contrast-enabled';
         }
 
@@ -613,7 +613,7 @@ class FlocksGeoDirectoryThemepack
      */
     public function flocks_geodirectory_header_carousel_object()
     {
-        $header_carousel_object = 'flocks-geodirectory-single-carousel';
+        $header_carousel_object = 'flocks-geodirectory-themepack-script';
 
         if ( geodir_is_geodir_page() && is_singular() )
         {
@@ -639,12 +639,17 @@ class FlocksGeoDirectoryThemepack
                 $defaults
             );
 
-            wp_register_script( $header_carousel_object );
+            wp_register_script(
+                $header_carousel_object,
+                plugins_url( '/assets/js/themepack.js', __FILE__ ),
+                array('jquery'),
+                '1.0'
+            );
 
             wp_enqueue_script( $header_carousel_object );
 
             wp_localize_script(
-                'flocks-geodirectory-single-carousel',
+                $header_carousel_object,
                 'flocks_geodirectory_single_carousel_object',
                 $settings
             );
