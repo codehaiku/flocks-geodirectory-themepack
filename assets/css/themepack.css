@@ -3883,6 +3883,20 @@ body.single .geodir_post_taxomomies {
   border-radius: 4px;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+  .chosen-rtl .chosen-search input[type="text"],
+  .geodir-chosen-container-single .chosen-single abbr,
+  .geodir-chosen-container-single .chosen-single div b,
+  .geodir-chosen-container-single .chosen-search input[type="text"],
+  .geodir-chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+  .geodir-chosen-container .chosen-results-scroll-down span,
+  .geodir-chosen-container .chosen-results-scroll-up span {
+    background-image: none !important;
+    background-size: 0px !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
 #geodir-sidebar .geodir-sidebar-wrap .geodir-company_info {
   background: #f6f8f9;
   padding: 15px 20px;
