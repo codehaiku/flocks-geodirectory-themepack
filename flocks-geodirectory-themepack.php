@@ -19,7 +19,8 @@ class FlocksGeoDirectoryThemepack
 {
     public function __construct()
     {
-        add_action( 'cmb2_admin_init', array( $this, 'flocks_gd_register_cmb2_header_fields')  );
+        add_action( 'cmb2_admin_init', array( $this, 'flocks_gd_register_cmb2_header_fields' ) );
+        add_action( 'cmb2_admin_init', array( $this, 'flocks_gd_register_cmb2_tax_header_fields' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'flocks_geodirectory_themepack_enqueue_scripts' ), 50 );
         add_action( 'wp_enqueue_scripts', array( $this, 'flocks_geodirectory_header_carousel_object' ), 50 );
         add_action( 'after_setup_theme', array( $this, 'flocks_geodirectory_action_calls' ), 11);
@@ -147,7 +148,7 @@ class FlocksGeoDirectoryThemepack
     }
 
     /**
-     * Register header options for individual post or pages.
+     * Register Taxonomy header options for individual GD Places and Events.
      *
      * @since 1.0.0
      * @package Flocks GeoDirectory Themepack
@@ -155,36 +156,95 @@ class FlocksGeoDirectoryThemepack
      * @return void
      */
     public function flocks_gd_register_cmb2_header_fields() {
+        $post_type_list = array(
+            'page',
+            'gd_place',
+            'gd_event',
+        );
 
       /**
        * Initiate the footer meta box.
        */
-      $cmb = new_cmb2_box( array(
-           'id'            => 'flocks_mb_header',
-           'title'         => esc_attr__( 'Header Style Color Contrast Option', 'flocks-geodirectory-themepack' ),
-           'object_types'  => array( 'page', 'gd_place' ), // Post type
-           'context'       => 'normal',
-           'priority'      => 'high',
-           'show_names'    => true, // Show field names on the left
+        $cmb = new_cmb2_box( array(
+            'id'            => 'flocks_mb_header',
+            'title'         => esc_attr__( 'Header Style Color Contrast Option', 'flocks-geodirectory-themepack' ),
+            'object_types'  => $post_type_list, // Post type
+            'context'       => 'normal',
+            'priority'      => 'high',
+            'show_names'    => true, // Show field names on the left
         ) );
 
-      $cmb->add_field( array(
-          'name'             => esc_attr__('Header Style Color Contrasts', 'flocks-geodirectory-themepack'),
-          'desc'             => esc_attr__('Check to enable the color contrast overlay for Header Style 3 and Header Style 4.', 'flocks-geodirectory-themepack'),
-          'id'               => 'flocks_gd_header_style_color_contrast',
-          'type'             => 'checkbox',
-          'show_option_none' => false,
-          'show_on_cb' => array( $this, 'is_header_style_need_contrast' ),
-      ) );
+        // Header Color Contrast
+        $cmb->add_field( array(
+            'name'             => esc_attr__('Header Style Color Contrasts', 'flocks-geodirectory-themepack'),
+            'desc'             => esc_attr__('Check to enable the color contrast overlay for Header Style 3 and Header Style 4.', 'flocks-geodirectory-themepack'),
+            'id'               => 'flocks_gd_header_style_color_contrast',
+            'type'             => 'checkbox',
+            'show_option_none' => false,
+            'show_on_cb' => array( $this, 'is_header_style_need_contrast' ),
+        ) );
 
     }
 
+    /**
+     * Register Taxonomy header options for individual GD Places and Events taxonomies.
+     *
+     * @since 1.0.0
+     * @package Flocks GeoDirectory Themepack
+     *
+     * @return void
+     */
+    public function flocks_gd_register_cmb2_tax_header_fields() {
+        $taxonomy_list = array(
+            'gd_placecategory',
+            'gd_place_tags',
+            'gd_eventcategory',
+            'gd_event_tags'
+        );
+
+       /**
+        * Initiate the metabox
+        */
+        $cmb_taxonomy = new_cmb2_box( array(
+            'id'            => 'flocks_gd_taxonomy_page_header',
+            'title'         => esc_attr__( 'Header Style Color Contrast Option', 'flocks-geodirectory-themepack' ),
+            'object_types'  => array( 'term' ), // Post type
+            'context'       => 'normal',
+            'priority'      => 'high',
+            'taxonomies'    => $taxonomy_list,
+            'show_names'    => true, // Show field names on the left
+        ) );
+
+       // Header Color Contrast
+        $cmb_taxonomy->add_field( array(
+           'name'             => esc_attr__('Header Style Color Contrasts', 'flocks-geodirectory-themepack'),
+           'desc'             => esc_attr__('Check to enable the color contrast overlay for Header Style 3 and Header Style 4.', 'flocks-geodirectory-themepack'),
+           'id'               => 'flocks_gd_header_style_color_contrast',
+           'type'             => 'checkbox',
+           'show_option_none' => false,
+           'show_on_cb' => array( $this, 'is_header_style_need_contrast' ),
+        ) );
+
+    }
+
+    /**
+     * Check if GD Places and Events and their taxonomies header are allowed
+     * to enable the header color contrast.
+     *
+     * @since 1.0.0
+     * @package Flocks GeoDirectory Themepack
+     *
+     * @return boolean Retruns true if enable. Otherwise false if disabled.
+     */
     public function is_header_style_need_contrast( $field ) {
-        $header_style = get_post_meta( get_the_ID(), 'flocks_post_header_style', true );
+        $object_id = get_queried_object_id();
+
+        $header_style = get_post_meta( $object_id, 'flocks_post_header_style', true );
+        $tax_header_style = get_term_meta( $object_id, 'flocks_gd_header_style_color_contrast', true );
         $theme_mod_header = get_theme_mod( 'flocks_header_type', 'header-style-1');
         $allowed_header_style = array( 'header-style-3', 'header-style-4');
 
-        if ( ! in_array( $header_style, $allowed_header_style ) ) {
+        if ( ! in_array( $header_style, $allowed_header_style ) || ! in_array( $tax_header_style, $allowed_header_style ) ) {
             if ( ! in_array( $theme_mod_header, $allowed_header_style ) ) {
                 return false;
             }
@@ -204,17 +264,108 @@ class FlocksGeoDirectoryThemepack
      */
     public function flocks_geodirectory_body_class( $classes )
     {
-        $is_header_color_contrast_enabled = get_post_meta( get_the_ID(), 'flocks_gd_header_style_color_contrast', true );
 
         if ( is_page( geodir_add_listing_page_id() ) ) {
             $classes[] = 'gd_add_listing_page';
         }
 
-        if ( 'on' === $is_header_color_contrast_enabled && true === $this->is_header_style_need_contrast('') ) {
+        if ( true === $this->is_header_color_contrast_enabled() ||
+             true === $this->is_tax_header_color_contrast_enabled() ||
+             true === $this->is_archive_header_color_contrast_enabled()
+         ) {
             $classes[] = 'flocks-header-color-contrast-enabled';
         }
 
         return $classes;
+
+    }
+
+    /**
+     * Checks if GD Places and Events archive header style needs color contrast.
+     *
+     * @since 1.0.0
+     * @package Flocks GeoDirectory Themepack
+     *
+     * @return boolean Retruns true if enable. Otherwise false if disabled.
+     */
+    public function is_archive_header_color_contrast_enabled()
+    {
+        $post_type_list = array(
+            'page',
+            'gd_place',
+            'gd_event',
+        );
+        $taxonomy_list = array(
+            'gd_placecategory',
+            'gd_place_tags',
+            'gd_eventcategory',
+            'gd_event_tags'
+        );
+        $allowed_header_style = array(
+            'header-style-3',
+            'header-style-4'
+        );
+
+        $theme_mod_header = get_theme_mod(
+            'flocks_header_type',
+            'header-style-1'
+        );
+
+        if ( is_post_type_archive( $post_type_list ) &&
+             ! is_tax( $taxonomy_list ) &&
+             in_array( $theme_mod_header, $allowed_header_style )
+        ) {
+            return true;
+        }
+
+        return false;
+
+    }
+
+    /**
+     * Checks if GD Places and Events header color contrast is enabled.
+     *
+     * @since 1.0.0
+     * @package Flocks GeoDirectory Themepack
+     *
+     * @return boolean Retruns true if enable. Otherwise false if disabled.
+     */
+    public function is_header_color_contrast_enabled()
+    {
+
+        $object_id = get_queried_object_id();
+
+        $is_header_color_contrast_enabled = get_post_meta( $object_id, 'flocks_gd_header_style_color_contrast', true );
+
+        if ( 'on' === $is_header_color_contrast_enabled && true === $this->is_header_style_need_contrast('') ) {
+            return true;
+        }
+
+        return false;
+
+    }
+
+    /**
+     * Checks if GD Places and Events taxonomy header color contrast is enabled.
+     *
+     * @since 1.0.0
+     * @package Flocks GeoDirectory Themepack
+     *
+     * @return boolean Retruns true if enable. Otherwise false if disabled.
+     */
+    public function is_tax_header_color_contrast_enabled()
+    {
+
+        $object_id = get_queried_object_id();
+
+        $is_tax_header_color_contrast_enabled = get_term_meta( $object_id, 'flocks_gd_header_style_color_contrast', true );
+
+        if ( 'on' === $is_tax_header_color_contrast_enabled && true === $this->is_header_style_need_contrast('') ) {
+            return true;
+        }
+
+        return false;
+
     }
 
     /**
@@ -265,7 +416,7 @@ class FlocksGeoDirectoryThemepack
      */
     public function flocks_gd_filter_media_image_large_height( $height, $default, $params )
     {
-        $height = 450;
+        $height = 387;
 
         return $height;
     }
@@ -284,7 +435,7 @@ class FlocksGeoDirectoryThemepack
      */
     public function flocks_gd_filter_media_image_large_width( $width, $default, $params )
     {
-        $width = 850;
+        $width = 825;
 
         return $width;
     }
@@ -624,7 +775,7 @@ class FlocksGeoDirectoryThemepack
                 'nav' => true,
                 'lazyLoad' => true,
                 'autoplay' => true,
-                'autoplayTimeout' => 1000,
+                'autoplayTimeout' => 5000,
                 'autoplayHoverPause' => true,
                 'responsiveClass' => true,
                 'mobile_screens_items' => true,
