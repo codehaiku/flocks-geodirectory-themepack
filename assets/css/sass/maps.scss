@@ -438,3 +438,13 @@
         }
     }
 }
+.flocks-home-map-container {
+    .geodir_map_container {
+        .map-category-listing-main .map_category {
+            height: 90%;
+        }
+        &.geodir-map-full .map_background .triggermap {
+            top: 87.5%;
+        }
+    }
+}

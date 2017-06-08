@@ -21,6 +21,12 @@
         margin-bottom: 0;
     }
 }
+#user-navigation ul {
+    &#nav-user-action-notification,
+    &#nav-user-action-dropdown {
+        z-index: 100;
+    }
+}
 .gd_add_listing_page {
     #geodir-wrapper-content {
         padding: 20px;

@@ -542,7 +542,7 @@ class FlocksGeoDirectoryThemepack
     {
         $enable_gd_home_header = apply_filters('flocks_enable_gd_home_header', true);
         $enable_map = apply_filters('flocks_enable_gd_home_map', true);
-        $map_atts = apply_filters('flocks_gd_home_map_atts', 'width=100% height=425 maptype="ROADMAP" zoom="10" scrollwheel=false');
+        $map_atts = apply_filters('flocks_gd_home_map_atts', 'width=100% height=500 maptype="ROADMAP" zoom="10" scrollwheel=false');
         $enable_search = apply_filters('flocks_enable_gd_home_search', true);
 
         if (is_page(geodir_home_page_id()) && $enable_gd_home_header) { ?>
@@ -594,7 +594,7 @@ class FlocksGeoDirectoryThemepack
     {
         $enable_gd_places_archive_header = apply_filters('flocks_enable_gd_places_archive_header', true);
         $enable_map = apply_filters('flocks_enable_gd_places_archive_map', true);
-        $map_atts = apply_filters('flocks_gd_places_archive_map_atts', 'width=100% height=425 maptype="ROADMAP" zoom="10" scrollwheel=false');
+        $map_atts = apply_filters('flocks_gd_places_archive_map_atts', 'width=100% height=500 maptype="ROADMAP" zoom="10" scrollwheel=false');
         $enable_search = apply_filters('flocks_enable_gd_places_archive_search', true);
         $post_type_list = array(
             'gd_place',
