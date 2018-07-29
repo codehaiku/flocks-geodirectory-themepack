@@ -773,6 +773,8 @@ class FlocksGeoDirectoryThemepack
                 'mobile_screens_items' => true,
                 'mobile_autoWidth' => false,
         	);
+            
+            $args = array();
 
         	$settings = wp_parse_args(
                 apply_filters(
